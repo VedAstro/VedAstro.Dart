@@ -1,0 +1,56 @@
+name: Dart SDK CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  # Prove the declared lower bound really works, across the 3.x line.
+  versions:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 3.0.0 is the constraint in pubspec.yaml; the rest guard the newer SDKs.
+        sdk: ['3.0.0', '3.3.0', 'stable']
+    name: Dart ${{ matrix.sdk }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: ${{ matrix.sdk }}
+
+      - run: dart pub get
+
+      - name: Verify formatting
+        run: dart format --output=none --set-exit-if-changed .
+
+      - name: Analyze
+        run: dart analyze --fatal-infos
+
+      # The suite needs no API key and no network: it drives the real client through
+      # a fake transport.
+      - name: Run the test suite
+        run: dart test --reporter expanded
+
+  # Prove it works on the platforms a Dart server actually runs on.
+  platforms:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest]
+    name: stable on ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+
+      - run: dart pub get
+      - run: dart analyze --fatal-infos
+      - run: dart test --reporter expanded

@@ -1,0 +1,22 @@
+name: vedastro
+description: >-
+  Official Dart client for the VedAstro Vedic astrology API. 684 calculations,
+  type-safe enums, and an HTTP transport that works on any server: Shelf, Dart
+  Frog, Cloud Run, a plain VM, or behind your own framework.
+version: 1.0.0
+repository: https://github.com/VedAstro/VedAstro.Dart
+homepage: https://vedastro.org
+issue_tracker: https://github.com/VedAstro/VedAstro.Dart/issues
+documentation: https://github.com/VedAstro/VedAstro.Dart#readme
+
+environment:
+  # Lower bounds are where the features this package uses landed: enhanced enums and
+  # records-free null safety throughout, plus class modifiers.
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  http: ^1.2.0
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.25.0

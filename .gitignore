@@ -1,0 +1,15 @@
+# Generated Dart output and build products.
+.dart_tool/
+.packages
+build/
+
+# Pub's own lock file: a library should not pin its consumers' resolution.
+pubspec.lock
+
+# IDE and editor state.
+.idea/
+.vscode/
+*.iml
+
+# Logs written by the demo scripts.
+*.log
