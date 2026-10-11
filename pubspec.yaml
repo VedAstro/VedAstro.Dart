@@ -15,7 +15,11 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  http: ^1.2.0
+  # Deliberately not `^1.2.0`: that floor requires SDK 3.2, which would make the
+  # declared 3.0 floor below a lie. `>=1.0.0 <2.0.0` lets the resolver pick the
+  # newest build the running SDK supports - 1.1.0 on Dart 3.0, 1.2.x on 3.3, and the
+  # current release on stable - so one pubspec stays honest across the whole range.
+  http: ">=1.0.0 <2.0.0"
 
 dev_dependencies:
   # No `lints` dependency on purpose: analysis_options.yaml carries its own curated
