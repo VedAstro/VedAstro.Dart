@@ -1,9 +1,13 @@
 # Analysis rules for the VedAstro Dart SDK.
 #
-# `package:lints/recommended.yaml` is the Dart team's own recommendation set. The
-# extra rules below are the ones this package actively relies on being clean, so a
+# This file is deliberately self-contained rather than including `package:lints`.
+# A package include makes `dart analyze` depend on whichever `lints` version the
+# resolver picks, and newer releases of it require a newer SDK than the 3.0 floor
+# this package declares. Owning the list keeps the declared floor honest and the
+# analysis identical on every supported SDK.
+#
+# The rules are the ones this package actively relies on being clean, so a
 # regression is caught by `dart analyze` rather than by a user.
-include: package:lints/recommended.yaml
 
 analyzer:
   language:

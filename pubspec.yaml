@@ -10,13 +10,16 @@ issue_tracker: https://github.com/VedAstro/VedAstro.Dart/issues
 documentation: https://github.com/VedAstro/VedAstro.Dart#readme
 
 environment:
-  # Lower bounds are where the features this package uses landed: enhanced enums and
-  # records-free null safety throughout, plus class modifiers.
+  # Lower bound is the first SDK with the features this package uses: enhanced enums
+  # and class modifiers. CI runs the suite on 3.0 and 3.3 to prove it really holds.
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   http: ^1.2.0
 
 dev_dependencies:
-  lints: ^5.0.0
+  # No `lints` dependency on purpose: analysis_options.yaml carries its own curated
+  # rule list, so `dart analyze` behaves identically on every supported SDK instead of
+  # depending on which lints version the resolver happens to pick. It also lets the
+  # declared 3.0 floor stay honest, since newer `lints` releases require a newer SDK.
   test: ^1.25.0
