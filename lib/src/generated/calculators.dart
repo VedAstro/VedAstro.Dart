@@ -6,7 +6,7 @@ import '../client.dart';
 import '../time.dart';
 import 'enums.dart';
 
-/// The 685 VedAstro calculators, one method per API endpoint.
+/// The 677 VedAstro calculators, one method per API endpoint.
 ///
 /// Reached through [VedAstroClient.calculate]. Every method is asynchronous and
 /// holds no state, so one instance is safe to share across every concurrent request
@@ -117,8 +117,6 @@ class Calculators {
     'brotherProsperityByJupiter',
     'calculateAshtamangalaNumberFromShells',
     'calculateEarthquakeRiskScore',
-    'calculateShoolaDasa',
-    'calculateSudarsanaChakraDasa',
     'calculateTripatakiChakra',
     'careerLossBySaturn',
     'chandraKalanalaChakra',
@@ -162,14 +160,10 @@ class Calculators {
     'countFromConstellationToConstellation',
     'countFromSignToSign',
     'd150AmsaRulers',
-    'dasaAtRange',
-    'dasaAtRangeString',
     'dasaAtTime',
+    'dasaChartReading',
     'dasaForLife',
-    'dasaForLifeString',
-    'dasaForNow',
-    'dasaPeriodAshtakavargaStrength',
-    'dasaYearLengthInDays',
+    'dasaSystems',
     'dashamamshaSignAtLongitude',
     'dashamamshaSignName',
     'dayDurationHours',
@@ -205,6 +199,7 @@ class Calculators {
     'fatherDeathBySun',
     'fatherDeathBySunSign',
     'findBirthTimeByAnimal',
+    'findBirthTimeByLifeEvents',
     'findBirthTimeByMachineLearning',
     'findBirthTimeByMachineLearningTopK',
     'findBirthTimeByRisingSign',
@@ -217,9 +212,7 @@ class Calculators {
     'getAllHouseNirayanaMiddleLongitudes',
     'getAscendantLongitude',
     'getAvailableSourceTexts',
-    'getCharaDasaAtTime',
     'getConstellationTransitStartTime',
-    'getDasaInfoForAscendant',
     'getEventTiming',
     'getHouseFromLongitude',
     'getHouseTags',
@@ -229,7 +222,6 @@ class Calculators {
     'getPlanetTags',
     'getPlanetTagsFromList',
     'getPlanetZodiacSignInDivisionalChart',
-    'getSignLord',
     'getSignTags',
     'getTithiNumber',
     'ghatakaChakra',
@@ -321,6 +313,7 @@ class Calculators {
     'isFireSign',
     'isFixedSign',
     'isFullMoon',
+    'isGocharaFavourable',
     'isGocharaObstructed',
     'isGocharaOccurring',
     'isHarmfulPlanetAspectingHouse',
@@ -431,8 +424,6 @@ class Calculators {
     'jaiminiRasiStrength',
     'kaalaLongitude',
     'kalaSarpaYoga',
-    'kalachakraChart',
-    'kalachakraDasa',
     'karana',
     'karanaNumber',
     'khavedamshaSignAtLongitude',
@@ -474,7 +465,6 @@ class Calculators {
     'matchReport',
     'mentalAfflictionBySaturn',
     'mentalBalanceByJupiter',
-    'moolaDasa',
     'moonConstellation',
     'moonSignChangeTime',
     'moonSignName',
@@ -490,7 +480,6 @@ class Calculators {
     'nakshatraToZodiacSign',
     'nameNumber',
     'nameNumberPrediction',
-    'narayanaDasa',
     'nativeDeathByJupiter',
     'nativeDeathBySaturn',
     'nativeDeathMonthBySun',
@@ -512,7 +501,12 @@ class Calculators {
     'nutation',
     'paapaKartariHouses',
     'paapaKartariPlanets',
+    'panchaPakshiActivityFactor',
+    'panchaPakshiBirdStrength',
     'panchaPakshiBirthBird',
+    'panchaPakshiCompare',
+    'panchaPakshiTimeline',
+    'panchaPakshiTimelineByDuration',
     'panchaka',
     'panchangaTable',
     'papaGrahasList',
@@ -536,7 +530,6 @@ class Calculators {
     'planetCirculationTime',
     'planetCombinedRelationshipWithPlanet',
     'planetConstellation',
-    'planetDasaEffectsBasedOnIshtaKashta',
     'planetDashamamshaD10Sign',
     'planetDebilitationPoint',
     'planetDeclination',
@@ -590,7 +583,9 @@ class Calculators {
     'planetShadbalaPinda',
     'planetShashtyamshaD60Sign',
     'planetShodashamshaD16Sign',
+    'planetSignBoundaries',
     'planetSignTransit',
+    'planetSignsAtTimes',
     'planetSodyaPinda',
     'planetSpeed',
     'planetSthanaBala',
@@ -620,6 +615,7 @@ class Calculators {
     'predictMedicalHealthConditions',
     'previousNewMoon',
     'rahuKala',
+    'ramanGochara',
     'rekhaSarvashtakavargaReductions',
     'rekhaSodyaPinda',
     'residentialStrength',
@@ -633,13 +629,13 @@ class Calculators {
     'sarvashtakavargaReductions',
     'sarvashtakavargaSodyaPinda',
     'sarvatobhadraChakra',
+    'scoreBirthTimeByLifeEvents',
     'searchEvents',
     'searchSourceText',
     'shashtyamshaSignAtLongitude',
     'shashtyamshaSignName',
     'shodashamshaSignAtLongitude',
     'shodashamshaSignName',
-    'shoolaChakra',
     'shubKartariHouses',
     'shubKartariPlanets',
     'signCountedFromInputSign',
@@ -652,11 +648,8 @@ class Calculators {
     'skyChart',
     'sodyaAshtakavarga',
     'southIndianChart',
-    'specialDasaApplicability',
-    'specialDasaAtTime',
     'spouseDeathByJupiter',
     'subhaGrahasList',
-    'sudarsanaChakra',
     'sunAndMoonWellPlacedAndAspected',
     'sunMoonConjunctionAngle',
     'sunSign',
@@ -679,7 +672,6 @@ class Calculators {
     'timeToJulianDay',
     'timeToJulianEphemerisTime',
     'timeToJulianUniversalTime',
-    'tithiAshtottariDasa',
     'tithiBalance',
     'tithiNumber',
     'tithiPravesha',
@@ -755,14 +747,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> allBeneficPlanetsInGoodConjunctionWith(
-      PlanetName inputPlanet, Time time) {
+  Future<Object?> allBeneficPlanetsInGoodConjunctionWith(PlanetName inputPlanet, Time time) {
     final params = <String, Object?>{
       "inputPlanet": inputPlanet,
       "time": time,
     };
-    return _client.call("AllBeneficPlanetsInGoodConjunctionWith",
-        parameters: params);
+    return _client.call("AllBeneficPlanetsInGoodConjunctionWith", parameters: params);
   }
 
   /// Returns all planets that form genuinely harmful conjunctions with the input planet. The method gets the physically harmful planet list checks which harmful planets are conjunct with the input planet always counts natural malefics as harmful checks relationship for Sun weak Moon and afflicted Mercury includes those conditional harmful planets only when their relationship is enemy or bitter enemy.
@@ -776,14 +766,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> allHarmfulPlanetsInBadConjunctionWith(
-      PlanetName inputPlanet, Time time) {
+  Future<Object?> allHarmfulPlanetsInBadConjunctionWith(PlanetName inputPlanet, Time time) {
     final params = <String, Object?>{
       "inputPlanet": inputPlanet,
       "time": time,
     };
-    return _client.call("AllHarmfulPlanetsInBadConjunctionWith",
-        parameters: params);
+    return _client.call("AllHarmfulPlanetsInBadConjunctionWith", parameters: params);
   }
 
   /// Returns the Akshavedamsha D45 sign for every house at the given time.
@@ -1040,8 +1028,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    return _client.call("AllHousePlanetsInHouseBasedOnSign",
-        parameters: params);
+    return _client.call("AllHousePlanetsInHouseBasedOnSign", parameters: params);
   }
 
   /// Returns the Rasi sign for every house at the given time. This is the bulk version of HouseRasiSign... packaged as a dictionary for all houses.
@@ -1174,8 +1161,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> allMaleficPlanetsAspecting(
-      PlanetName planetReceivingAspect, Time time) {
+  Future<Object?> allMaleficPlanetsAspecting(PlanetName planetReceivingAspect, Time time) {
     final params = <String, Object?>{
       "planetReceivingAspect": planetReceivingAspect,
       "time": time,
@@ -1194,14 +1180,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> allPhysicallyHarmfulPlanetsAspecting(
-      PlanetName planetReceivingAspect, Time time) {
+  Future<Object?> allPhysicallyHarmfulPlanetsAspecting(PlanetName planetReceivingAspect, Time time) {
     final params = <String, Object?>{
       "planetReceivingAspect": planetReceivingAspect,
       "time": time,
     };
-    return _client.call("AllPhysicallyHarmfulPlanetsAspecting",
-        parameters: params);
+    return _client.call("AllPhysicallyHarmfulPlanetsAspecting", parameters: params);
   }
 
   /// Returns all physically harmful planets conjunct with a specified planet. The method gets all planets conjunct with the input planet gets the physically harmful planet list returns the conjunct planets that also appear in the harmful list.
@@ -1215,14 +1199,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> allPhysicallyHarmfulPlanetsConjunctWith(
-      PlanetName planetName, Time time) {
+  Future<Object?> allPhysicallyHarmfulPlanetsConjunctWith(PlanetName planetName, Time time) {
     final params = <String, Object?>{
       "planetName": planetName,
       "time": time,
     };
-    return _client.call("AllPhysicallyHarmfulPlanetsConjunctWith",
-        parameters: params);
+    return _client.call("AllPhysicallyHarmfulPlanetsConjunctWith", parameters: params);
   }
 
   /// Returns the Akshavedamsha D45 sign for every planet at the given time.
@@ -1426,8 +1408,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> allPlanetHouseData(
-      PlanetName planetName, HouseName houseName, Time time) {
+  Future<Object?> allPlanetHouseData(PlanetName planetName, HouseName houseName, Time time) {
     final params = <String, Object?>{
       "planetName": planetName,
       "houseName": houseName,
@@ -1586,8 +1567,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    return _client.call("AllPlanetSignsBasedOnHouseLongitudes",
-        parameters: params);
+    return _client.call("AllPlanetSignsBasedOnHouseLongitudes", parameters: params);
   }
 
   /// Returns the Shadbala strength of all nine planets. The method calculates PlanetShadbalaPinda... for each planet and returns a list of strengthandplanet tuples.
@@ -1652,8 +1632,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> allPlanetsInASignFromLagna(
-      int signsFromLagna, Time birthTime) {
+  Future<Object?> allPlanetsInASignFromLagna(int signsFromLagna, Time birthTime) {
     final params = <String, Object?>{
       "signsFromLagna": signsFromLagna,
       "birthTime": birthTime,
@@ -1672,8 +1651,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> allPlanetsInBadAspectToHouse(
-      HouseName receivingAspect, Time time) {
+  Future<Object?> allPlanetsInBadAspectToHouse(HouseName receivingAspect, Time time) {
     final params = <String, Object?>{
       "receivingAspect": receivingAspect,
       "time": time,
@@ -1692,8 +1670,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> allPlanetsInBadAspectToPlanet(
-      PlanetName receivingAspect, Time time) {
+  Future<Object?> allPlanetsInBadAspectToPlanet(PlanetName receivingAspect, Time time) {
     final params = <String, Object?>{
       "receivingAspect": receivingAspect,
       "time": time,
@@ -1712,8 +1689,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> allPlanetsInEnemyConjunctionWith(
-      PlanetName inputPlanet, Time time) {
+  Future<Object?> allPlanetsInEnemyConjunctionWith(PlanetName inputPlanet, Time time) {
     final params = <String, Object?>{
       "inputPlanet": inputPlanet,
       "time": time,
@@ -1732,14 +1708,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> allPlanetsInFriendConjunctionWith(
-      PlanetName inputPlanet, Time time) {
+  Future<Object?> allPlanetsInFriendConjunctionWith(PlanetName inputPlanet, Time time) {
     final params = <String, Object?>{
       "inputPlanet": inputPlanet,
       "time": time,
     };
-    return _client.call("AllPlanetsInFriendConjunctionWith",
-        parameters: params);
+    return _client.call("AllPlanetsInFriendConjunctionWith", parameters: params);
   }
 
   /// Returns all planets located in any of several signs counted from Lagna. The method loops through the requested sign counts gathers planets from each counted sign removes duplicate planets returns the final list.
@@ -1753,8 +1727,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> allPlanetsInSignsFromLagna(
-      List<Object?> signsFromList, Time birthTime) {
+  Future<Object?> allPlanetsInSignsFromLagna(List<Object?> signsFromList, Time birthTime) {
     final params = <String, Object?>{
       "signsFromList": signsFromList,
       "birthTime": birthTime,
@@ -1774,8 +1747,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> allPlanetsSignsFromPlanet(
-      int signsFromMoon, PlanetName startPlanet, Time birthTime) {
+  Future<Object?> allPlanetsSignsFromPlanet(int signsFromMoon, PlanetName startPlanet, Time birthTime) {
     final params = <String, Object?>{
       "signsFromMoon": signsFromMoon,
       "startPlanet": startPlanet,
@@ -1903,8 +1875,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> ascendantDegreesToARMC(double ascendant,
-      double obliquityOfEcliptic, double geographicLatitude, Time time) {
+  Future<Object?> ascendantDegreesToARMC(double ascendant, double obliquityOfEcliptic, double geographicLatitude, Time time) {
     final params = <String, Object?>{
       "ascendant": ascendant,
       "obliquityOfEcliptic": obliquityOfEcliptic,
@@ -1945,18 +1916,14 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> ashtakavargaTransitPrediction(
-      PlanetName planet, int houseFromPlanet, int divisor, Time birthTime,
-      {bool? useRawBindus}) {
+  Future<Object?> ashtakavargaTransitPrediction(PlanetName planet, int houseFromPlanet, int divisor, Time birthTime, {bool? useRawBindus}) {
     final params = <String, Object?>{
       "planet": planet,
       "houseFromPlanet": houseFromPlanet,
       "divisor": divisor,
       "birthTime": birthTime,
     };
-    if (useRawBindus != null) {
-      params["useRawBindus"] = useRawBindus;
-    }
+    if (useRawBindus != null) { params["useRawBindus"] = useRawBindus; }
     return _client.call("AshtakavargaTransitPrediction", parameters: params);
   }
 
@@ -2010,26 +1977,14 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> astrocartography(Time birthTime,
-      {List<Object?>? locations,
-      List<Object?>? planets,
-      String? zodiac,
-      String? siderealAyanamsa}) {
+  Future<Object?> astrocartography(Time birthTime, {List<Object?>? locations, List<Object?>? planets, String? zodiac, String? siderealAyanamsa}) {
     final params = <String, Object?>{
       "birthTime": birthTime,
     };
-    if (locations != null) {
-      params["locations"] = locations;
-    }
-    if (planets != null) {
-      params["planets"] = planets;
-    }
-    if (zodiac != null) {
-      params["zodiac"] = zodiac;
-    }
-    if (siderealAyanamsa != null) {
-      params["siderealAyanamsa"] = siderealAyanamsa;
-    }
+    if (locations != null) { params["locations"] = locations; }
+    if (planets != null) { params["planets"] = planets; }
+    if (zodiac != null) { params["zodiac"] = zodiac; }
+    if (siderealAyanamsa != null) { params["siderealAyanamsa"] = siderealAyanamsa; }
     return _client.call("Astrocartography", parameters: params);
   }
 
@@ -2061,8 +2016,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> beneficHouseListByShadbala(
-      Time personBirthTime, int threshold) {
+  Future<Object?> beneficHouseListByShadbala(Time personBirthTime, int threshold) {
     final params = <String, Object?>{
       "personBirthTime": personBirthTime,
       "threshold": threshold,
@@ -2098,8 +2052,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> beneficPlanetListByShadbala(
-      Time personBirthTime, int threshold) {
+  Future<Object?> beneficPlanetListByShadbala(Time personBirthTime, int threshold) {
     final params = <String, Object?>{
       "personBirthTime": personBirthTime,
       "threshold": threshold,
@@ -2402,16 +2355,14 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> calculateAshtamangalaNumberFromShells(
-      int leftPile, int centerPile, int rightPile, int totalShells) {
+  Future<Object?> calculateAshtamangalaNumberFromShells(int leftPile, int centerPile, int rightPile, int totalShells) {
     final params = <String, Object?>{
       "leftPile": leftPile,
       "centerPile": centerPile,
       "rightPile": rightPile,
       "totalShells": totalShells,
     };
-    return _client.call("CalculateAshtamangalaNumberFromShells",
-        parameters: params);
+    return _client.call("CalculateAshtamangalaNumberFromShells", parameters: params);
   }
 
   /// Calculates weighted earthquake risk score 035 scale. Weight 3 Critical max 12 points Eclipse MoonMercury exact JupiterSaturn aspect Weight 2 Strong max 14 points NewFull Moon planetary Kendras clustering Weight 1 Supporting max 9 points Sign positions nakshatras Moon perigee Based on frequency of appearance in BV Ramans 200 historical earthquake charts. Maximum possible score 35 if every indicator fires simultaneously. In practice scores above 12 are extremely rare. Risk levels Score 8 HIGH RISK critical mass of indicators Score 47 MODERATE RISK several supporting indicators Score 03 LOW RISK few or no indicators
@@ -2431,55 +2382,6 @@ class Calculators {
     return _client.call("CalculateEarthquakeRiskScore", parameters: params);
   }
 
-  /// Builds twelve consecutive nineyear Shoola mahadasas and twelve equal consecutive antardasas per mahadasa.
-  ///
-  /// - `time` (Time): time
-  /// - `startingHouse` (int?, optional): startingHouse Server default: 1.
-  /// - `resolvedStartSign` (ZodiacName?, optional): Optional override for the result of the shared JHora strongeroppositesign table FUN_004AB810FUN_004AB890. Server default: null.
-  /// - `antardasaMode` (ShoolaAntardasaMode?, optional): antardasaMode Server default: "DasaSign".
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> calculateShoolaDasa(Time time,
-      {int? startingHouse,
-      ZodiacName? resolvedStartSign,
-      ShoolaAntardasaMode? antardasaMode}) {
-    final params = <String, Object?>{
-      "time": time,
-    };
-    if (startingHouse != null) {
-      params["startingHouse"] = startingHouse;
-    }
-    if (resolvedStartSign != null) {
-      params["resolvedStartSign"] = resolvedStartSign;
-    }
-    if (antardasaMode != null) {
-      params["antardasaMode"] = antardasaMode;
-    }
-    return _client.call("CalculateShoolaDasa", parameters: params);
-  }
-
-  /// Empty sample text
-  ///
-  /// - `time` (Time): time
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> calculateSudarsanaChakraDasa(Time time) {
-    final params = <String, Object?>{
-      "time": time,
-    };
-    return _client.call("CalculateSudarsanaChakraDasa", parameters: params);
-  }
-
   /// Empty sample text
   ///
   /// - `time` (Time): time
@@ -2491,14 +2393,11 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> calculateTripatakiChakra(Time time,
-      {TripatakiObjectGroup? objectGroup}) {
+  Future<Object?> calculateTripatakiChakra(Time time, {TripatakiObjectGroup? objectGroup}) {
     final params = <String, Object?>{
       "time": time,
     };
-    if (objectGroup != null) {
-      params["objectGroup"] = objectGroup;
-    }
+    if (objectGroup != null) { params["objectGroup"] = objectGroup; }
     return _client.call("CalculateTripatakiChakra", parameters: params);
   }
 
@@ -2566,8 +2465,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter10PrashnaMargaPredictions(
-      Time birthTime, Time queryTime) {
+  Future<Object?> chapter10PrashnaMargaPredictions(Time birthTime, Time queryTime) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "queryTime": queryTime,
@@ -2586,8 +2484,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter11PrashnaMargaPredictions(
-      Time birthTime, Time queryTime) {
+  Future<Object?> chapter11PrashnaMargaPredictions(Time birthTime, Time queryTime) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "queryTime": queryTime,
@@ -2606,8 +2503,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter12PrashnaMargaPredictions(
-      Time birthTime, Time queryTime) {
+  Future<Object?> chapter12PrashnaMargaPredictions(Time birthTime, Time queryTime) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "queryTime": queryTime,
@@ -2627,16 +2523,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter13PrashnaMargaPredictions(
-      Time birthTime, Time queryTime,
-      {String? firstLetterOfQuery}) {
+  Future<Object?> chapter13PrashnaMargaPredictions(Time birthTime, Time queryTime, {String? firstLetterOfQuery}) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "queryTime": queryTime,
     };
-    if (firstLetterOfQuery != null) {
-      params["firstLetterOfQuery"] = firstLetterOfQuery;
-    }
+    if (firstLetterOfQuery != null) { params["firstLetterOfQuery"] = firstLetterOfQuery; }
     return _client.call("Chapter13PrashnaMargaPredictions", parameters: params);
   }
 
@@ -2651,8 +2543,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter14PrashnaMargaPredictions(
-      Time birthTime, Time queryTime) {
+  Future<Object?> chapter14PrashnaMargaPredictions(Time birthTime, Time queryTime) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "queryTime": queryTime,
@@ -2671,8 +2562,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter15PrashnaMargaPredictions(
-      Time birthTime, Time queryTime) {
+  Future<Object?> chapter15PrashnaMargaPredictions(Time birthTime, Time queryTime) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "queryTime": queryTime,
@@ -2693,19 +2583,13 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter16PrashnaMargaPredictions(
-      Time birthTime, Time queryTime,
-      {int? thamBoolaLeafCount, String? firstLetterOfQuery}) {
+  Future<Object?> chapter16PrashnaMargaPredictions(Time birthTime, Time queryTime, {int? thamBoolaLeafCount, String? firstLetterOfQuery}) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "queryTime": queryTime,
     };
-    if (thamBoolaLeafCount != null) {
-      params["thamBoolaLeafCount"] = thamBoolaLeafCount;
-    }
-    if (firstLetterOfQuery != null) {
-      params["firstLetterOfQuery"] = firstLetterOfQuery;
-    }
+    if (thamBoolaLeafCount != null) { params["thamBoolaLeafCount"] = thamBoolaLeafCount; }
+    if (firstLetterOfQuery != null) { params["firstLetterOfQuery"] = firstLetterOfQuery; }
     return _client.call("Chapter16PrashnaMargaPredictions", parameters: params);
   }
 
@@ -2754,14 +2638,11 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter19PrashnaMargaPredictions(Time birthTime,
-      {Time? partnerBirthTime}) {
+  Future<Object?> chapter19PrashnaMargaPredictions(Time birthTime, {Time? partnerBirthTime}) {
     final params = <String, Object?>{
       "birthTime": birthTime,
     };
-    if (partnerBirthTime != null) {
-      params["partnerBirthTime"] = partnerBirthTime;
-    }
+    if (partnerBirthTime != null) { params["partnerBirthTime"] = partnerBirthTime; }
     return _client.call("Chapter19PrashnaMargaPredictions", parameters: params);
   }
 
@@ -2827,14 +2708,11 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter25PrashnaMargaPredictions(Time queryTime,
-      {String? firstLetterOfQuery}) {
+  Future<Object?> chapter25PrashnaMargaPredictions(Time queryTime, {String? firstLetterOfQuery}) {
     final params = <String, Object?>{
       "queryTime": queryTime,
     };
-    if (firstLetterOfQuery != null) {
-      params["firstLetterOfQuery"] = firstLetterOfQuery;
-    }
+    if (firstLetterOfQuery != null) { params["firstLetterOfQuery"] = firstLetterOfQuery; }
     return _client.call("Chapter25PrashnaMargaPredictions", parameters: params);
   }
 
@@ -2849,14 +2727,11 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter26PrashnaMargaPredictions(Time queryTime,
-      {String? firstLetterOfQuery}) {
+  Future<Object?> chapter26PrashnaMargaPredictions(Time queryTime, {String? firstLetterOfQuery}) {
     final params = <String, Object?>{
       "queryTime": queryTime,
     };
-    if (firstLetterOfQuery != null) {
-      params["firstLetterOfQuery"] = firstLetterOfQuery;
-    }
+    if (firstLetterOfQuery != null) { params["firstLetterOfQuery"] = firstLetterOfQuery; }
     return _client.call("Chapter26PrashnaMargaPredictions", parameters: params);
   }
 
@@ -2923,17 +2798,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter30PrashnaMargaPredictions(Time queryTime,
-      {int? personsPresent, String? bodyPartTouched}) {
+  Future<Object?> chapter30PrashnaMargaPredictions(Time queryTime, {int? personsPresent, String? bodyPartTouched}) {
     final params = <String, Object?>{
       "queryTime": queryTime,
     };
-    if (personsPresent != null) {
-      params["personsPresent"] = personsPresent;
-    }
-    if (bodyPartTouched != null) {
-      params["bodyPartTouched"] = bodyPartTouched;
-    }
+    if (personsPresent != null) { params["personsPresent"] = personsPresent; }
+    if (bodyPartTouched != null) { params["bodyPartTouched"] = bodyPartTouched; }
     return _client.call("Chapter30PrashnaMargaPredictions", parameters: params);
   }
 
@@ -2948,8 +2818,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter5PrashnaMargaPredictions(
-      Time birthTime, Time queryTime) {
+  Future<Object?> chapter5PrashnaMargaPredictions(Time birthTime, Time queryTime) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "queryTime": queryTime,
@@ -2969,8 +2838,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter7PrashnaMargaPredictions(
-      int ashtamangalaRootNumber, Time birthTime, Time queryTime) {
+  Future<Object?> chapter7PrashnaMargaPredictions(int ashtamangalaRootNumber, Time birthTime, Time queryTime) {
     final params = <String, Object?>{
       "ashtamangalaRootNumber": ashtamangalaRootNumber,
       "birthTime": birthTime,
@@ -2991,8 +2859,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter8PrashnaMargaPredictions(
-      int ashtamangalaRootNumber, Time birthTime, Time queryTime) {
+  Future<Object?> chapter8PrashnaMargaPredictions(int ashtamangalaRootNumber, Time birthTime, Time queryTime) {
     final params = <String, Object?>{
       "ashtamangalaRootNumber": ashtamangalaRootNumber,
       "birthTime": birthTime,
@@ -3012,8 +2879,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> chapter9PrashnaMargaPredictions(
-      Time birthTime, Time queryTime) {
+  Future<Object?> chapter9PrashnaMargaPredictions(Time birthTime, Time queryTime) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "queryTime": queryTime,
@@ -3185,8 +3051,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> classifyForKartari(
-      PlanetName planet, List<Object?> coOccupants) {
+  Future<Object?> classifyForKartari(PlanetName planet, List<Object?> coOccupants) {
     final params = <String, Object?>{
       "planet": planet,
       "coOccupants": coOccupants,
@@ -3256,14 +3121,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> countFromConstellationToConstellation(
-      Object? start, Object? end) {
+  Future<Object?> countFromConstellationToConstellation(Object? start, Object? end) {
     final params = <String, Object?>{
       "start": start,
       "end": end,
     };
-    return _client.call("CountFromConstellationToConstellation",
-        parameters: params);
+    return _client.call("CountFromConstellationToConstellation", parameters: params);
   }
 
   /// Counts inclusively from one zodiac sign to another. For example counting from Aquarius to Taurus returns 4 Aquarius Pisces Aries Taurus.
@@ -3277,8 +3140,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> countFromSignToSign(
-      ZodiacName startSign, ZodiacName endSign) {
+  Future<Object?> countFromSignToSign(ZodiacName startSign, ZodiacName endSign) {
     final params = <String, Object?>{
       "startSign": startSign,
       "endSign": endSign,
@@ -3303,43 +3165,13 @@ class Calculators {
     return _client.call("D150AmsaRulers", parameters: params);
   }
 
-  /// Returns the sequence of Vimshottari Dasa periods across a time range for the given birth chart sampling the range at the given precision and nesting down to the requested number of levels. Use this to build a Dasa timeline between two dates.
+  /// Raw periods running at one moment through the requested depth. Contains no interpretation text interpretation belongs to the EventsChart layer.
   ///
-  /// - `birthTime` (Time): Birth time location of the person.
-  /// - `startTime` (Time): Start of the range to scan.
-  /// - `endTime` (Time): End of the range to scan.
-  /// - `levels` (int?, optional): How many nested Dasa levels to compute default 3. Server default: 3.
-  /// - `precisionHours` (int?, optional): Sampling step across the range in hours default 100. Server default: 100.
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> dasaAtRange(Time birthTime, Time startTime, Time endTime,
-      {int? levels, int? precisionHours}) {
-    final params = <String, Object?>{
-      "birthTime": birthTime,
-      "startTime": startTime,
-      "endTime": endTime,
-    };
-    if (levels != null) {
-      params["levels"] = levels;
-    }
-    if (precisionHours != null) {
-      params["precisionHours"] = precisionHours;
-    }
-    return _client.call("DasaAtRange", parameters: params);
-  }
-
-  /// Same as DasaAtRange but returns the Dasa timeline as a compact JSON string instead of a JObject. Useful for callers that want the raw serialized payload directly.
-  ///
-  /// - `birthTime` (Time): Birth time location of the person.
-  /// - `startTime` (Time): Start of the range to scan.
-  /// - `endTime` (Time): End of the range to scan.
-  /// - `levels` (int?, optional): How many nested Dasa levels to compute default 3. Server default: 3.
-  /// - `precisionHours` (int?, optional): Sampling step across the range in hours default 100. Server default: 100.
+  /// - `birthTime` (Time): birthTime
+  /// - `at` (Time): at
+  /// - `system` (DasaSystem?, optional): system Server default: "Vimshottari".
+  /// - `depth` (int?, optional): depth Server default: 3.
+  /// - `optionsValue` (Object??, optional): options Server default: null.
   ///
   /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
   /// or null. Read it with `Response.string(...)` and friends, or pass the
@@ -3347,52 +3179,21 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> dasaAtRangeString(
-      Time birthTime, Time startTime, Time endTime,
-      {int? levels, int? precisionHours}) {
+  Future<Object?> dasaAtTime(Time birthTime, Time at, {DasaSystem? system, int? depth, Object? optionsValue}) {
     final params = <String, Object?>{
       "birthTime": birthTime,
-      "startTime": startTime,
-      "endTime": endTime,
+      "at": at,
     };
-    if (levels != null) {
-      params["levels"] = levels;
-    }
-    if (precisionHours != null) {
-      params["precisionHours"] = precisionHours;
-    }
-    return _client.call("DasaAtRangeString", parameters: params);
-  }
-
-  /// Returns the Vimshottari Dasa periods operating at a specific moment for the given birth chart nested down to the requested number of levels Maha Dasa Bhukti Antaram ....
-  ///
-  /// - `birthTime` (Time): Birth time location of the person.
-  /// - `checkTime` (Time): The moment to evaluate the running Dasa periods for.
-  /// - `levels` (int?, optional): How many nested Dasa levels to compute default 3. Server default: 3.
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> dasaAtTime(Time birthTime, Time checkTime, {int? levels}) {
-    final params = <String, Object?>{
-      "birthTime": birthTime,
-      "checkTime": checkTime,
-    };
-    if (levels != null) {
-      params["levels"] = levels;
-    }
+    if (system != null) { params["system"] = system; }
+    if (depth != null) { params["depth"] = depth; }
+    if (optionsValue != null) { params["options"] = optionsValue; }
     return _client.call("DasaAtTime", parameters: params);
   }
 
-  /// Returns the full Vimshottari Dasa timeline for an entire life starting at birth and scanning forward the given number of years nested down to the requested number of levels. A convenience wrapper over DasaAtRange covering birth to birth scanYears.
+  /// Calls the DasaChartReading API calculator.
   ///
-  /// - `birthTime` (Time): Birth time location of the person.
-  /// - `levels` (int?, optional): How many nested Dasa levels to compute default 3. Server default: 3.
-  /// - `precisionHours` (int?, optional): Sampling step across the lifetime in hours default 24. Server default: 24.
-  /// - `scanYears` (int?, optional): How many years from birth to cover default 100. Server default: 100.
+  /// - `birthTime` (Time): birthTime
+  /// - `atDate` (Time): atDate
   ///
   /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
   /// or null. Read it with `Response.string(...)` and friends, or pass the
@@ -3400,29 +3201,40 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> dasaForLife(Time birthTime,
-      {int? levels, int? precisionHours, int? scanYears}) {
+  Future<Object?> dasaChartReading(Time birthTime, Time atDate) {
+    final params = <String, Object?>{
+      "birthTime": birthTime,
+      "atDate": atDate,
+    };
+    return _client.call("DasaChartReading", parameters: params);
+  }
+
+  /// Raw periods for one systemdefined life. The span comes from the system itself Vimshottari 120 years Ashtottari 108 Sudarsana 12 so there is no range year count or precision to supply. Contains no interpretation text.
+  ///
+  /// - `birthTime` (Time): birthTime
+  /// - `system` (DasaSystem?, optional): system Server default: "Vimshottari".
+  /// - `depth` (int?, optional): depth Server default: 3.
+  /// - `optionsValue` (Object??, optional): options Server default: null.
+  ///
+  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
+  /// or null. Read it with `Response.string(...)` and friends, or pass the
+  /// calculator's own type argument.
+  ///
+  /// Throws [ApiException] when the API rejects the call, and
+  /// [VedAstroException] when the request cannot be completed.
+  Future<Object?> dasaForLife(Time birthTime, {DasaSystem? system, int? depth, Object? optionsValue}) {
     final params = <String, Object?>{
       "birthTime": birthTime,
     };
-    if (levels != null) {
-      params["levels"] = levels;
-    }
-    if (precisionHours != null) {
-      params["precisionHours"] = precisionHours;
-    }
-    if (scanYears != null) {
-      params["scanYears"] = scanYears;
-    }
+    if (system != null) { params["system"] = system; }
+    if (depth != null) { params["depth"] = depth; }
+    if (optionsValue != null) { params["options"] = optionsValue; }
     return _client.call("DasaForLife", parameters: params);
   }
 
-  /// Same as DasaForLife but returns the wholelife Dasa timeline as a compact JSON string instead of a JObject. Useful for callers that want the raw serialized payload directly.
+  /// Which Dasa systems exist which apply to this chart and why. Discovery only no periods are calculated.
   ///
-  /// - `birthTime` (Time): Birth time location of the person.
-  /// - `levels` (int?, optional): How many nested Dasa levels to compute default 3. Server default: 3.
-  /// - `precisionHours` (int?, optional): Sampling step across the lifetime in hours default 24. Server default: 24.
-  /// - `scanYears` (int?, optional): How many years from birth to cover default 100. Server default: 100.
+  /// - `birthTime` (Time): birthTime
   ///
   /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
   /// or null. Read it with `Response.string(...)` and friends, or pass the
@@ -3430,79 +3242,11 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> dasaForLifeString(Time birthTime,
-      {int? levels, int? precisionHours, int? scanYears}) {
+  Future<Object?> dasaSystems(Time birthTime) {
     final params = <String, Object?>{
       "birthTime": birthTime,
     };
-    if (levels != null) {
-      params["levels"] = levels;
-    }
-    if (precisionHours != null) {
-      params["precisionHours"] = precisionHours;
-    }
-    if (scanYears != null) {
-      params["scanYears"] = scanYears;
-    }
-    return _client.call("DasaForLifeString", parameters: params);
-  }
-
-  /// Returns the Vimshottari Dasa periods operating right now current system time at the birth location for the given birth chart nested down to the requested number of levels Maha Dasa Bhukti Antaram .... Handy for what planetary period am I in today.
-  ///
-  /// - `birthTime` (Time): Birth time location of the person.
-  /// - `levels` (int?, optional): How many nested Dasa levels to compute default 3. Server default: 3.
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> dasaForNow(Time birthTime, {int? levels}) {
-    final params = <String, Object?>{
-      "birthTime": birthTime,
-    };
-    if (levels != null) {
-      params["levels"] = levels;
-    }
-    return _client.call("DasaForNow", parameters: params);
-  }
-
-  /// Returns an Ashtakavargabased strength score for a Dasa planet on a 0100 scale. The method calculates the planets Sodya Pinda normalizes it to a percentagelike scale rounds the final result. This can be used as a quick indicator of how strong a Dasa period may be from an Ashtakavarga perspective.
-  ///
-  /// - `dasaPlanet` (PlanetName): The Dasa planet to evaluate.
-  /// - `birthTime` (Time): The natives birth time.
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> dasaPeriodAshtakavargaStrength(
-      PlanetName dasaPlanet, Time birthTime) {
-    final params = <String, Object?>{
-      "dasaPlanet": dasaPlanet,
-      "birthTime": birthTime,
-    };
-    return _client.call("DasaPeriodAshtakavargaStrength", parameters: params);
-  }
-
-  /// Returns the exact day count used for a JHora dasa year.
-  ///
-  /// - `yearDefinition` (JHoraDasaYearDefinition): yearDefinition
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> dasaYearLengthInDays(JHoraDasaYearDefinition yearDefinition) {
-    final params = <String, Object?>{
-      "yearDefinition": yearDefinition,
-    };
-    return _client.call("DasaYearLengthInDays", parameters: params);
+    return _client.call("DasaSystems", parameters: params);
   }
 
   /// Returns the Dashamamsha D10 sign at the specified longitude. The method resolves the ordinary zodiac sign at the longitude and then converts it into the D10 sign.
@@ -3765,8 +3509,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> distanceBetweenPlanets(
-      PlanetName planet1, PlanetName planet2, Time time) {
+  Future<Object?> distanceBetweenPlanets(PlanetName planet1, PlanetName planet2, Time time) {
     final params = <String, Object?>{
       "planet1": planet1,
       "planet2": planet2,
@@ -3926,8 +3669,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> eventEndTime(
-      Time birthTime, Time checkTime, Object? eventData, int precisionInHours) {
+  Future<Object?> eventEndTime(Time birthTime, Time checkTime, Object? eventData, int precisionInHours) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "checkTime": checkTime,
@@ -3949,8 +3691,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> eventStartEndTime(
-      Time birthTime, Time checkTime, EventName nameOfEvent) {
+  Future<Object?> eventStartEndTime(Time birthTime, Time checkTime, EventName nameOfEvent) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "checkTime": checkTime,
@@ -3972,8 +3713,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> eventStartTime(
-      Time birthTime, Time checkTime, Object? eventData, int precisionInHours) {
+  Future<Object?> eventStartTime(Time birthTime, Time checkTime, Object? eventData, int precisionInHours) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "checkTime": checkTime,
@@ -3997,18 +3737,14 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> eventsAtRange(
-      Time birthTime, Time startTime, Time endTime, List<Object?> eventTagList,
-      {int? precisionHours}) {
+  Future<Object?> eventsAtRange(Time birthTime, Time startTime, Time endTime, List<Object?> eventTagList, {int? precisionHours}) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "startTime": startTime,
       "endTime": endTime,
       "eventTagList": eventTagList,
     };
-    if (precisionHours != null) {
-      params["precisionHours"] = precisionHours;
-    }
+    if (precisionHours != null) { params["precisionHours"] = precisionHours; }
     return _client.call("EventsAtRange", parameters: params);
   }
 
@@ -4024,8 +3760,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> eventsAtTime(
-      Time birthTime, Time checkTime, List<Object?> eventTagList) {
+  Future<Object?> eventsAtTime(Time birthTime, Time checkTime, List<Object?> eventTagList) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "checkTime": checkTime,
@@ -4147,15 +3882,35 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> findBirthTimeByAnimal(Time possibleBirthTime,
-      {double? precisionHours}) {
+  Future<Object?> findBirthTimeByAnimal(Time possibleBirthTime, {double? precisionHours}) {
     final params = <String, Object?>{
       "possibleBirthTime": possibleBirthTime,
     };
-    if (precisionHours != null) {
-      params["precisionHours"] = precisionHours;
-    }
+    if (precisionHours != null) { params["precisionHours"] = precisionHours; }
     return _client.call("FindBirthTimeByAnimal", parameters: params);
+  }
+
+  /// Calls the FindBirthTimeByLifeEvents API calculator.
+  ///
+  /// - `birthDateReference` (Time): birthDateReference
+  /// - `lifeEvents` (List<Object?>): lifeEvents
+  /// - `precision` (BirthDatePrecision?, optional): precision Server default: "Day".
+  /// - `optionsValue` (Object??, optional): options Server default: null.
+  ///
+  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
+  /// or null. Read it with `Response.string(...)` and friends, or pass the
+  /// calculator's own type argument.
+  ///
+  /// Throws [ApiException] when the API rejects the call, and
+  /// [VedAstroException] when the request cannot be completed.
+  Future<Object?> findBirthTimeByLifeEvents(Time birthDateReference, List<Object?> lifeEvents, {BirthDatePrecision? precision, Object? optionsValue}) {
+    final params = <String, Object?>{
+      "birthDateReference": birthDateReference,
+      "lifeEvents": lifeEvents,
+    };
+    if (precision != null) { params["precision"] = precision; }
+    if (optionsValue != null) { params["options"] = optionsValue; }
+    return _client.call("FindBirthTimeByLifeEvents", parameters: params);
   }
 
   /// Rectifies finds an unknown birth time using machine learning over physical and personality traits. Scans candidate time slices across the birth day and returns the TimeRange the model judges most consistent with the supplied appearance and temperament body heightshape hair lips nose complexion face shape constitution personality. Uses the RAMAN ayanamsa to match the trained rule set model and precision are configurable.
@@ -4179,19 +3934,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> findBirthTimeByMachineLearning(
-      Time possibleBirthTime,
-      String bodyHeight,
-      String bodyShape,
-      String hair,
-      String lips,
-      String nose,
-      String complexion,
-      String faceShape,
-      String constitution,
-      String personality,
-      {double? precisionHours,
-      BirthTimeModelType? modelType}) {
+  Future<Object?> findBirthTimeByMachineLearning(Time possibleBirthTime, String bodyHeight, String bodyShape, String hair, String lips, String nose, String complexion, String faceShape, String constitution, String personality, {double? precisionHours, BirthTimeModelType? modelType}) {
     final params = <String, Object?>{
       "possibleBirthTime": possibleBirthTime,
       "bodyHeight": bodyHeight,
@@ -4204,12 +3947,8 @@ class Calculators {
       "constitution": constitution,
       "personality": personality,
     };
-    if (precisionHours != null) {
-      params["precisionHours"] = precisionHours;
-    }
-    if (modelType != null) {
-      params["modelType"] = modelType;
-    }
+    if (precisionHours != null) { params["precisionHours"] = precisionHours; }
+    if (modelType != null) { params["modelType"] = modelType; }
     return _client.call("FindBirthTimeByMachineLearning", parameters: params);
   }
 
@@ -4234,19 +3973,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> findBirthTimeByMachineLearningTopK(
-      Time possibleBirthTime,
-      String bodyHeight,
-      String bodyShape,
-      String hair,
-      String lips,
-      String nose,
-      String complexion,
-      String faceShape,
-      String constitution,
-      String personality,
-      {double? precisionHours,
-      BirthTimeModelType? modelType}) {
+  Future<Object?> findBirthTimeByMachineLearningTopK(Time possibleBirthTime, String bodyHeight, String bodyShape, String hair, String lips, String nose, String complexion, String faceShape, String constitution, String personality, {double? precisionHours, BirthTimeModelType? modelType}) {
     final params = <String, Object?>{
       "possibleBirthTime": possibleBirthTime,
       "bodyHeight": bodyHeight,
@@ -4259,14 +3986,9 @@ class Calculators {
       "constitution": constitution,
       "personality": personality,
     };
-    if (precisionHours != null) {
-      params["precisionHours"] = precisionHours;
-    }
-    if (modelType != null) {
-      params["modelType"] = modelType;
-    }
-    return _client.call("FindBirthTimeByMachineLearningTopK",
-        parameters: params);
+    if (precisionHours != null) { params["precisionHours"] = precisionHours; }
+    if (modelType != null) { params["modelType"] = modelType; }
+    return _client.call("FindBirthTimeByMachineLearningTopK", parameters: params);
   }
 
   /// Builds a list of possible birth times for the given day by checking the rising sign Lagna prediction for each time slice. For every generated time slice the method calculates horoscope predictions using the RisingSign event tag selects the first matching prediction stores the result in a JSON object keyed by the time slice. This helps narrow down a possible birth time when the expected rising sign is already known or suspected.
@@ -4280,14 +4002,11 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> findBirthTimeByRisingSign(Time possibleBirthTime,
-      {double? precisionHours}) {
+  Future<Object?> findBirthTimeByRisingSign(Time possibleBirthTime, {double? precisionHours}) {
     final params = <String, Object?>{
       "possibleBirthTime": possibleBirthTime,
     };
-    if (precisionHours != null) {
-      params["precisionHours"] = precisionHours;
-    }
+    if (precisionHours != null) { params["precisionHours"] = precisionHours; }
     return _client.call("FindBirthTimeByRisingSign", parameters: params);
   }
 
@@ -4302,14 +4021,11 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> findBirthTimeHouseStrengthPerson(Time possibleBirthTime,
-      {double? precisionHours}) {
+  Future<Object?> findBirthTimeHouseStrengthPerson(Time possibleBirthTime, {double? precisionHours}) {
     final params = <String, Object?>{
       "possibleBirthTime": possibleBirthTime,
     };
-    if (precisionHours != null) {
-      params["precisionHours"] = precisionHours;
-    }
+    if (precisionHours != null) { params["precisionHours"] = precisionHours; }
     return _client.call("FindBirthTimeHouseStrengthPerson", parameters: params);
   }
 
@@ -4404,17 +4120,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> getActiveNccBodyRulesAtTime(
-      Time birthTime,
-      String bodyHeight,
-      String bodyShape,
-      String hair,
-      String lips,
-      String nose,
-      String complexion,
-      String faceShape,
-      String constitution,
-      String personality) {
+  Future<Object?> getActiveNccBodyRulesAtTime(Time birthTime, String bodyHeight, String bodyShape, String hair, String lips, String nose, String complexion, String faceShape, String constitution, String personality) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "bodyHeight": bodyHeight,
@@ -4444,8 +4150,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    return _client.call("GetAllHouseNirayanaMiddleLongitudes",
-        parameters: params);
+    return _client.call("GetAllHouseNirayanaMiddleLongitudes", parameters: params);
   }
 
   /// Empty sample text
@@ -4475,27 +4180,9 @@ class Calculators {
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
   Future<Object?> getAvailableSourceTexts() {
-    final params = <String, Object?>{};
-    return _client.call("GetAvailableSourceTexts", parameters: params);
-  }
-
-  /// Calculates the active Chara Dasa sign period at a given moment and when found also fills in its subperiods. The method determines the natal Lagna sign builds the Chara Dasa sign order from that Lagna calculates the duration of each Dasa sign generates the full sequence of Dasa periods finds which period contains the requested checkTime computes the subperiods for the active Dasa. This is the main entry point for Chara Dasa lookup in this section.
-  ///
-  /// - `birthTime` (Time): The natives birth time.
-  /// - `checkTime` (Time): The time for which the active Chara Dasa period should be identified.
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> getCharaDasaAtTime(Time birthTime, Time checkTime) {
     final params = <String, Object?>{
-      "birthTime": birthTime,
-      "checkTime": checkTime,
     };
-    return _client.call("GetCharaDasaAtTime", parameters: params);
+    return _client.call("GetAvailableSourceTexts", parameters: params);
   }
 
   /// Returns the times at which a planet benters a new constellationb between two dates. For each detected constellation change the method returns the transition time the new constellation name the zodiac sign occupied at that moment.
@@ -4510,31 +4197,13 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> getConstellationTransitStartTime(
-      Time startTime, Time endTime, PlanetName planetName) {
+  Future<Object?> getConstellationTransitStartTime(Time startTime, Time endTime, PlanetName planetName) {
     final params = <String, Object?>{
       "startTime": startTime,
       "endTime": endTime,
       "planetName": planetName,
     };
     return _client.call("GetConstellationTransitStartTime", parameters: params);
-  }
-
-  /// Returns traditional bDasa interpretation guidance for a given ascendantb. The method 1. selects the list of generally favorable planets for the ascendant 2. selects the list of generally unfavorable planets 3. retrieves a narrative description explaining how those planets behave for that Lagna 4. packages the result into an cAscendantDasaInfoc object. This helper is meant to support Dasa interpretation by giving quick signspecific guidance on which planets are broadly auspicious inauspicious or capable of producing yoga or maraka effects.
-  ///
-  /// - `ascendantName` (ZodiacName): The ascendant sign for which Dasa guidance is required.
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> getDasaInfoForAscendant(ZodiacName ascendantName) {
-    final params = <String, Object?>{
-      "ascendantName": ascendantName,
-    };
-    return _client.call("GetDasaInfoForAscendant", parameters: params);
   }
 
   /// Resolves the full timing window start and end for a single specific event given a moment at which the event is believed to be active. If the event is not active at the supplied check time returns Event.Empty.
@@ -4549,8 +4218,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> getEventTiming(
-      Time birthTime, Time checkTime, EventName nameOfEvent) {
+  Future<Object?> getEventTiming(Time birthTime, Time checkTime, EventName nameOfEvent) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "checkTime": checkTime,
@@ -4641,8 +4309,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> getPlanetSignInDivisionalChart(
-      PlanetName planet, Time time, String divisionalChart) {
+  Future<Object?> getPlanetSignInDivisionalChart(PlanetName planet, Time time, String divisionalChart) {
     final params = <String, Object?>{
       "planet": planet,
       "time": time,
@@ -4697,32 +4364,13 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> getPlanetZodiacSignInDivisionalChart(
-      PlanetName planet, Time time, String divisionalChart) {
+  Future<Object?> getPlanetZodiacSignInDivisionalChart(PlanetName planet, Time time, String divisionalChart) {
     final params = <String, Object?>{
       "planet": planet,
       "time": time,
       "divisionalChart": divisionalChart,
     };
-    return _client.call("GetPlanetZodiacSignInDivisionalChart",
-        parameters: params);
-  }
-
-  /// Empty sample text
-  ///
-  /// - `sign` (ZodiacName): sign
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> getSignLord(ZodiacName sign) {
-    final params = <String, Object?>{
-      "sign": sign,
-    };
-    return _client.call("GetSignLord", parameters: params);
+    return _client.call("GetPlanetZodiacSignInDivisionalChart", parameters: params);
   }
 
   /// Returns a plainEnglish keyword summary for a zodiac sign. The descriptions include traditional sign characteristics such as modality odd or even nature gender elemental quality temperament fertility ascensional type and rising style. This helper is intended to support signbased delineation especially for character and mentaldisposition interpretation.
@@ -4811,8 +4459,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> gocharaZodiacSignCountFromMoon(
-      Time birthTime, Time currentTime, PlanetName planet) {
+  Future<Object?> gocharaZodiacSignCountFromMoon(Time birthTime, Time currentTime, PlanetName planet) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "currentTime": currentTime,
@@ -5022,8 +4669,7 @@ class Calculators {
     final params = <String, Object?>{
       "birthTime": birthTime,
     };
-    return _client.call("HoroscopePredictionAlpacaTemplateLoRA",
-        parameters: params);
+    return _client.call("HoroscopePredictionAlpacaTemplateLoRA", parameters: params);
   }
 
   /// Returns all horoscope predictions whose underlying events are currently true for the given birth chart. The method 1. starts with the full stored prediction list 2. optionally filters by event tags 3. keeps only predictions whose event condition is active 4. optionally calculates a weight score using related planet and house strengths 5. sorts the results by descending weight when requested.
@@ -5038,17 +4684,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> horoscopePredictions(Time birthTime,
-      {List<Object?>? filterTags, bool? sortByWeight}) {
+  Future<Object?> horoscopePredictions(Time birthTime, {List<Object?>? filterTags, bool? sortByWeight}) {
     final params = <String, Object?>{
       "birthTime": birthTime,
     };
-    if (filterTags != null) {
-      params["filterTags"] = filterTags;
-    }
-    if (sortByWeight != null) {
-      params["sortByWeight"] = sortByWeight;
-    }
+    if (filterTags != null) { params["filterTags"] = filterTags; }
+    if (sortByWeight != null) { params["sortByWeight"] = sortByWeight; }
     return _client.call("HoroscopePredictions", parameters: params);
   }
 
@@ -5062,14 +4703,11 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> horoscopePredictionsForLargeAstrologyModelTrainingData(
-      Time birthTime) {
+  Future<Object?> horoscopePredictionsForLargeAstrologyModelTrainingData(Time birthTime) {
     final params = <String, Object?>{
       "birthTime": birthTime,
     };
-    return _client.call(
-        "HoroscopePredictionsForLargeAstrologyModelTrainingData",
-        parameters: params);
+    return _client.call("HoroscopePredictionsForLargeAstrologyModelTrainingData", parameters: params);
   }
 
   /// Returns the Akshavedamsha D45 sign for a house using the midpoint of House 1 as the starting reference. The method finds the D45 sign of House 1 counts forward to the requested house preserves the degree portion from the starting sign.
@@ -5105,8 +4743,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    return _client.call("HouseAllPlanetOccupiesBasedOnLongitudes",
-        parameters: params);
+    return _client.call("HouseAllPlanetOccupiesBasedOnLongitudes", parameters: params);
   }
 
   /// Returns the Bhamsha D27 sign for a house using the midpoint of House 1 as the starting reference. The method 1. finds the D27 sign of House 1 2. counts forward to the requested house 3. preserves the degree component from the starting sign.
@@ -5177,8 +4814,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> houseChaturvimshamshaD24Sign(
-      HouseName houseNumber, Time time) {
+  Future<Object?> houseChaturvimshamshaD24Sign(HouseName houseNumber, Time time) {
     final params = <String, Object?>{
       "houseNumber": houseNumber,
       "time": time,
@@ -5235,8 +4871,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> houseCountedFromInputHouse(
-      int inputHouseNumber, int countToNextHouse) {
+  Future<Object?> houseCountedFromInputHouse(int inputHouseNumber, int countToNextHouse) {
     final params = <String, Object?>{
       "inputHouseNumber": inputHouseNumber,
       "countToNextHouse": countToNextHouse,
@@ -5313,8 +4948,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> houseFromPlanetByAspectOrKendra(
-      PlanetName reference, PlanetName target, Time time) {
+  Future<Object?> houseFromPlanetByAspectOrKendra(PlanetName reference, PlanetName target, Time time) {
     final params = <String, Object?>{
       "reference": reference,
       "target": target,
@@ -5467,14 +5101,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> housePlanetOccupiesBasedOnLongitudes(
-      PlanetName planetName, Time time) {
+  Future<Object?> housePlanetOccupiesBasedOnLongitudes(PlanetName planetName, Time time) {
     final params = <String, Object?>{
       "planetName": planetName,
       "time": time,
     };
-    return _client.call("HousePlanetOccupiesBasedOnLongitudes",
-        parameters: params);
+    return _client.call("HousePlanetOccupiesBasedOnLongitudes", parameters: params);
   }
 
   /// Finds the house occupied by a planet using signbased house assignment. The method gets the planets Rasi sign gets the Rasi sign assigned to every house returns the house whose sign matches the planets sign.
@@ -5488,8 +5120,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> housePlanetOccupiesBasedOnSign(
-      PlanetName planetName, Time time) {
+  Future<Object?> housePlanetOccupiesBasedOnSign(PlanetName planetName, Time time) {
     final params = <String, Object?>{
       "planetName": planetName,
       "time": time,
@@ -5769,8 +5400,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isAllPlanetsInHouse(
-      List<Object?> planetList, HouseName houseNumber, Time time) {
+  Future<Object?> isAllPlanetsInHouse(List<Object?> planetList, HouseName houseNumber, Time time) {
     final params = <String, Object?>{
       "planetList": planetList,
       "houseNumber": houseNumber,
@@ -5791,8 +5421,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isAnyPlanetsInHouse(
-      List<Object?> planetList, HouseName houseNumber, Time time) {
+  Future<Object?> isAnyPlanetsInHouse(List<Object?> planetList, HouseName houseNumber, Time time) {
     final params = <String, Object?>{
       "planetList": planetList,
       "houseNumber": houseNumber,
@@ -5903,8 +5532,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isBeneficsInSignsFromLagna(
-      List<Object?> signsFromList, Time birthTime) {
+  Future<Object?> isBeneficsInSignsFromLagna(List<Object?> signsFromList, Time birthTime) {
     final params = <String, Object?>{
       "signsFromList": signsFromList,
       "birthTime": birthTime,
@@ -5924,8 +5552,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isBeneficsInSignsFromPlanet(
-      List<Object?> signsFromList, PlanetName startPlanet, Time birthTime) {
+  Future<Object?> isBeneficsInSignsFromPlanet(List<Object?> signsFromList, PlanetName startPlanet, Time birthTime) {
     final params = <String, Object?>{
       "signsFromList": signsFromList,
       "startPlanet": startPlanet,
@@ -6016,8 +5643,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    return _client.call("IsEarthquakeJupiterInKendraFromAscendant",
-        parameters: params);
+    return _client.call("IsEarthquakeJupiterInKendraFromAscendant", parameters: params);
   }
 
   /// Two of the worst earthquakes occurred in 1960 perhaps due to JupiterSaturn remaining in the same sign p.73
@@ -6034,8 +5660,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    return _client.call("IsEarthquakeJupiterSaturnConjunction",
-        parameters: params);
+    return _client.call("IsEarthquakeJupiterSaturnConjunction", parameters: params);
   }
 
   /// Jupiter and Saturn are in opposite signs p.73 Assam earthquake 1950 JupiterSaturn opposition is associated with the strongest earthquakes.
@@ -6052,8 +5677,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    return _client.call("IsEarthquakeJupiterSaturnOpposition",
-        parameters: params);
+    return _client.call("IsEarthquakeJupiterSaturnOpposition", parameters: params);
   }
 
   /// Major planets generally occupy airy signs p.66 rule 5 Airy signs Gemini Libra Aquarius. Seven bodies are disposed in mutual Trikona Rasis in airy signs p.68 Threshold 2 of Mars Saturn Rahu Jupiter in airy signs lowered from 3 per audit.
@@ -6070,8 +5694,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    return _client.call("IsEarthquakeMajorPlanetsInAirySigns",
-        parameters: params);
+    return _client.call("IsEarthquakeMajorPlanetsInAirySigns", parameters: params);
   }
 
   /// Major planets generally occupy earthy signs p.66 rule 5 Earthy signs Taurus Virgo Capricorn. Threshold 2 of Mars Saturn Rahu Jupiter in earthy signs lowered from 3 per audit.
@@ -6088,8 +5711,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    return _client.call("IsEarthquakeMajorPlanetsInEarthySigns",
-        parameters: params);
+    return _client.call("IsEarthquakeMajorPlanetsInEarthySigns", parameters: params);
   }
 
   /// The major planets Mars Saturn Rahu and Jupiter will be in mutual angles Kendras or trines Trikonas p.66 rule 3 Checks if at least 3 of these 4 major planets are in KendraTrikona from each other.
@@ -6106,8 +5728,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    return _client.call("IsEarthquakeMajorPlanetsInMutualKendras",
-        parameters: params);
+    return _client.call("IsEarthquakeMajorPlanetsInMutualKendras", parameters: params);
   }
 
   /// Mars was exactly in the 10th house Japan 1923 p.71 Both Jupiter and Saturn are near the lower meridian Persia 1960 p.75 The locality is indicated in places where Saturn or Jupiter is on the meridian p.62 Checks if Saturn Mars or Jupiter are in houses 4 or 10 meridiannadir. NOTE Locationdependent requires geographic location for house calculation.
@@ -6158,8 +5779,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    return _client.call("IsEarthquakeMercurySaturnConjunction",
-        parameters: params);
+    return _client.call("IsEarthquakeMercurySaturnConjunction", parameters: params);
   }
 
   /// The most important feature is again the closeness of the Moon and Mercury p.65 MoonMercury conjunction appears in nearly every earthquake chart in the book. Wider orb version within 10 degrees for general conjunction tracking.
@@ -6176,8 +5796,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    return _client.call("IsEarthquakeMoonMercuryConjunction",
-        parameters: params);
+    return _client.call("IsEarthquakeMoonMercuryConjunction", parameters: params);
   }
 
   /// The most important feature is again the closeness of the Moon and Mercury p.65 EXACT conjunction within 3 degrees strongest form of MoonMercury indicator. Appears in virtually every major earthquake chart in BV Ramans study. Charts China 1976 p.65 Assam 1950 p.72 Agadir 1960 p.74 Iran 1990 p.80.
@@ -6194,8 +5813,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    return _client.call("IsEarthquakeMoonMercuryExactConjunction",
-        parameters: params);
+    return _client.call("IsEarthquakeMoonMercuryExactConjunction", parameters: params);
   }
 
   /// Moon was in perigee Manila 1887 p.69 Moon was near perigee Assam 1950 p.73. Moon at perigee closest to Earth amplifies gravitational stress on tectonic plates. Moons average daily motion is 13.2 degday. At perigee it exceeds 14.5 degday. Uses Moons speed as a proxy for perigee proximity.
@@ -6280,8 +5898,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    return _client.call("IsEarthquakePlanetsClusteredInNarrowArc",
-        parameters: params);
+    return _client.call("IsEarthquakePlanetsClusteredInNarrowArc", parameters: params);
   }
 
   /// The asterism of the day belongs to Prithvi Earth Mandala p.66 rule 6 Using BV Ramans Indra Mandala nakshatras p.28 which he associates with terrestrial disturbances fear from fire poverty crops fail. Nakshatras Rohini Anuradha Jyeshta Uttarashadha Sravana Dhanishta.
@@ -6403,6 +6020,25 @@ class Calculators {
     return _client.call("IsFullMoon", parameters: params);
   }
 
+  /// Whether a transit sits in one of Ramans favourable Gochara positions for that planet. This is only the base classification Raman insists a favourable position guarantees nothing until it is qualified by the planets bindus and by Vedha so read it together with see crefGocharaTransit.Bindu and see crefGocharaTransit.VedhaPartnerOccupied.
+  ///
+  /// - `planet` (PlanetName): The transiting planet the seven classical planets have positions.
+  /// - `houseFromMoon` (int): Inclusive sign count from the natal Moon 1 to 12.
+  ///
+  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
+  /// or null. Read it with `Response.string(...)` and friends, or pass the
+  /// calculator's own type argument.
+  ///
+  /// Throws [ApiException] when the API rejects the call, and
+  /// [VedAstroException] when the request cannot be completed.
+  Future<Object?> isGocharaFavourable(PlanetName planet, int houseFromMoon) {
+    final params = <String, Object?>{
+      "planet": planet,
+      "houseFromMoon": houseFromMoon,
+    };
+    return _client.call("IsGocharaFavourable", parameters: params);
+  }
+
   /// Checks whether a given Gochara transit is obstructed by Vedha Vedhanka. The method looks up the obstruction point for the planet and transit house exits early if no Vedhanka exists finds all planets currently transiting that obstruction house removes the standard exception pairs Sun and Saturn Moon and Mercury returns true if any obstructing planet remains. This method applies the Vedha rule layer used to suppress or modify an otherwise valid Gochara result.
   ///
   /// - `planet` (PlanetName): The transiting planet being evaluated.
@@ -6416,8 +6052,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isGocharaObstructed(
-      PlanetName planet, int gocharaHouse, Time birthTime, Time currentTime) {
+  Future<Object?> isGocharaObstructed(PlanetName planet, int gocharaHouse, Time birthTime, Time currentTime) {
     final params = <String, Object?>{
       "planet": planet,
       "gocharaHouse": gocharaHouse,
@@ -6440,8 +6075,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isGocharaOccurring(
-      Time birthTime, Time time, PlanetName planet, int gocharaHouse) {
+  Future<Object?> isGocharaOccurring(Time birthTime, Time time, PlanetName planet, int gocharaHouse) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "time": time,
@@ -6482,8 +6116,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isHouseAspectedByPlanet(
-      HouseName receiveingAspect, PlanetName transmitingAspect, Time time) {
+  Future<Object?> isHouseAspectedByPlanet(HouseName receiveingAspect, PlanetName transmitingAspect, Time time) {
     final params = <String, Object?>{
       "receiveingAspect": receiveingAspect,
       "transmitingAspect": transmitingAspect,
@@ -6504,15 +6137,13 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isHouseLordInHouseBasedOnLongitudes(
-      HouseName lordHouse, HouseName occupiedHouse, Time time) {
+  Future<Object?> isHouseLordInHouseBasedOnLongitudes(HouseName lordHouse, HouseName occupiedHouse, Time time) {
     final params = <String, Object?>{
       "lordHouse": lordHouse,
       "occupiedHouse": occupiedHouse,
       "time": time,
     };
-    return _client.call("IsHouseLordInHouseBasedOnLongitudes",
-        parameters: params);
+    return _client.call("IsHouseLordInHouseBasedOnLongitudes", parameters: params);
   }
 
   /// Checks whether the lord of one house is located in another specified house using signbased house placement. The method finds the lord of lordHouse finds which house that lord occupies by sign compares the result with occupiedHouse.
@@ -6527,8 +6158,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isHouseLordInHouseBasedOnSign(
-      HouseName lordHouse, HouseName occupiedHouse, Time time) {
+  Future<Object?> isHouseLordInHouseBasedOnSign(HouseName lordHouse, HouseName occupiedHouse, Time time) {
     final params = <String, Object?>{
       "lordHouse": lordHouse,
       "occupiedHouse": occupiedHouse,
@@ -6837,17 +6467,13 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetAfflictedSpecificallyByPlanets(
-      PlanetName afflictedPlanet,
-      List<Object?> damagingPlanets,
-      Time birthTime) {
+  Future<Object?> isPlanetAfflictedSpecificallyByPlanets(PlanetName afflictedPlanet, List<Object?> damagingPlanets, Time birthTime) {
     final params = <String, Object?>{
       "afflictedPlanet": afflictedPlanet,
       "damagingPlanets": damagingPlanets,
       "birthTime": birthTime,
     };
-    return _client.call("IsPlanetAfflictedSpecificallyByPlanets",
-        parameters: params);
+    return _client.call("IsPlanetAfflictedSpecificallyByPlanets", parameters: params);
   }
 
   /// Checks whether a planet receives an aspect from any lagnaspecific benefic planet. The method delegates to BeneficPlanetsAspectingPlanet....
@@ -6880,8 +6506,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetAspectedByEnemyPlanets(
-      PlanetName inputPlanet, Time time) {
+  Future<Object?> isPlanetAspectedByEnemyPlanets(PlanetName inputPlanet, Time time) {
     final params = <String, Object?>{
       "inputPlanet": inputPlanet,
       "time": time,
@@ -6900,8 +6525,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetAspectedByFriendPlanets(
-      PlanetName inputPlanet, Time time) {
+  Future<Object?> isPlanetAspectedByFriendPlanets(PlanetName inputPlanet, Time time) {
     final params = <String, Object?>{
       "inputPlanet": inputPlanet,
       "time": time,
@@ -6920,8 +6544,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetAspectedByMaleficPlanets(
-      PlanetName receivingAspect, Time time) {
+  Future<Object?> isPlanetAspectedByMaleficPlanets(PlanetName receivingAspect, Time time) {
     final params = <String, Object?>{
       "receivingAspect": receivingAspect,
       "time": time,
@@ -6940,14 +6563,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetAspectedByPhysicallyHarmfulPlanets(
-      PlanetName planetReceivingAspect, Time time) {
+  Future<Object?> isPlanetAspectedByPhysicallyHarmfulPlanets(PlanetName planetReceivingAspect, Time time) {
     final params = <String, Object?>{
       "planetReceivingAspect": planetReceivingAspect,
       "time": time,
     };
-    return _client.call("IsPlanetAspectedByPhysicallyHarmfulPlanets",
-        parameters: params);
+    return _client.call("IsPlanetAspectedByPhysicallyHarmfulPlanets", parameters: params);
   }
 
   /// Checks whether one planet aspects another planet. The method gets all planets aspected by the transmitting planet checks whether the receiving planet appears in that list.
@@ -6962,8 +6583,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetAspectedByPlanet(
-      PlanetName receiveingAspect, PlanetName transmitingAspect, Time time) {
+  Future<Object?> isPlanetAspectedByPlanet(PlanetName receiveingAspect, PlanetName transmitingAspect, Time time) {
     final params = <String, Object?>{
       "receiveingAspect": receiveingAspect,
       "transmitingAspect": transmitingAspect,
@@ -6984,8 +6604,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetAspectingHouse(
-      PlanetName planet, HouseName house, Time time) {
+  Future<Object?> isPlanetAspectingHouse(PlanetName planet, HouseName house, Time time) {
     final params = <String, Object?>{
       "planet": planet,
       "house": house,
@@ -7043,8 +6662,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetBeneficLordForLagna(
-      PlanetName planetName, Time birthTime) {
+  Future<Object?> isPlanetBeneficLordForLagna(PlanetName planetName, Time birthTime) {
     final params = <String, Object?>{
       "planetName": planetName,
       "birthTime": birthTime,
@@ -7101,14 +6719,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetConjunctWithBeneficPlanets(
-      PlanetName inputPlanet, Time time) {
+  Future<Object?> isPlanetConjunctWithBeneficPlanets(PlanetName inputPlanet, Time time) {
     final params = <String, Object?>{
       "inputPlanet": inputPlanet,
       "time": time,
     };
-    return _client.call("IsPlanetConjunctWithBeneficPlanets",
-        parameters: params);
+    return _client.call("IsPlanetConjunctWithBeneficPlanets", parameters: params);
   }
 
   /// Checks whether a planet is conjunct with any enemy planet. The method delegates to AllPlanetsInEnemyConjunctionWith....
@@ -7122,8 +6738,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetConjunctWithEnemyPlanets(
-      PlanetName inputPlanet, Time time) {
+  Future<Object?> isPlanetConjunctWithEnemyPlanets(PlanetName inputPlanet, Time time) {
     final params = <String, Object?>{
       "inputPlanet": inputPlanet,
       "time": time,
@@ -7142,14 +6757,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetConjunctWithFriendPlanets(
-      PlanetName inputPlanet, Time time) {
+  Future<Object?> isPlanetConjunctWithFriendPlanets(PlanetName inputPlanet, Time time) {
     final params = <String, Object?>{
       "inputPlanet": inputPlanet,
       "time": time,
     };
-    return _client.call("IsPlanetConjunctWithFriendPlanets",
-        parameters: params);
+    return _client.call("IsPlanetConjunctWithFriendPlanets", parameters: params);
   }
 
   /// Checks whether a planet is conjunct with any functional malefic planet for the charts Lagna. The method gets the lagnaspecific malefic planet list gets the planets conjunct the input planet returns whether any conjunct planet appears in the malefic list.
@@ -7163,14 +6776,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetConjunctWithMaleficPlanets(
-      PlanetName planetName, Time time) {
+  Future<Object?> isPlanetConjunctWithMaleficPlanets(PlanetName planetName, Time time) {
     final params = <String, Object?>{
       "planetName": planetName,
       "time": time,
     };
-    return _client.call("IsPlanetConjunctWithMaleficPlanets",
-        parameters: params);
+    return _client.call("IsPlanetConjunctWithMaleficPlanets", parameters: params);
   }
 
   /// Checks whether a planet is conjunct with any physically harmful planet. The method delegates to AllPhysicallyHarmfulPlanetsConjunctWith... and returns whether that list contains any matching planets.
@@ -7184,14 +6795,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetConjunctWithPhysicallyHarmfulPlanets(
-      PlanetName planetName, Time time) {
+  Future<Object?> isPlanetConjunctWithPhysicallyHarmfulPlanets(PlanetName planetName, Time time) {
     final params = <String, Object?>{
       "planetName": planetName,
       "time": time,
     };
-    return _client.call("IsPlanetConjunctWithPhysicallyHarmfulPlanets",
-        parameters: params);
+    return _client.call("IsPlanetConjunctWithPhysicallyHarmfulPlanets", parameters: params);
   }
 
   /// Checks whether two planets are conjunct. The method gets the conjunction list for planetA gets the conjunction list for planetB confirms that each planet appears in the others conjunction list.
@@ -7206,8 +6815,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetConjunctWithPlanet(
-      PlanetName planetA, PlanetName planetB, Time time) {
+  Future<Object?> isPlanetConjunctWithPlanet(PlanetName planetA, PlanetName planetB, Time time) {
     final params = <String, Object?>{
       "planetA": planetA,
       "planetB": planetB,
@@ -7362,8 +6970,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetGocharaBindu(
-      Time birthTime, Time nowTime, PlanetName planet, int bindu) {
+  Future<Object?> isPlanetGocharaBindu(Time birthTime, Time nowTime, PlanetName planet, int bindu) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "nowTime": nowTime,
@@ -7386,8 +6993,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetGocharaBinduResult(
-      Time birthTime, Time nowTime, PlanetName planet, int bindu) {
+  Future<Object?> isPlanetGocharaBinduResult(Time birthTime, Time nowTime, PlanetName planet, int bindu) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "nowTime": nowTime,
@@ -7427,8 +7033,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetInBadAspectToHouse(
-      HouseName receivingAspect, Time time) {
+  Future<Object?> isPlanetInBadAspectToHouse(HouseName receivingAspect, Time time) {
     final params = <String, Object?>{
       "receivingAspect": receivingAspect,
       "time": time,
@@ -7600,8 +7205,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetInGoodAspectToHouse(
-      HouseName receivingAspect, PlanetName transmitingAspect, Time time) {
+  Future<Object?> isPlanetInGoodAspectToHouse(HouseName receivingAspect, PlanetName transmitingAspect, Time time) {
     final params = <String, Object?>{
       "receivingAspect": receivingAspect,
       "transmitingAspect": transmitingAspect,
@@ -7622,8 +7226,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetInGoodAspectToPlanet(
-      PlanetName receivingAspect, PlanetName transmitingAspect, Time time) {
+  Future<Object?> isPlanetInGoodAspectToPlanet(PlanetName receivingAspect, PlanetName transmitingAspect, Time time) {
     final params = <String, Object?>{
       "receivingAspect": receivingAspect,
       "transmitingAspect": transmitingAspect,
@@ -7663,8 +7266,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetInHouseBasedOnLongitudes(
-      PlanetName planet, HouseName houseNumber, Time time) {
+  Future<Object?> isPlanetInHouseBasedOnLongitudes(PlanetName planet, HouseName houseNumber, Time time) {
     final params = <String, Object?>{
       "planet": planet,
       "houseNumber": houseNumber,
@@ -7685,8 +7287,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetInHouseBasedOnSign(
-      PlanetName planet, HouseName houseNumber, Time time) {
+  Future<Object?> isPlanetInHouseBasedOnSign(PlanetName planet, HouseName houseNumber, Time time) {
     final params = <String, Object?>{
       "planet": planet,
       "houseNumber": houseNumber,
@@ -7707,8 +7308,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetInHouseKP(
-      List<Object?> cusps, Object? planetNirayanaDegrees, HouseName house) {
+  Future<Object?> isPlanetInHouseKP(List<Object?> cusps, Object? planetNirayanaDegrees, HouseName house) {
     final params = <String, Object?>{
       "cusps": cusps,
       "planetNirayanaDegrees": planetNirayanaDegrees,
@@ -7748,8 +7348,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetInKendraFromPlanet(
-      PlanetName kendraFrom, PlanetName kendraTo, Time time) {
+  Future<Object?> isPlanetInKendraFromPlanet(PlanetName kendraFrom, PlanetName kendraTo, Time time) {
     final params = <String, Object?>{
       "kendraFrom": kendraFrom,
       "kendraTo": kendraTo,
@@ -7903,8 +7502,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetInSign(
-      PlanetName planetName, ZodiacName signInput, Time time) {
+  Future<Object?> isPlanetInSign(PlanetName planetName, ZodiacName signInput, Time time) {
     final params = <String, Object?>{
       "planetName": planetName,
       "signInput": signInput,
@@ -8019,8 +7617,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetMaleficLordForLagna(
-      PlanetName planetName, Time birthTime) {
+  Future<Object?> isPlanetMaleficLordForLagna(PlanetName planetName, Time birthTime) {
     final params = <String, Object?>{
       "planetName": planetName,
       "birthTime": birthTime,
@@ -8111,8 +7708,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetNeutralForLagna(
-      PlanetName planetName, Time birthTime) {
+  Future<Object?> isPlanetNeutralForLagna(PlanetName planetName, Time birthTime) {
     final params = <String, Object?>{
       "planetName": planetName,
       "birthTime": birthTime,
@@ -8150,8 +7746,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetReceivingBadAspects(
-      PlanetName receivingAspect, Time time) {
+  Future<Object?> isPlanetReceivingBadAspects(PlanetName receivingAspect, Time time) {
     final params = <String, Object?>{
       "receivingAspect": receivingAspect,
       "time": time,
@@ -8170,14 +7765,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetReceivingHarmfulConjunctions(
-      PlanetName inputPlanet, Time time) {
+  Future<Object?> isPlanetReceivingHarmfulConjunctions(PlanetName inputPlanet, Time time) {
     final params = <String, Object?>{
       "inputPlanet": inputPlanet,
       "time": time,
     };
-    return _client.call("IsPlanetReceivingHarmfulConjunctions",
-        parameters: params);
+    return _client.call("IsPlanetReceivingHarmfulConjunctions", parameters: params);
   }
 
   /// Checks whether a planet is retrograde at the supplied time. The method handles special fixed cases calculates the planets speed or motion condition returns whether the planet is moving in reverse zodiacal direction.
@@ -8211,8 +7804,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetSameHouseWithHouseLord(
-      int houseNumber, PlanetName planet, Time birthTime) {
+  Future<Object?> isPlanetSameHouseWithHouseLord(int houseNumber, PlanetName planet, Time birthTime) {
     final params = <String, Object?>{
       "houseNumber": houseNumber,
       "planet": planet,
@@ -8289,8 +7881,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetYogakarakaToLagna(
-      PlanetName planetName, Time birthTime) {
+  Future<Object?> isPlanetYogakarakaToLagna(PlanetName planetName, Time birthTime) {
     final params = <String, Object?>{
       "planetName": planetName,
       "birthTime": birthTime,
@@ -8310,8 +7901,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetsInSignsFromLagna(
-      List<Object?> signsFromList, List<Object?> planetList, Time birthTime) {
+  Future<Object?> isPlanetsInSignsFromLagna(List<Object?> signsFromList, List<Object?> planetList, Time birthTime) {
     final params = <String, Object?>{
       "signsFromList": signsFromList,
       "planetList": planetList,
@@ -8333,8 +7923,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> isPlanetsInSignsFromPlanet(List<Object?> signsFromList,
-      List<Object?> planetList, PlanetName startPlanet, Time birthTime) {
+  Future<Object?> isPlanetsInSignsFromPlanet(List<Object?> signsFromList, List<Object?> planetList, PlanetName startPlanet, Time birthTime) {
     final params = <String, Object?>{
       "signsFromList": signsFromList,
       "planetList": planetList,
@@ -8546,40 +8135,6 @@ class Calculators {
       "inputTime": inputTime,
     };
     return _client.call("KalaSarpaYoga", parameters: params);
-  }
-
-  /// Calculates Kalachakra Chart. Kalachakra chart maps Moon Nakshatra Pada into the corresponding Rasi sequence used for Kalachakra Dasa calculations. Based on Jagannatha Hora Kalachakra system. Returns Moon longitude Nakshatra Pada Kalachakra group Starting sign Direction sequence
-  ///
-  /// - `time` (Time): Birth time.
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> kalachakraChart(Time time) {
-    final params = <String, Object?>{
-      "time": time,
-    };
-    return _client.call("KalachakraChart", parameters: params);
-  }
-
-  /// Calculates Kalachakra Dasa. Kalachakra Dasa is a Rasi based predictive system derived from Moon Nakshatra Pada. Uses KalachakraChart Rasi sequence Sign lords Classical sign years
-  ///
-  /// - `time` (Time): Birth chart time.
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> kalachakraDasa(Time time) {
-    final params = <String, Object?>{
-      "time": time,
-    };
-    return _client.call("KalachakraDasa", parameters: params);
   }
 
   /// Calculates the Karana which is half of a lunar day or Tithi. The method calculates the angular separation between the Moon and Sun converts that separation into a raw lunarday value determines the current Tithi checks whether the time is in the first or second half of the Tithi maps that position to the correct Karana.
@@ -9013,9 +8568,7 @@ class Calculators {
     final params = <String, Object?>{
       "inputTime": inputTime,
     };
-    if (ignoreLeapMonth != null) {
-      params["ignoreLeapMonth"] = ignoreLeapMonth;
-    }
+    if (ignoreLeapMonth != null) { params["ignoreLeapMonth"] = ignoreLeapMonth; }
     return _client.call("LunarMonth", parameters: params);
   }
 
@@ -9102,8 +8655,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> maleficHouseListByShadbala(
-      Time personBirthTime, int threshold) {
+  Future<Object?> maleficHouseListByShadbala(Time personBirthTime, int threshold) {
     final params = <String, Object?>{
       "personBirthTime": personBirthTime,
       "threshold": threshold,
@@ -9122,8 +8674,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> maleficPlanetListByShadbala(
-      Time personBirthTime, int threshold) {
+  Future<Object?> maleficPlanetListByShadbala(Time personBirthTime, int threshold) {
     final params = <String, Object?>{
       "personBirthTime": personBirthTime,
       "threshold": threshold,
@@ -9178,8 +8729,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> maleficPlanetsAspectingPlanet(
-      PlanetName receivingAspect, Time time) {
+  Future<Object?> maleficPlanetsAspectingPlanet(PlanetName receivingAspect, Time time) {
     final params = <String, Object?>{
       "receivingAspect": receivingAspect,
       "time": time,
@@ -9308,44 +8858,7 @@ class Calculators {
     return _client.call("MentalBalanceByJupiter", parameters: params);
   }
 
-  /// Builds JHoras Moola Dasa recovered from FUN_00410CD0 together with FUN_004AB650 FUN_004AB730 and FUN_004AD280. The strongest enabled candidate among Lagna Moon and Sun supplies the starting sign. Planets are then collected through the native kendrapanapharaapoklima sign sequence. Every planet has two complementary periods whose total is its Vimshottari allotment. Civil boundaries are exact returns of the natal sidereal Sun.
-  ///
-  /// - `time` (Time): time
-  /// - `useLagna` (bool?, optional): useLagna Server default: true.
-  /// - `useMoon` (bool?, optional): useMoon Server default: true.
-  /// - `useSun` (bool?, optional): useSun Server default: true.
-  /// - `noCorrectionInMoolatrikona` (bool?, optional): noCorrectionInMoolatrikona Server default: false.
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> moolaDasa(Time time,
-      {bool? useLagna,
-      bool? useMoon,
-      bool? useSun,
-      bool? noCorrectionInMoolatrikona}) {
-    final params = <String, Object?>{
-      "time": time,
-    };
-    if (useLagna != null) {
-      params["useLagna"] = useLagna;
-    }
-    if (useMoon != null) {
-      params["useMoon"] = useMoon;
-    }
-    if (useSun != null) {
-      params["useSun"] = useSun;
-    }
-    if (noCorrectionInMoolatrikona != null) {
-      params["noCorrectionInMoolatrikona"] = noCorrectionInMoolatrikona;
-    }
-    return _client.call("MoolaDasa", parameters: params);
-  }
-
-  /// Returns the constellation occupied by a planet. The method gets the planets Nirayana longitude and maps that longitude to a constellation.
+  /// Returns the Moons constellation at the supplied chart time.
   ///
   /// - `time` (Time): The chart time.
   ///
@@ -9510,8 +9023,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> murthi(
-      PlanetName transitPlanet, Time checkTime, Time birthTime) {
+  Future<Object?> murthi(PlanetName transitPlanet, Time checkTime, Time birthTime) {
     final params = <String, Object?>{
       "transitPlanet": transitPlanet,
       "checkTime": checkTime,
@@ -9605,23 +9117,6 @@ class Calculators {
     return _client.call("NameNumberPrediction", parameters: params);
   }
 
-  /// Builds JHoras default D1 Narayana mahadasas recovered from FUN_00414060 and FUN_004ACC50. The second twelvesign cycle uses the native 12Y complements including zeroduration periods and civil boundaries are exact sidereal solar returns.
-  ///
-  /// - `time` (Time): time
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> narayanaDasa(Time time) {
-    final params = <String, Object?>{
-      "time": time,
-    };
-    return _client.call("NarayanaDasa", parameters: params);
-  }
-
   /// Returns the Jupiterbased Ashtakavarga transit prediction related to the natives death timing.
   ///
   /// - `t` (Time): t
@@ -9683,7 +9178,8 @@ class Calculators {
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
   Future<Object?> naturalBeneficPlanetList() {
-    final params = <String, Object?>{};
+    final params = <String, Object?>{
+    };
     return _client.call("NaturalBeneficPlanetList", parameters: params);
   }
 
@@ -9697,7 +9193,8 @@ class Calculators {
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
   Future<Object?> naturalMaleficPlanetList() {
-    final params = <String, Object?>{};
+    final params = <String, Object?>{
+    };
     return _client.call("NaturalMaleficPlanetList", parameters: params);
   }
 
@@ -9920,9 +9417,7 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    if (chartType != null) {
-      params["chartType"] = chartType;
-    }
+    if (chartType != null) { params["chartType"] = chartType; }
     return _client.call("NorthIndianChart", parameters: params);
   }
 
@@ -9977,6 +9472,40 @@ class Calculators {
     return _client.call("PaapaKartariPlanets", parameters: params);
   }
 
+  /// The relative strength factor of each activity Ruling strongest Dying weakest from Table No. 5. Multiplied against see crefPanchaPakshiBirdStrength to get a persons combined vibrational strength at a moment.
+  ///
+  /// - `activity` (BirdActivity): activity
+  ///
+  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
+  /// or null. Read it with `Response.string(...)` and friends, or pass the
+  /// calculator's own type argument.
+  ///
+  /// Throws [ApiException] when the API rejects the call, and
+  /// [VedAstroException] when the request cannot be completed.
+  Future<Object?> panchaPakshiActivityFactor(BirdActivity activity) {
+    final params = <String, Object?>{
+      "activity": activity,
+    };
+    return _client.call("PanchaPakshiActivityFactor", parameters: params);
+  }
+
+  /// The natural vibrational strength of each bird from the books Comparative Strength Analysis Table No. 5. Crow is the strongest bird and Peacock the weakest. Used to decide which of two people wins when they face each other.
+  ///
+  /// - `bird` (BirdName): bird
+  ///
+  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
+  /// or null. Read it with `Response.string(...)` and friends, or pass the
+  /// calculator's own type argument.
+  ///
+  /// Throws [ApiException] when the API rejects the call, and
+  /// [VedAstroException] when the request cannot be completed.
+  Future<Object?> panchaPakshiBirdStrength(BirdName bird) {
+    final params = <String, Object?>{
+      "bird": bird,
+    };
+    return _client.call("PanchaPakshiBirdStrength", parameters: params);
+  }
+
   /// Returns the persons Pancha Pakshi birthbird one of the five birds Vulture Owl Crow Cock or Peacock from their birth time. The bird is assigned from the ruling Moon constellation nakshatra at birth choosing between the waxingMoon and waningMoon bird groupings. The birthbird is the foundation of all Pancha Pakshi timing predictions for that person.
   ///
   /// - `birthTime` (Time): Birth time of the person.
@@ -9992,6 +9521,77 @@ class Calculators {
       "birthTime": birthTime,
     };
     return _client.call("PanchaPakshiBirthBird", parameters: params);
+  }
+
+  /// Compares two people at one moment and reports who is vibrationally stronger wins. Each persons combined strength natural bird strength activity factor exactly the model the book uses in its courtship worked example Vulture 75 Ruling beats Peacock 12.5 Walking and in the boss example when the boss is at a lower vibration the former succeeds. A higher strength wins equal strengths are a tie.
+  ///
+  /// - `personA` (Time): Birth time of the first person their stellar birthbird is fixed from this.
+  /// - `personB` (Time): Birth time of the second person.
+  /// - `checkTime` (Time): The moment to compare the two people at.
+  ///
+  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
+  /// or null. Read it with `Response.string(...)` and friends, or pass the
+  /// calculator's own type argument.
+  ///
+  /// Throws [ApiException] when the API rejects the call, and
+  /// [VedAstroException] when the request cannot be completed.
+  Future<Object?> panchaPakshiCompare(Time personA, Time personB, Time checkTime) {
+    final params = <String, Object?>{
+      "personA": personA,
+      "personB": personB,
+      "checkTime": checkTime,
+    };
+    return _client.call("PanchaPakshiCompare", parameters: params);
+  }
+
+  /// Scans a time window and returns for each sample which of the two people is stronger see see crefPanchaPakshiCompare. Use it to find the hours in a dayweekmonth year when person A can get their way with person B ask for a promotion court compete and the hours to avoid. The sample step is clamped so the answer never exceeds 2000 rows.
+  ///
+  /// - `personA` (Time): Birth time of the first person.
+  /// - `personB` (Time): Birth time of the second person.
+  /// - `startTime` (Time): First moment of the window to scan.
+  /// - `endTime` (Time): Last moment of the window to scan.
+  /// - `precisionHours` (double?, optional): Step between samples in hours default 1. Values lt 0 give a single sample at paramref namestartTime. Server default: 1.
+  ///
+  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
+  /// or null. Read it with `Response.string(...)` and friends, or pass the
+  /// calculator's own type argument.
+  ///
+  /// Throws [ApiException] when the API rejects the call, and
+  /// [VedAstroException] when the request cannot be completed.
+  Future<Object?> panchaPakshiTimeline(Time personA, Time personB, Time startTime, Time endTime, {double? precisionHours}) {
+    final params = <String, Object?>{
+      "personA": personA,
+      "personB": personB,
+      "startTime": startTime,
+      "endTime": endTime,
+    };
+    if (precisionHours != null) { params["precisionHours"] = precisionHours; }
+    return _client.call("PanchaPakshiTimeline", parameters: params);
+  }
+
+  /// Convenience overload of see crefPanchaPakshiTimeline that derives the window end from a duration instead of a second time so callers only need one checktime URL. Used by the websites twoperson who wins tool.
+  ///
+  /// - `personA` (Time): Birth time of the first person.
+  /// - `personB` (Time): Birth time of the second person.
+  /// - `startTime` (Time): First moment of the window to scan.
+  /// - `durationHours` (double?, optional): Length of the window in hours 1 day 24 1 week 168 1 year 8760. Server default: 24.
+  /// - `precisionHours` (double?, optional): Step between samples in hours default 1. Server default: 1.
+  ///
+  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
+  /// or null. Read it with `Response.string(...)` and friends, or pass the
+  /// calculator's own type argument.
+  ///
+  /// Throws [ApiException] when the API rejects the call, and
+  /// [VedAstroException] when the request cannot be completed.
+  Future<Object?> panchaPakshiTimelineByDuration(Time personA, Time personB, Time startTime, {double? durationHours, double? precisionHours}) {
+    final params = <String, Object?>{
+      "personA": personA,
+      "personB": personB,
+      "startTime": startTime,
+    };
+    if (durationHours != null) { params["durationHours"] = durationHours; }
+    if (precisionHours != null) { params["precisionHours"] = precisionHours; }
+    return _client.call("PanchaPakshiTimelineByDuration", parameters: params);
   }
 
   /// Calculates the Panchaka classification for a given time. The method gets the lunar day number gets the Moon constellation number gets the weekday number gets the rising sign number adds them together divides the total by 9 maps the remainder to a Panchaka name.
@@ -10090,14 +9690,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> physicallyHarmfulPlanetsAspectingHouse(
-      HouseName house, Time time) {
+  Future<Object?> physicallyHarmfulPlanetsAspectingHouse(HouseName house, Time time) {
     final params = <String, Object?>{
       "house": house,
       "time": time,
     };
-    return _client.call("PhysicallyHarmfulPlanetsAspectingHouse",
-        parameters: params);
+    return _client.call("PhysicallyHarmfulPlanetsAspectingHouse", parameters: params);
   }
 
   /// Selects the strongest planet from a supplied list based on Shadbala. The method returns immediately if the list contains only one planet calculates Shadbala strength for each planet selects the planet with the highest strength value.
@@ -10111,8 +9709,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> pickOutStrongestPlanet(
-      List<Object?> relatedPlanets, Time birthTime) {
+  Future<Object?> pickOutStrongestPlanet(List<Object?> relatedPlanets, Time birthTime) {
     final params = <String, Object?>{
       "relatedPlanets": relatedPlanets,
       "birthTime": birthTime,
@@ -10170,8 +9767,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetAshtakavargaReducedBindu(
-      PlanetName planet, ZodiacName sign, Time birthTime) {
+  Future<Object?> planetAshtakavargaReducedBindu(PlanetName planet, ZodiacName sign, Time birthTime) {
     final params = <String, Object?>{
       "planet": planet,
       "sign": sign,
@@ -10191,8 +9787,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetAshtakavargaReductions(
-      PlanetName planet, Time birthTime) {
+  Future<Object?> planetAshtakavargaReductions(PlanetName planet, Time birthTime) {
     final params = <String, Object?>{
       "planet": planet,
       "birthTime": birthTime,
@@ -10212,8 +9807,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetAshtakvargaBindu(
-      PlanetName planet, ZodiacName signToCheck, Time time) {
+  Future<Object?> planetAshtakvargaBindu(PlanetName planet, ZodiacName signToCheck, Time time) {
     final params = <String, Object?>{
       "planet": planet,
       "signToCheck": signToCheck,
@@ -10234,8 +9828,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetAshtakvargaBinduByPlanet(
-      PlanetName mainAshtakvargaPlanet, PlanetName planetToCheck, Time time) {
+  Future<Object?> planetAshtakvargaBinduByPlanet(PlanetName mainAshtakvargaPlanet, PlanetName planetToCheck, Time time) {
     final params = <String, Object?>{
       "mainAshtakvargaPlanet": mainAshtakvargaPlanet,
       "planetToCheck": planetToCheck,
@@ -10256,8 +9849,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetAspectDegree(
-      PlanetName receiver, PlanetName trasmitter, Time time) {
+  Future<Object?> planetAspectDegree(PlanetName receiver, PlanetName trasmitter, Time time) {
     final params = <String, Object?>{
       "receiver": receiver,
       "trasmitter": trasmitter,
@@ -10353,8 +9945,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetChaturvimshamshaD24Sign(
-      PlanetName planetName, Time time) {
+  Future<Object?> planetChaturvimshamshaD24Sign(PlanetName planetName, Time time) {
     final params = <String, Object?>{
       "planetName": planetName,
       "time": time,
@@ -10374,15 +9965,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetChestaBala(PlanetName planetName, Time time,
-      {bool? useSpecialSunMoon}) {
+  Future<Object?> planetChestaBala(PlanetName planetName, Time time, {bool? useSpecialSunMoon}) {
     final params = <String, Object?>{
       "planetName": planetName,
       "time": time,
     };
-    if (useSpecialSunMoon != null) {
-      params["useSpecialSunMoon"] = useSpecialSunMoon;
-    }
+    if (useSpecialSunMoon != null) { params["useSpecialSunMoon"] = useSpecialSunMoon; }
     return _client.call("PlanetChestaBala", parameters: params);
   }
 
@@ -10415,15 +10003,13 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetCombinedRelationshipWithPlanet(
-      PlanetName mainPlanet, PlanetName secondaryPlanet, Time time) {
+  Future<Object?> planetCombinedRelationshipWithPlanet(PlanetName mainPlanet, PlanetName secondaryPlanet, Time time) {
     final params = <String, Object?>{
       "mainPlanet": mainPlanet,
       "secondaryPlanet": secondaryPlanet,
       "time": time,
     };
-    return _client.call("PlanetCombinedRelationshipWithPlanet",
-        parameters: params);
+    return _client.call("PlanetCombinedRelationshipWithPlanet", parameters: params);
   }
 
   /// Gets the constellation behind a planet at a given time
@@ -10443,27 +10029,6 @@ class Calculators {
       "time": time,
     };
     return _client.call("PlanetConstellation", parameters: params);
-  }
-
-  /// Reference Bhava Graha Bala pg. 104 A planet with more lshta Phala is always supposed to be inclined to do good in its Dasa or Bhukti while a planet with more Kashta Phala is supposed to give rise to more evil results. In case of Venus in the Standard Horoscope the Kashta predominates over Ishta. Therefore in his Dasa or Bhukti Venus will give aJl sorts of miseries with regard to the bhavas ruled or aspected by him. As lord of the 5th house in such a circumstance Saturn is sure to cause loss of children and producing evil on this account.
-  ///
-  /// - `planetName` (PlanetName): planetName
-  /// - `birthTime` (Time): birthTime
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetDasaEffectsBasedOnIshtaKashta(
-      PlanetName planetName, Time birthTime) {
-    final params = <String, Object?>{
-      "planetName": planetName,
-      "birthTime": birthTime,
-    };
-    return _client.call("PlanetDasaEffectsBasedOnIshtaKashta",
-        parameters: params);
   }
 
   /// Returns the planets Dashamamsha D10 sign at the given time. The method converts the planets Rasi sign into its D10 equivalent.
@@ -10571,8 +10136,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetDignityInDivisionalChart(
-      PlanetName planet, Time time, String divisionalChart) {
+  Future<Object?> planetDignityInDivisionalChart(PlanetName planet, Time time, String divisionalChart) {
     final params = <String, Object?>{
       "planet": planet,
       "time": time,
@@ -10593,8 +10157,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetDivisionalLongitude(
-      PlanetName planetName, Time inputTime, int divisionalNo) {
+  Future<Object?> planetDivisionalLongitude(PlanetName planetName, Time inputTime, int divisionalNo) {
     final params = <String, Object?>{
       "planetName": planetName,
       "inputTime": inputTime,
@@ -10836,8 +10399,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetIshtaKashtaScoreDegree(
-      PlanetName planet, Time birthTime) {
+  Future<Object?> planetIshtaKashtaScoreDegree(PlanetName planet, Time birthTime) {
     final params = <String, Object?>{
       "planet": planet,
       "birthTime": birthTime,
@@ -11065,8 +10627,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetNatureScore(
-      Time personBirthTime, PlanetName inputPlanet) {
+  Future<Object?> planetNatureScore(Time personBirthTime, PlanetName inputPlanet) {
     final params = <String, Object?>{
       "personBirthTime": personBirthTime,
       "inputPlanet": inputPlanet,
@@ -11233,14 +10794,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetPermanentRelationshipWithPlanet(
-      PlanetName mainPlanet, PlanetName secondaryPlanet) {
+  Future<Object?> planetPermanentRelationshipWithPlanet(PlanetName mainPlanet, PlanetName secondaryPlanet) {
     final params = <String, Object?>{
       "mainPlanet": mainPlanet,
       "secondaryPlanet": secondaryPlanet,
     };
-    return _client.call("PlanetPermanentRelationshipWithPlanet",
-        parameters: params);
+    return _client.call("PlanetPermanentRelationshipWithPlanet", parameters: params);
   }
 
   /// Converts a planets Shadbala strength into a relative percentage score. The method calculates the strength of all planets finds the strength of the requested planet identifies the weakest and strongest planet values remaps the requested planets strength onto a 0100 scale.
@@ -11293,8 +10852,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetRelationshipWithHouse(
-      HouseName house, PlanetName planet, Time time) {
+  Future<Object?> planetRelationshipWithHouse(HouseName house, PlanetName planet, Time time) {
     final params = <String, Object?>{
       "house": house,
       "planet": planet,
@@ -11315,8 +10873,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetRelationshipWithSign(
-      PlanetName planetName, ZodiacName zodiacSignName, Time time) {
+  Future<Object?> planetRelationshipWithSign(PlanetName planetName, ZodiacName zodiacSignName, Time time) {
     final params = <String, Object?>{
       "planetName": planetName,
       "zodiacSignName": zodiacSignName,
@@ -11477,6 +11034,29 @@ class Calculators {
     return _client.call("PlanetShodashamshaD16Sign", parameters: params);
   }
 
+  /// Returns every moment a planet changes zodiac sign inside a date range for several planets at once. PlanetSignTransit scans its whole range on a fixed 3minute grid which makes any multiyear range far too expensive to answer that is why it is unusable for long timelines. This walks the range on a coarse precisionHours grid and then bisects each detected change so the work scales with the number of changes rather than the length of the range and the reported boundary is accurate to well within a minute. Retrograde reentries are reported as separate intervals so the sequence is complete.
+  ///
+  /// - `startTime` (Time): Start of the range to scan.
+  /// - `endTime` (Time): End of the range to scan.
+  /// - `planets` (List<Object?>?, optional): Planets to track defaults to all 9. Server default: null.
+  /// - `precisionHours` (double?, optional): Walk step used to detect changes default 24 hours. Server default: 24.
+  ///
+  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
+  /// or null. Read it with `Response.string(...)` and friends, or pass the
+  /// calculator's own type argument.
+  ///
+  /// Throws [ApiException] when the API rejects the call, and
+  /// [VedAstroException] when the request cannot be completed.
+  Future<Object?> planetSignBoundaries(Time startTime, Time endTime, {List<Object?>? planets, double? precisionHours}) {
+    final params = <String, Object?>{
+      "startTime": startTime,
+      "endTime": endTime,
+    };
+    if (planets != null) { params["planets"] = planets; }
+    if (precisionHours != null) { params["precisionHours"] = precisionHours; }
+    return _client.call("PlanetSignBoundaries", parameters: params);
+  }
+
   /// Calculates the periods during which a planet stays in each bzodiac signb between two times. The method 1. generates time slices across the requested range 2. tracks sign changes for the selected planet 3. records each finished sign interval as a tuple of start time end time sign name planet name.
   ///
   /// - `startTime` (Time): Beginning of the scan range.
@@ -11489,14 +11069,32 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetSignTransit(
-      Time startTime, Time endTime, PlanetName planetName) {
+  Future<Object?> planetSignTransit(Time startTime, Time endTime, PlanetName planetName) {
     final params = <String, Object?>{
       "startTime": startTime,
       "endTime": endTime,
       "planetName": planetName,
     };
     return _client.call("PlanetSignTransit", parameters: params);
+  }
+
+  /// Returns the zodiac sign each requested planet occupies at each of the supplied moments in one call. This is the batch form of PlanetRasiD1Sign a caller charting a timeline needs a planets sign at many dates and one request per date is both slow and ratelimit hostile. Signs follow the sidereal zodiac honouring the requests Ayanamsa setting matching PlanetSignTransit and the dasha calculations.
+  ///
+  /// - `checkTimes` (List<Object?>): The moments to evaluate in any order.
+  /// - `planets` (List<Object?>?, optional): Planets to report defaults to all 9. Server default: null.
+  ///
+  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
+  /// or null. Read it with `Response.string(...)` and friends, or pass the
+  /// calculator's own type argument.
+  ///
+  /// Throws [ApiException] when the API rejects the call, and
+  /// [VedAstroException] when the request cannot be completed.
+  Future<Object?> planetSignsAtTimes(List<Object?> checkTimes, {List<Object?>? planets}) {
+    final params = <String, Object?>{
+      "checkTimes": checkTimes,
+    };
+    if (planets != null) { params["planets"] = planets; }
+    return _client.call("PlanetSignsAtTimes", parameters: params);
   }
 
   /// Calculates the Sodya Pinda for a planets Ashtakavarga. The method returns the combined Pinda value used in a range of timing strength and longevity calculations.
@@ -11511,15 +11109,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetSodyaPinda(PlanetName planet, Time birthTime,
-      {bool? useReduced}) {
+  Future<Object?> planetSodyaPinda(PlanetName planet, Time birthTime, {bool? useReduced}) {
     final params = <String, Object?>{
       "planet": planet,
       "birthTime": birthTime,
     };
-    if (useReduced != null) {
-      params["useReduced"] = useReduced;
-    }
+    if (useReduced != null) { params["useReduced"] = useReduced; }
     return _client.call("PlanetSodyaPinda", parameters: params);
   }
 
@@ -11592,8 +11187,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetTajikaConstellation(
-      PlanetName planetName, Time birthTime, int scanYear) {
+  Future<Object?> planetTajikaConstellation(PlanetName planetName, Time birthTime, int scanYear) {
     final params = <String, Object?>{
       "planetName": planetName,
       "birthTime": birthTime,
@@ -11614,8 +11208,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetTajikaLongitude(
-      PlanetName planetName, Time birthTime, int scanYear) {
+  Future<Object?> planetTajikaLongitude(PlanetName planetName, Time birthTime, int scanYear) {
     final params = <String, Object?>{
       "planetName": planetName,
       "birthTime": birthTime,
@@ -11636,8 +11229,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetTajikaZodiacSign(
-      PlanetName planetName, Time birthTime, int scanYear) {
+  Future<Object?> planetTajikaZodiacSign(PlanetName planetName, Time birthTime, int scanYear) {
     final params = <String, Object?>{
       "planetName": planetName,
       "birthTime": birthTime,
@@ -11677,15 +11269,13 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetTemporaryRelationshipWithPlanet(
-      PlanetName mainPlanet, PlanetName secondaryPlanet, Time time) {
+  Future<Object?> planetTemporaryRelationshipWithPlanet(PlanetName mainPlanet, PlanetName secondaryPlanet, Time time) {
     final params = <String, Object?>{
       "mainPlanet": mainPlanet,
       "secondaryPlanet": secondaryPlanet,
       "time": time,
     };
-    return _client.call("PlanetTemporaryRelationshipWithPlanet",
-        parameters: params);
+    return _client.call("PlanetTemporaryRelationshipWithPlanet", parameters: params);
   }
 
   /// Calculates Tribhaga Bala strength from the onethird division of day or night. The method follows these rules During the day Mercury gains strength in the first third. Sun gains strength in the second third. Saturn gains strength in the third third. During the night Moon gains strength in the first third. Venus gains strength in the second third. Mars gains strength in the third third. Jupiter always receives full Tribhaga Bala.
@@ -11810,8 +11400,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetYuddhaBala(
-      PlanetName target, List<Object?> preKalaBalaValues, Time time) {
+  Future<Object?> planetYuddhaBala(PlanetName target, List<Object?> preKalaBalaValues, Time time) {
     final params = <String, Object?>{
       "target": target,
       "preKalaBalaValues": preKalaBalaValues,
@@ -11831,14 +11420,12 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetZodiacSignBasedOnHouseLongitudes(
-      PlanetName planetName, Time time) {
+  Future<Object?> planetZodiacSignBasedOnHouseLongitudes(PlanetName planetName, Time time) {
     final params = <String, Object?>{
       "planetName": planetName,
       "time": time,
     };
-    return _client.call("PlanetZodiacSignBasedOnHouseLongitudes",
-        parameters: params);
+    return _client.call("PlanetZodiacSignBasedOnHouseLongitudes", parameters: params);
   }
 
   /// Returns all planets that aspect a given house. The method loops through all nine planets gets the houses aspected by each planet adds planets whose aspectedhouse list contains the requested house.
@@ -11871,8 +11458,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetsAspectingPlanet(
-      PlanetName receivingAspect, Time time) {
+  Future<Object?> planetsAspectingPlanet(PlanetName receivingAspect, Time time) {
     final params = <String, Object?>{
       "receivingAspect": receivingAspect,
       "time": time,
@@ -11930,8 +11516,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetsInGocharaHouse(
-      Time birthTime, Time currentTime, int gocharaHouse) {
+  Future<Object?> planetsInGocharaHouse(Time birthTime, Time currentTime, int gocharaHouse) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "currentTime": currentTime,
@@ -11951,8 +11536,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> planetsInHouseBasedOnLongitudes(
-      HouseName houseNumber, Time time) {
+  Future<Object?> planetsInHouseBasedOnLongitudes(HouseName houseNumber, Time time) {
     final params = <String, Object?>{
       "houseNumber": houseNumber,
       "time": time,
@@ -12064,6 +11648,25 @@ class Calculators {
       "time": time,
     };
     return _client.call("RahuKala", parameters: params);
+  }
+
+  /// All seven classical planets transits at one moment each judged against the same natal chart with Ramans method the Moonrelative position and its base classification the planets own Bhinnashtakavarga bindu in the transited sign Vedha the active Kakshyas contributor and the Sarvashtakavarga total of the transited sign. Ramans stated order is birth chart then dasa then Gochara qualified by Ashtakavarga then Vedha then Kakshya unless Gochara is combined with Ashtakavarga results cannot be predicted with appreciable accuracy. This method supplies those transit pieces and leaves the weighing to the caller because Raman gives no calibrated formula for it. Rahu and Ketu are not included Ramans Ashtakavarga is defined for the seven planets and invents no contribution tables for the nodes.
+  ///
+  /// - `birthTime` (Time): The natal chart the transit is judged against.
+  /// - `transitTime` (Time): The moment being judged for a match the kickoff.
+  ///
+  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
+  /// or null. Read it with `Response.string(...)` and friends, or pass the
+  /// calculator's own type argument.
+  ///
+  /// Throws [ApiException] when the API rejects the call, and
+  /// [VedAstroException] when the request cannot be completed.
+  Future<Object?> ramanGochara(Time birthTime, Time transitTime) {
+    final params = <String, Object?>{
+      "birthTime": birthTime,
+      "transitTime": transitTime,
+    };
+    return _client.call("RamanGochara", parameters: params);
   }
 
   /// Returns the Rekha Sarvashtakavarga result after the full reduction pipeline. This is the reduced 56bindu style Sarvashtakavarga variant referenced in the source comments.
@@ -12237,8 +11840,7 @@ class Calculators {
     final params = <String, Object?>{
       "birthTime": birthTime,
     };
-    return _client.call("SarvashtakavargaLongevityDetailed",
-        parameters: params);
+    return _client.call("SarvashtakavargaLongevityDetailed", parameters: params);
   }
 
   /// Returns the Sarvashtakavarga reduction result after applying the Mandala Sodhana reduction pipeline. This is a higherlevel reduction across the combined Sarvashtakavarga figures rather than a singleplanet Bhinnashtakavarga result.
@@ -12292,6 +11894,25 @@ class Calculators {
     return _client.call("SarvatobhadraChakra", parameters: params);
   }
 
+  /// Calls the ScoreBirthTimeByLifeEvents API calculator.
+  ///
+  /// - `candidateBirthTime` (Time): candidateBirthTime
+  /// - `lifeEvents` (List<Object?>): lifeEvents
+  ///
+  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
+  /// or null. Read it with `Response.string(...)` and friends, or pass the
+  /// calculator's own type argument.
+  ///
+  /// Throws [ApiException] when the API rejects the call, and
+  /// [VedAstroException] when the request cannot be completed.
+  Future<Object?> scoreBirthTimeByLifeEvents(Time candidateBirthTime, List<Object?> lifeEvents) {
+    final params = <String, Object?>{
+      "candidateBirthTime": candidateBirthTime,
+      "lifeEvents": lifeEvents,
+    };
+    return _client.call("ScoreBirthTimeByLifeEvents", parameters: params);
+  }
+
   /// Searches for all matching events that are active at a single moment in time. This is the snapshot form of event discovery it answers what is happening right now.
   ///
   /// - `birthTime` (Time): The natives birth time used to anchor all event calculations.
@@ -12304,8 +11925,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> searchEvents(
-      Time birthTime, Time atTime, List<Object?> eventTagList) {
+  Future<Object?> searchEvents(Time birthTime, Time atTime, List<Object?> eventTagList) {
     final params = <String, Object?>{
       "birthTime": birthTime,
       "atTime": atTime,
@@ -12327,20 +11947,13 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> searchSourceText(String query,
-      {int? topK, String? sourceName, int? contextSize}) {
+  Future<Object?> searchSourceText(String query, {int? topK, String? sourceName, int? contextSize}) {
     final params = <String, Object?>{
       "query": query,
     };
-    if (topK != null) {
-      params["topK"] = topK;
-    }
-    if (sourceName != null) {
-      params["sourceName"] = sourceName;
-    }
-    if (contextSize != null) {
-      params["contextSize"] = contextSize;
-    }
+    if (topK != null) { params["topK"] = topK; }
+    if (sourceName != null) { params["sourceName"] = sourceName; }
+    if (contextSize != null) { params["contextSize"] = contextSize; }
     return _client.call("SearchSourceText", parameters: params);
   }
 
@@ -12412,23 +12025,6 @@ class Calculators {
     return _client.call("ShodashamshaSignName", parameters: params);
   }
 
-  /// Compatibility entry point for the Shoola rasi dasa recovered at FUN_00407920. It is unrelated to weekday travel directions.
-  ///
-  /// - `time` (Time): time
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> shoolaChakra(Time time) {
-    final params = <String, Object?>{
-      "time": time,
-    };
-    return _client.call("ShoolaChakra", parameters: params);
-  }
-
   /// Finds houses in Shubha Kartari Yoga meaning houses hemmed between benefic planets. For each house the method checks the adjacent 2nd and 12th houses classifies the planets found there and returns the house when benefics are present and malefics are absent.
   ///
   /// - `time` (Time): The chart time.
@@ -12474,8 +12070,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> signCountedFromInputSign(
-      ZodiacName inputSign, int countToNextSign) {
+  Future<Object?> signCountedFromInputSign(ZodiacName inputSign, int countToNextSign) {
     final params = <String, Object?>{
       "inputSign": inputSign,
       "countToNextSign": countToNextSign,
@@ -12494,8 +12089,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> signCountedFromLagnaSign(
-      int countToNextSign, Time inputTime) {
+  Future<Object?> signCountedFromLagnaSign(int countToNextSign, Time inputTime) {
     final params = <String, Object?>{
       "countToNextSign": countToNextSign,
       "inputTime": inputTime,
@@ -12515,8 +12109,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> signCountedFromPlanetSign(
-      int countToNextSign, PlanetName startPlanet, Time inputTime) {
+  Future<Object?> signCountedFromPlanetSign(int countToNextSign, PlanetName startPlanet, Time inputTime) {
     final params = <String, Object?>{
       "countToNextSign": countToNextSign,
       "startPlanet": startPlanet,
@@ -12537,8 +12130,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> signDistanceFromPlanetToPlanet(
-      PlanetName startPlanet, PlanetName endPlanet, Time time) {
+  Future<Object?> signDistanceFromPlanetToPlanet(PlanetName startPlanet, PlanetName endPlanet, Time time) {
     final params = <String, Object?>{
       "startPlanet": startPlanet,
       "endPlanet": endPlanet,
@@ -12649,54 +12241,8 @@ class Calculators {
     final params = <String, Object?>{
       "time": time,
     };
-    if (chartType != null) {
-      params["chartType"] = chartType;
-    }
+    if (chartType != null) { params["chartType"] = chartType; }
     return _client.call("SouthIndianChart", parameters: params);
-  }
-
-  /// Checks which of Parasaras 9 special condition conditional Udu Dasa systems apply to a birth chart Ashtottari Shodasottari Dwadasottari Panchottari Satabdika Chaturasiti Sama Dwisaptati Sama Shastihayani and Shattrimsa Sama. Each system has a strict applicability criteria given in BPHS ch 48 e.g. Ashtottari needs Rahu in quadranttrine from the Lagna lord. Returns every applicable system with its reason plus the single winning system as per Parasaras order of precedence. Note that these special dasas supplement the universally applicable Vimshottari Dasa they do not replace it they reveal the special purpose of the birth and time the major turning points that lead to its achievement.
-  ///
-  /// - `birthTime` (Time): Birth time location of the person.
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> specialDasaApplicability(Time birthTime) {
-    final params = <String, Object?>{
-      "birthTime": birthTime,
-    };
-    return _client.call("SpecialDasaApplicability", parameters: params);
-  }
-
-  /// Returns the planetary period lords PD1 Maha Dasa PD2 subperiod PD3 subsubperiod... operating at a specific moment under one of Parasaras special condition Udu Dasa systems Ashtottari Shodasottari Dwadasottari Panchottari Satabdika Chaturasiti Sama Dwisaptati Sama Shastihayani Shattrimsa Sama. Use SpecialDasaApplicability first to know which system fits the chart. These conditional dasas supplement Vimshottari Dasa for timing the special purpose of the birth.
-  ///
-  /// - `birthTime` (Time): Birth time location of the person.
-  /// - `checkTime` (Time): The moment to evaluate the running Dasa periods for.
-  /// - `dasaSystem` (DasaType): Which special dasa system to calculate with.
-  /// - `levels` (int?, optional): How many nested Dasa levels to return default 3 max 8. Server default: 3.
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> specialDasaAtTime(
-      Time birthTime, Time checkTime, DasaType dasaSystem,
-      {int? levels}) {
-    final params = <String, Object?>{
-      "birthTime": birthTime,
-      "checkTime": checkTime,
-      "dasaSystem": dasaSystem,
-    };
-    if (levels != null) {
-      params["levels"] = levels;
-    }
-    return _client.call("SpecialDasaAtTime", parameters: params);
   }
 
   /// Returns the Jupiterbased Ashtakavarga transit prediction related to the spouses death timing.
@@ -12731,23 +12277,6 @@ class Calculators {
       "time": time,
     };
     return _client.call("SubhaGrahasList", parameters: params);
-  }
-
-  /// Compatibility entry point for JHoras Sudarsana Chakra Dasa. FUN_004133E0 is a 12by12 oneyear rasi dasa not three rotated copies of the natal chart.
-  ///
-  /// - `time` (Time): time
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> sudarsanaChakra(Time time) {
-    final params = <String, Object?>{
-      "time": time,
-    };
-    return _client.call("SudarsanaChakra", parameters: params);
   }
 
   /// Checks whether both the Sun and Moon are sufficiently strong and receive netbenefic aspect influence. The method requires both conditions Sun and Moon must each have positive Drik Bala. Sun and Moon must meet minimum Shadbala Pinda thresholds Sun must be at least 5 rupas or 300 shashtiamsas Moon must be at least 6 rupas or 360 shashtiamsas.
@@ -12966,8 +12495,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> tajakaYogaListFromPlanetaryData(
-      List<Object?> planetaryPositions) {
+  Future<Object?> tajakaYogaListFromPlanetaryData(List<Object?> planetaryPositions) {
     final params = <String, Object?>{
       "planetaryPositions": planetaryPositions,
     };
@@ -13133,23 +12661,6 @@ class Calculators {
     return _client.call("TimeToJulianUniversalTime", parameters: params);
   }
 
-  /// Calculates Tithi Ashtottari Dasa. Tithi Ashtottari is an Ashtottari Dasa system whose starting point is the birth Tithi instead of Nakshatra. Cycle Sun 6 Moon 15 Mars 8 Mercury 17 Saturn 10 Jupiter 19 Venus 21 Rahu 12 Total 108 years Based on Jagannatha Hora implementation.
-  ///
-  /// - `time` (Time): Birth chart time.
-  ///
-  /// Returns the unwrapped payload: a `Map`, `List`, `String`, `num`, `bool`
-  /// or null. Read it with `Response.string(...)` and friends, or pass the
-  /// calculator's own type argument.
-  ///
-  /// Throws [ApiException] when the API rejects the call, and
-  /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> tithiAshtottariDasa(Time time) {
-    final params = <String, Object?>{
-      "time": time,
-    };
-    return _client.call("TithiAshtottariDasa", parameters: params);
-  }
-
   /// Returns the percentage of the current Tithi still remaining. A Tithi spans 12 degrees of forward angular separation between the Moon and Sun. Values 100 Tithi has just begun 0 Tithi has reached its end
   ///
   /// - `time` (Time): The time to evaluate.
@@ -13213,8 +12724,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> transitHouseFromLagna(
-      PlanetName transitPlanet, Time checkTime, Time birthTime) {
+  Future<Object?> transitHouseFromLagna(PlanetName transitPlanet, Time checkTime, Time birthTime) {
     final params = <String, Object?>{
       "transitPlanet": transitPlanet,
       "checkTime": checkTime,
@@ -13235,8 +12745,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> transitHouseFromMoon(
-      PlanetName transitPlanet, Time checkTime, Time birthTime) {
+  Future<Object?> transitHouseFromMoon(PlanetName transitPlanet, Time checkTime, Time birthTime) {
     final params = <String, Object?>{
       "transitPlanet": transitPlanet,
       "checkTime": checkTime,
@@ -13257,8 +12766,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> transitHouseFromNavamsaLagna(
-      PlanetName transitPlanet, Time checkTime, Time birthTime) {
+  Future<Object?> transitHouseFromNavamsaLagna(PlanetName transitPlanet, Time checkTime, Time birthTime) {
     final params = <String, Object?>{
       "transitPlanet": transitPlanet,
       "checkTime": checkTime,
@@ -13279,8 +12787,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> transitHouseFromNavamsaMoon(
-      PlanetName transitPlanet, Time checkTime, Time birthTime) {
+  Future<Object?> transitHouseFromNavamsaMoon(PlanetName transitPlanet, Time checkTime, Time birthTime) {
     final params = <String, Object?>{
       "transitPlanet": transitPlanet,
       "checkTime": checkTime,
@@ -13386,8 +12893,7 @@ class Calculators {
   ///
   /// Throws [ApiException] when the API rejects the call, and
   /// [VedAstroException] when the request cannot be completed.
-  Future<Object?> upagrahaLongitude(
-      Time time, PlanetName relatedPlanet, String upagrahaPart) {
+  Future<Object?> upagrahaLongitude(Time time, PlanetName relatedPlanet, String upagrahaPart) {
     final params = <String, Object?>{
       "time": time,
       "relatedPlanet": relatedPlanet,
@@ -13654,4 +13160,5 @@ class Calculators {
     };
     return _client.call("ZodiacSignsOwnedByPlanet", parameters: params);
   }
+
 }
