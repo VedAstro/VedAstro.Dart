@@ -2,6 +2,7 @@
 //
 // Regenerate with: dotnet run --project StaticTableGenerator -- --task 14
 
+
 /// Values for the server's `Avasta` type.
 ///
 /// [wireName] is what travels to the API; the constant's own name is for your
@@ -9,19 +10,14 @@
 enum Avasta {
   /// KshuditaStarved
   kshuditaStarved('KshuditaStarved'),
-
   /// TrishitaThirst
   trishitaThirst('TrishitaThirst'),
-
   /// LajjitaShamed
   lajjitaShamed('LajjitaShamed'),
-
   /// GarvitaProud
   garvitaProud('GarvitaProud'),
-
   /// MuditaDelighted
   muditaDelighted('MuditaDelighted'),
-
   /// KshobitaAgitated
   kshobitaAgitated('KshobitaAgitated'),
   ;
@@ -39,147 +35,166 @@ enum Avasta {
 enum Ayanamsa {
   /// FAGAN_BRADLEY
   faganBradley('FAGAN_BRADLEY'),
-
   /// LAHIRI
   lahiri('LAHIRI'),
-
   /// DELUCE
   deluce('DELUCE'),
-
   /// RAMAN
   raman('RAMAN'),
-
   /// USHASHASHI
   ushashashi('USHASHASHI'),
-
   /// KRISHNAMURTI
   krishnamurti('KRISHNAMURTI'),
-
   /// DJWHAL_KHUL
   djwhalKhul('DJWHAL_KHUL'),
-
   /// YUKTESHWAR
   yukteshwar('YUKTESHWAR'),
-
   /// JN_BHASIN
   jnBhasin('JN_BHASIN'),
-
   /// BABYL_KUGLER1
   babylKugler1('BABYL_KUGLER1'),
-
   /// BABYL_KUGLER2
   babylKugler2('BABYL_KUGLER2'),
-
   /// BABYL_KUGLER3
   babylKugler3('BABYL_KUGLER3'),
-
   /// BABYL_HUBER
   babylHuber('BABYL_HUBER'),
-
   /// BABYL_ETPSC
   babylEtpsc('BABYL_ETPSC'),
-
   /// ALDEBARAN_15TAU
   aldebaran15Tau('ALDEBARAN_15TAU'),
-
   /// HIPPARCHOS
   hipparchos('HIPPARCHOS'),
-
   /// SASSANIAN
   sassanian('SASSANIAN'),
-
   /// GALCENT_0SAG
   galcent0Sag('GALCENT_0SAG'),
-
   /// J2000
   j2000('J2000'),
-
   /// J1900
   j1900('J1900'),
-
   /// B1950
   b1950('B1950'),
-
   /// SURYASIDDHANTA
   suryasiddhanta('SURYASIDDHANTA'),
-
   /// SURYASIDDHANTA_MSUN
   suryasiddhantaMsun('SURYASIDDHANTA_MSUN'),
-
   /// ARYABHATA
   aryabhata('ARYABHATA'),
-
   /// ARYABHATA_MSUN
   aryabhataMsun('ARYABHATA_MSUN'),
-
   /// SS_REVATI
   ssRevati('SS_REVATI'),
-
   /// SS_CITRA
   ssCitra('SS_CITRA'),
-
   /// TRUE_CITRA
   trueCitra('TRUE_CITRA'),
-
   /// TRUE_REVATI
   trueRevati('TRUE_REVATI'),
-
   /// TRUE_PUSHYA
   truePushya('TRUE_PUSHYA'),
-
   /// GALCENT_RGBRAND
   galcentRgbrand('GALCENT_RGBRAND'),
-
   /// GALEQU_IAU1958
   galequIau1958('GALEQU_IAU1958'),
-
   /// GALEQU_TRUE
   galequTrue('GALEQU_TRUE'),
-
   /// GALEQU_MULA
   galequMula('GALEQU_MULA'),
-
   /// GALALIGN_MARDYKS
   galalignMardyks('GALALIGN_MARDYKS'),
-
   /// TRUE_MULA
   trueMula('TRUE_MULA'),
-
   /// GALCENT_MULA_WILHELM
   galcentMulaWilhelm('GALCENT_MULA_WILHELM'),
-
   /// ARYABHATA_522
   aryabhata522('ARYABHATA_522'),
-
   /// BABYL_BRITTON
   babylBritton('BABYL_BRITTON'),
-
   /// TRUE_SHEORAN
   trueSheoran('TRUE_SHEORAN'),
-
   /// GALCENT_COCHRANE
   galcentCochrane('GALCENT_COCHRANE'),
-
   /// GALEQU_FIORENZA
   galequFiorenza('GALEQU_FIORENZA'),
-
   /// VALENS_MOON
   valensMoon('VALENS_MOON'),
-
   /// LAHIRI_1940
   lahiri1940('LAHIRI_1940'),
-
   /// LAHIRI_VP285
   lahiriVp285('LAHIRI_VP285'),
-
   /// KRISHNAMURTI_VP291
   krishnamurtiVp291('KRISHNAMURTI_VP291'),
-
   /// LAHIRI_ICRC
   lahiriIcrc('LAHIRI_ICRC'),
   ;
 
   const Ayanamsa(this.wireName);
+
+  /// The exact string the API expects.
+  final String wireName;
+}
+
+/// Values for the server's `BirdActivity` type.
+///
+/// [wireName] is what travels to the API; the constant's own name is for your
+/// code. Send one straight to a calculator and it is converted for you.
+enum BirdActivity {
+  /// Dying
+  dying('Dying'),
+  /// Sleeping
+  sleeping('Sleeping'),
+  /// Walking
+  walking('Walking'),
+  /// Eating
+  eating('Eating'),
+  /// Ruling
+  ruling('Ruling'),
+  ;
+
+  const BirdActivity(this.wireName);
+
+  /// The exact string the API expects.
+  final String wireName;
+}
+
+/// Values for the server's `BirdName` type.
+///
+/// [wireName] is what travels to the API; the constant's own name is for your
+/// code. Send one straight to a calculator and it is converted for you.
+enum BirdName {
+  /// Vulture
+  vulture('Vulture'),
+  /// Owl
+  owl('Owl'),
+  /// Crow
+  crow('Crow'),
+  /// Cock
+  cock('Cock'),
+  /// Peacock
+  peacock('Peacock'),
+  ;
+
+  const BirdName(this.wireName);
+
+  /// The exact string the API expects.
+  final String wireName;
+}
+
+/// Values for the server's `BirthDatePrecision` type.
+///
+/// [wireName] is what travels to the API; the constant's own name is for your
+/// code. Send one straight to a calculator and it is converted for you.
+enum BirthDatePrecision {
+  /// Year
+  year('Year'),
+  /// Month
+  month('Month'),
+  /// Day
+  day('Day'),
+  ;
+
+  const BirthDatePrecision(this.wireName);
 
   /// The exact string the API expects.
   final String wireName;
@@ -192,7 +207,6 @@ enum Ayanamsa {
 enum BirthTimeModelType {
   /// NCC
   ncc('NCC'),
-
   /// KNN
   knn('KNN'),
   ;
@@ -210,52 +224,36 @@ enum BirthTimeModelType {
 enum ChartType {
   /// BhavaChalit
   bhavaChalit('BhavaChalit'),
-
   /// RasiD1
   rasiD1('RasiD1'),
-
   /// HoraD2
   horaD2('HoraD2'),
-
   /// DrekkanaD3
   drekkanaD3('DrekkanaD3'),
-
   /// ChaturthamshaD4
   chaturthamshaD4('ChaturthamshaD4'),
-
   /// SaptamshaD7
   saptamshaD7('SaptamshaD7'),
-
   /// NavamshaD9
   navamshaD9('NavamshaD9'),
-
   /// DashamamshaD10
   dashamamshaD10('DashamamshaD10'),
-
   /// DwadashamshaD12
   dwadashamshaD12('DwadashamshaD12'),
-
   /// ShodashamshaD16
   shodashamshaD16('ShodashamshaD16'),
-
   /// VimshamshaD20
   vimshamshaD20('VimshamshaD20'),
-
   /// ChaturvimshamshaD24
   chaturvimshamshaD24('ChaturvimshamshaD24'),
-
   /// BhamshaD27
   bhamshaD27('BhamshaD27'),
-
   /// TrimshamshaD30
   trimshamshaD30('TrimshamshaD30'),
-
   /// KhavedamshaD40
   khavedamshaD40('KhavedamshaD40'),
-
   /// AkshavedamshaD45
   akshavedamshaD45('AkshavedamshaD45'),
-
   /// ShashtyamshaD60
   shashtyamshaD60('ShashtyamshaD60'),
   ;
@@ -273,85 +271,58 @@ enum ChartType {
 enum ConstellationName {
   /// Empty
   empty('Empty'),
-
   /// Aswini
   aswini('Aswini'),
-
   /// Bharani
   bharani('Bharani'),
-
   /// Krithika
   krithika('Krithika'),
-
   /// Rohini
   rohini('Rohini'),
-
   /// Mrigasira
   mrigasira('Mrigasira'),
-
   /// Aridra
   aridra('Aridra'),
-
   /// Punarvasu
   punarvasu('Punarvasu'),
-
   /// Pushyami
   pushyami('Pushyami'),
-
   /// Aslesha
   aslesha('Aslesha'),
-
   /// Makha
   makha('Makha'),
-
   /// Pubba
   pubba('Pubba'),
-
   /// Uttara
   uttara('Uttara'),
-
   /// Hasta
   hasta('Hasta'),
-
   /// Chitta
   chitta('Chitta'),
-
   /// Swathi
   swathi('Swathi'),
-
   /// Vishhaka
   vishhaka('Vishhaka'),
-
   /// Anuradha
   anuradha('Anuradha'),
-
   /// Jyesta
   jyesta('Jyesta'),
-
   /// Moola
   moola('Moola'),
-
   /// Poorvashada
   poorvashada('Poorvashada'),
-
   /// Uttarashada
   uttarashada('Uttarashada'),
-
   /// Sravana
   sravana('Sravana'),
-
   /// Dhanishta
   dhanishta('Dhanishta'),
-
   /// Satabhisha
   satabhisha('Satabhisha'),
-
   /// Poorvabhadra
   poorvabhadra('Poorvabhadra'),
-
   /// Uttarabhadra
   uttarabhadra('Uttarabhadra'),
-
   /// Revathi
   revathi('Revathi'),
   ;
@@ -362,73 +333,62 @@ enum ConstellationName {
   final String wireName;
 }
 
-/// Values for the server's `DasaType` type.
+/// Values for the server's `DasaSystem` type.
 ///
 /// [wireName] is what travels to the API; the constant's own name is for your
 /// code. Send one straight to a calculator and it is converted for you.
-enum DasaType {
+enum DasaSystem {
   /// Vimshottari
   vimshottari('Vimshottari'),
-
+  /// VimshottariJanma
+  vimshottariJanma('VimshottariJanma'),
+  /// VimshottariLagna
+  vimshottariLagna('VimshottariLagna'),
+  /// VimshottariUtpanna
+  vimshottariUtpanna('VimshottariUtpanna'),
+  /// VimshottariKshema
+  vimshottariKshema('VimshottariKshema'),
+  /// VimshottariAdhana
+  vimshottariAdhana('VimshottariAdhana'),
   /// Ashtottari
   ashtottari('Ashtottari'),
-
+  /// TithiAshtottari
+  tithiAshtottari('TithiAshtottari'),
   /// Shodshottari
   shodshottari('Shodshottari'),
-
   /// Dvadashottari
   dvadashottari('Dvadashottari'),
-
   /// Panchottari
   panchottari('Panchottari'),
-
-  /// Shatabdika
-  shatabdika('Shatabdika'),
-
+  /// Satabdika
+  satabdika('Satabdika'),
   /// ChaturashitiSama
   chaturashitiSama('ChaturashitiSama'),
-
   /// DwisaptatiSama
   dwisaptatiSama('DwisaptatiSama'),
-
   /// Shastihayani
   shastihayani('Shastihayani'),
-
   /// ShattrimshatSama
   shattrimshatSama('ShattrimshatSama'),
-
+  /// Tara
+  tara('Tara'),
+  /// Moola
+  moola('Moola'),
+  /// TribhagiVimshottari
+  tribhagiVimshottari('TribhagiVimshottari'),
   /// Chara
   chara('Chara'),
-
-  /// Sthira
-  sthira('Sthira'),
-
-  /// LagnaKendra
-  lagnaKendra('LagnaKendra'),
-
-  /// KarakaKendra
-  karakaKendra('KarakaKendra'),
-
-  /// Karaka
-  karaka('Karaka'),
-
-  /// BrahmaGrahaAshrita
-  brahmaGrahaAshrita('BrahmaGrahaAshrita'),
-
-  /// Manduka
-  manduka('Manduka'),
-
-  /// Shula
-  shula('Shula'),
-
-  /// Yogardha
-  yogardha('Yogardha'),
-
-  /// Drg
-  drg('Drg'),
+  /// Kalachakra
+  kalachakra('Kalachakra'),
+  /// Narayana
+  narayana('Narayana'),
+  /// Shoola
+  shoola('Shoola'),
+  /// Sudarsana
+  sudarsana('Sudarsana'),
   ;
 
-  const DasaType(this.wireName);
+  const DasaSystem(this.wireName);
 
   /// The exact string the API expects.
   final String wireName;
@@ -441,22 +401,16 @@ enum DasaType {
 enum DayOfWeek {
   /// Sunday
   sunday('Sunday'),
-
   /// Monday
   monday('Monday'),
-
   /// Tuesday
   tuesday('Tuesday'),
-
   /// Wednesday
   wednesday('Wednesday'),
-
   /// Thursday
   thursday('Thursday'),
-
   /// Friday
   friday('Friday'),
-
   /// Saturday
   saturday('Saturday'),
   ;
@@ -474,5512 +428,3676 @@ enum DayOfWeek {
 enum EventName {
   /// Empty
   empty('Empty'),
-
   /// GoodTarabala
   goodTarabala('GoodTarabala'),
-
   /// BadTarabala
   badTarabala('BadTarabala'),
-
   /// GoodChandrabala
   goodChandrabala('GoodChandrabala'),
-
   /// BadChandrabala
   badChandrabala('BadChandrabala'),
-
   /// GoodPanchaka
   goodPanchaka('GoodPanchaka'),
-
   /// BadPanchaka
   badPanchaka('BadPanchaka'),
-
   /// SiddhaYogaSunday
   siddhaYogaSunday('SiddhaYogaSunday'),
-
   /// SiddhaYogaMonday
   siddhaYogaMonday('SiddhaYogaMonday'),
-
   /// SiddhaYogaTuesday
   siddhaYogaTuesday('SiddhaYogaTuesday'),
-
   /// SiddhaYogaWednesday
   siddhaYogaWednesday('SiddhaYogaWednesday'),
-
   /// SiddhaYogaThursday
   siddhaYogaThursday('SiddhaYogaThursday'),
-
   /// SiddhaYogaFriday
   siddhaYogaFriday('SiddhaYogaFriday'),
-
   /// SiddhaYogaSaturday
   siddhaYogaSaturday('SiddhaYogaSaturday'),
-
   /// AmritaSiddhaYoga
   amritaSiddhaYoga('AmritaSiddhaYoga'),
-
   /// PanchangaSuddhi
   panchangaSuddhi('PanchangaSuddhi'),
-
   /// UgraYoga
   ugraYoga('UgraYoga'),
-
   /// SuryaSankramana
   suryaSankramana('SuryaSankramana'),
-
   /// KarthariDosha
   karthariDosha('KarthariDosha'),
-
   /// ShashtashtaRiphagathaChandraDosha
   shashtashtaRiphagathaChandraDosha('ShashtashtaRiphagathaChandraDosha'),
-
   /// SagrahaChandraDosha
   sagrahaChandraDosha('SagrahaChandraDosha'),
-
   /// UdayasthaSuddhi
   udayasthaSuddhi('UdayasthaSuddhi'),
-
   /// SiddhaYoga
   siddhaYoga('SiddhaYoga'),
-
   /// SakunaKarana
   sakunaKarana('SakunaKarana'),
-
   /// BadNithyaYoga
   badNithyaYoga('BadNithyaYoga'),
-
   /// LagnaThyajya
   lagnaThyajya('LagnaThyajya'),
-
   /// BhriguShatka
   bhriguShatka('BhriguShatka'),
-
   /// Kujasthama
   kujasthama('Kujasthama'),
-
   /// GoodHairCutting
   goodHairCutting('GoodHairCutting'),
-
   /// GoodNailCutting
   goodNailCutting('GoodNailCutting'),
-
   /// FixedConstellationRuling
   fixedConstellationRuling('FixedConstellationRuling'),
-
   /// SoftConstellationRuling
   softConstellationRuling('SoftConstellationRuling'),
-
   /// LightConstellationRuling
   lightConstellationRuling('LightConstellationRuling'),
-
   /// SharpConstellationRuling
   sharpConstellationRuling('SharpConstellationRuling'),
-
   /// MovableConstellationRuling
   movableConstellationRuling('MovableConstellationRuling'),
-
   /// DreadfulConstellationRuling
   dreadfulConstellationRuling('DreadfulConstellationRuling'),
-
   /// MixedConstellationRuling
   mixedConstellationRuling('MixedConstellationRuling'),
-
   /// Ekadashi
   ekadashi('Ekadashi'),
-
   /// NotAuspiciousDay
   notAuspiciousDay('NotAuspiciousDay'),
-
   /// GoodPlanetsInLagna
   goodPlanetsInLagna('GoodPlanetsInLagna'),
-
   /// GoodRullingConstellation
   goodRullingConstellation('GoodRullingConstellation'),
-
   /// BadRullingConstellation
   badRullingConstellation('BadRullingConstellation'),
-
   /// GoodTakingInjections
   goodTakingInjections('GoodTakingInjections'),
-
   /// BavaKarana
   bavaKarana('BavaKarana'),
-
   /// TaitulaKarana
   taitulaKarana('TaitulaKarana'),
-
   /// BhadraKarana
   bhadraKarana('BhadraKarana'),
-
   /// JanmaNakshatraRulling
   janmaNakshatraRulling('JanmaNakshatraRulling'),
-
   /// BadForBuyingToolsUtensilsJewellery
   badForBuyingToolsUtensilsJewellery('BadForBuyingToolsUtensilsJewellery'),
-
   /// GoodForBuyingBrassVessels
   goodForBuyingBrassVessels('GoodForBuyingBrassVessels'),
-
   /// GoodForBuyingCopperVessels
   goodForBuyingCopperVessels('GoodForBuyingCopperVessels'),
-
   /// GoodForBuyingSteelIronVessels
   goodForBuyingSteelIronVessels('GoodForBuyingSteelIronVessels'),
-
   /// GoodForBuyingSilverVessels
   goodForBuyingSilverVessels('GoodForBuyingSilverVessels'),
-
   /// GoodForBuyingJewellery
   goodForBuyingJewellery('GoodForBuyingJewellery'),
-
   /// GoodPlanetsIn11th
   goodPlanetsIn11th('GoodPlanetsIn11th'),
-
   /// GoodPlanetsInKendra
   goodPlanetsInKendra('GoodPlanetsInKendra'),
-
   /// TarabalaJanmaStrong
   tarabalaJanmaStrong('TarabalaJanmaStrong'),
-
   /// TarabalaSampatStrong
   tarabalaSampatStrong('TarabalaSampatStrong'),
-
   /// TarabalaVipatStrong
   tarabalaVipatStrong('TarabalaVipatStrong'),
-
   /// TarabalaKshemaStrong
   tarabalaKshemaStrong('TarabalaKshemaStrong'),
-
   /// TarabalaPratyakStrong
   tarabalaPratyakStrong('TarabalaPratyakStrong'),
-
   /// TarabalaSadhanaStrong
   tarabalaSadhanaStrong('TarabalaSadhanaStrong'),
-
   /// TarabalaNaidhanaStrong
   tarabalaNaidhanaStrong('TarabalaNaidhanaStrong'),
-
   /// TarabalaMitraStrong
   tarabalaMitraStrong('TarabalaMitraStrong'),
-
   /// TarabalaParamaMitraStrong
   tarabalaParamaMitraStrong('TarabalaParamaMitraStrong'),
-
   /// TarabalaJanmaMiddling
   tarabalaJanmaMiddling('TarabalaJanmaMiddling'),
-
   /// TarabalaSampatMiddling
   tarabalaSampatMiddling('TarabalaSampatMiddling'),
-
   /// TarabalaVipatMiddling
   tarabalaVipatMiddling('TarabalaVipatMiddling'),
-
   /// TarabalaKshemaMiddling
   tarabalaKshemaMiddling('TarabalaKshemaMiddling'),
-
   /// TarabalaPratyakMiddling
   tarabalaPratyakMiddling('TarabalaPratyakMiddling'),
-
   /// TarabalaSadhanaMiddling
   tarabalaSadhanaMiddling('TarabalaSadhanaMiddling'),
-
   /// TarabalaNaidhanaMiddling
   tarabalaNaidhanaMiddling('TarabalaNaidhanaMiddling'),
-
   /// TarabalaMitraMiddling
   tarabalaMitraMiddling('TarabalaMitraMiddling'),
-
   /// TarabalaParamaMitraMiddling
   tarabalaParamaMitraMiddling('TarabalaParamaMitraMiddling'),
-
   /// TarabalaJanmaWeak
   tarabalaJanmaWeak('TarabalaJanmaWeak'),
-
   /// TarabalaSampatWeak
   tarabalaSampatWeak('TarabalaSampatWeak'),
-
   /// TarabalaVipatWeak
   tarabalaVipatWeak('TarabalaVipatWeak'),
-
   /// TarabalaKshemaWeak
   tarabalaKshemaWeak('TarabalaKshemaWeak'),
-
   /// TarabalaPratyakWeak
   tarabalaPratyakWeak('TarabalaPratyakWeak'),
-
   /// TarabalaSadhanaWeak
   tarabalaSadhanaWeak('TarabalaSadhanaWeak'),
-
   /// TarabalaNaidhanaWeak
   tarabalaNaidhanaWeak('TarabalaNaidhanaWeak'),
-
   /// TarabalaMitraWeak
   tarabalaMitraWeak('TarabalaMitraWeak'),
-
   /// TarabalaParamaMitraWeak
   tarabalaParamaMitraWeak('TarabalaParamaMitraWeak'),
-
   /// Papashadvargas
   papashadvargas('Papashadvargas'),
-
   /// CombinedEvent
   combinedEvent('CombinedEvent'),
-
   /// Lord6And8Dasa
   lord6And8Dasa('Lord6And8Dasa'),
-
   /// Lord5And9Dasa
   lord5And9Dasa('Lord5And9Dasa'),
-
   /// BhuktiDasaLordInBadHouses
   bhuktiDasaLordInBadHouses('BhuktiDasaLordInBadHouses'),
-
   /// BadLunarMonthForBuilding
   badLunarMonthForBuilding('BadLunarMonthForBuilding'),
-
   /// GoodSunSignForBuilding
   goodSunSignForBuilding('GoodSunSignForBuilding'),
-
   /// BadSunSignForBuilding
   badSunSignForBuilding('BadSunSignForBuilding'),
-
   /// GoodLunarDayForBuilding
   goodLunarDayForBuilding('GoodLunarDayForBuilding'),
-
   /// GoodWeekDayForBuilding
   goodWeekDayForBuilding('GoodWeekDayForBuilding'),
-
   /// BadLunarPhaseForBuilding
   badLunarPhaseForBuilding('BadLunarPhaseForBuilding'),
-
   /// BadWeekDayForBuilding
   badWeekDayForBuilding('BadWeekDayForBuilding'),
-
   /// BadWeekDayForRepairs
   badWeekDayForRepairs('BadWeekDayForRepairs'),
-
   /// GoodYogaForRepairs
   goodYogaForRepairs('GoodYogaForRepairs'),
-
   /// GoodYogaForRepairs2
   goodYogaForRepairs2('GoodYogaForRepairs2'),
-
   /// Lord2Dasa
   lord2Dasa('Lord2Dasa'),
-
   /// Lord3Dasa
   lord3Dasa('Lord3Dasa'),
-
   /// Lord5And9DasaBhukti
   lord5And9DasaBhukti('Lord5And9DasaBhukti'),
-
   /// LagnaLordDasa
   lagnaLordDasa('LagnaLordDasa'),
-
   /// Saturn4thDasa
   saturn4thDasa('Saturn4thDasa'),
-
   /// Jupiter6thDasa
   jupiter6thDasa('Jupiter6thDasa'),
-
   /// ElevatedSunDasa
   elevatedSunDasa('ElevatedSunDasa'),
-
   /// SunWithLord9Or10Dasa
   sunWithLord9Or10Dasa('SunWithLord9Or10Dasa'),
-
   /// SunWithLord5Dasa
   sunWithLord5Dasa('SunWithLord5Dasa'),
-
   /// SunWithLord2Dasa
   sunWithLord2Dasa('SunWithLord2Dasa'),
-
   /// SunBadPositionDasa
   sunBadPositionDasa('SunBadPositionDasa'),
-
   /// ExaltedSunDasa
   exaltedSunDasa('ExaltedSunDasa'),
-
   /// BadForBuyingForBusiness
   badForBuyingForBusiness('BadForBuyingForBusiness'),
-
   /// GoodForBuyingForBusiness
   goodForBuyingForBusiness('GoodForBuyingForBusiness'),
-
   /// GoodForSellingForProfit
   goodForSellingForProfit('GoodForSellingForProfit'),
-
   /// BadForSellingForProfit
   badForSellingForProfit('BadForSellingForProfit'),
-
   /// GeneralBadForBorrowingMoney
   generalBadForBorrowingMoney('GeneralBadForBorrowingMoney'),
-
   /// GoodForBorrowingMoneyForDomestic
   goodForBorrowingMoneyForDomestic('GoodForBorrowingMoneyForDomestic'),
-
   /// GoodForBorrowingMoneyForBusiness
   goodForBorrowingMoneyForBusiness('GoodForBorrowingMoneyForBusiness'),
-
   /// BadForLendingMoney
   badForLendingMoney('BadForLendingMoney'),
-
   /// GoodForLendingMoney
   goodForLendingMoney('GoodForLendingMoney'),
-
   /// BadForStartingAllAgriculture
   badForStartingAllAgriculture('BadForStartingAllAgriculture'),
-
   /// GoodLunarDayAgriculture
   goodLunarDayAgriculture('GoodLunarDayAgriculture'),
-
   /// BadLagnaForAllAgriculture
   badLagnaForAllAgriculture('BadLagnaForAllAgriculture'),
-
   /// GoodYogaForAllAgriculture
   goodYogaForAllAgriculture('GoodYogaForAllAgriculture'),
-
   /// GoodAnySeedsSowing
   goodAnySeedsSowing('GoodAnySeedsSowing'),
-
   /// GoodForPlantingFloweringPlants
   goodForPlantingFloweringPlants('GoodForPlantingFloweringPlants'),
-
   /// GoodForPlantingGarlic
   goodForPlantingGarlic('GoodForPlantingGarlic'),
-
   /// GoodForPlantingPeachAndOthers
   goodForPlantingPeachAndOthers('GoodForPlantingPeachAndOthers'),
-
   /// GoodForPlantingTomatoesAndOthers
   goodForPlantingTomatoesAndOthers('GoodForPlantingTomatoesAndOthers'),
-
   /// GoodForPlantingGrains
   goodForPlantingGrains('GoodForPlantingGrains'),
-
   /// GoodForPlantingOnionAndOthers
   goodForPlantingOnionAndOthers('GoodForPlantingOnionAndOthers'),
-
   /// GoodForPlantingPepperAndOthers
   goodForPlantingPepperAndOthers('GoodForPlantingPepperAndOthers'),
-
   /// GoodForPlantingPotatoAndOthers
   goodForPlantingPotatoAndOthers('GoodForPlantingPotatoAndOthers'),
-
   /// GoodForPlantingGrainsAndOthers
   goodForPlantingGrainsAndOthers('GoodForPlantingGrainsAndOthers'),
-
   /// GoodForPlantingPumpkinsAndOthers
   goodForPlantingPumpkinsAndOthers('GoodForPlantingPumpkinsAndOthers'),
-
   /// GoodForPlantingTrees
   goodForPlantingTrees('GoodForPlantingTrees'),
-
   /// GoodForPlantingFlowerSeeds
   goodForPlantingFlowerSeeds('GoodForPlantingFlowerSeeds'),
-
   /// GoodForPlantingSugarcane
   goodForPlantingSugarcane('GoodForPlantingSugarcane'),
-
   /// GoodForPlantingFruitTrees
   goodForPlantingFruitTrees('GoodForPlantingFruitTrees'),
-
   /// GoodForPlantingFlowerTrees
   goodForPlantingFlowerTrees('GoodForPlantingFlowerTrees'),
-
   /// GoodForPlantingFlowers
   goodForPlantingFlowers('GoodForPlantingFlowers'),
-
   /// GoodForPlantingFlowerCuttings
   goodForPlantingFlowerCuttings('GoodForPlantingFlowerCuttings'),
-
   /// SunGochara8Bindu
   sunGochara8Bindu('SunGochara8Bindu'),
-
   /// SunGochara7Bindu
   sunGochara7Bindu('SunGochara7Bindu'),
-
   /// SunGochara6Bindu
   sunGochara6Bindu('SunGochara6Bindu'),
-
   /// SunGochara5Bindu
   sunGochara5Bindu('SunGochara5Bindu'),
-
   /// SunGochara4Bindu
   sunGochara4Bindu('SunGochara4Bindu'),
-
   /// SunGochara3Bindu
   sunGochara3Bindu('SunGochara3Bindu'),
-
   /// SunGochara2Bindu
   sunGochara2Bindu('SunGochara2Bindu'),
-
   /// SunGochara1Bindu
   sunGochara1Bindu('SunGochara1Bindu'),
-
   /// SunGochara0Bindu
   sunGochara0Bindu('SunGochara0Bindu'),
-
   /// MoonGochara8Bindu
   moonGochara8Bindu('MoonGochara8Bindu'),
-
   /// MoonGochara7Bindu
   moonGochara7Bindu('MoonGochara7Bindu'),
-
   /// MoonGochara6Bindu
   moonGochara6Bindu('MoonGochara6Bindu'),
-
   /// MoonGochara5Bindu
   moonGochara5Bindu('MoonGochara5Bindu'),
-
   /// MoonGochara4Bindu
   moonGochara4Bindu('MoonGochara4Bindu'),
-
   /// MoonGochara3Bindu
   moonGochara3Bindu('MoonGochara3Bindu'),
-
   /// MoonGochara2Bindu
   moonGochara2Bindu('MoonGochara2Bindu'),
-
   /// MoonGochara1Bindu
   moonGochara1Bindu('MoonGochara1Bindu'),
-
   /// MoonGochara0Bindu
   moonGochara0Bindu('MoonGochara0Bindu'),
-
   /// MarsGochara8Bindu
   marsGochara8Bindu('MarsGochara8Bindu'),
-
   /// MarsGochara7Bindu
   marsGochara7Bindu('MarsGochara7Bindu'),
-
   /// MarsGochara6Bindu
   marsGochara6Bindu('MarsGochara6Bindu'),
-
   /// MarsGochara5Bindu
   marsGochara5Bindu('MarsGochara5Bindu'),
-
   /// MarsGochara4Bindu
   marsGochara4Bindu('MarsGochara4Bindu'),
-
   /// MarsGochara3Bindu
   marsGochara3Bindu('MarsGochara3Bindu'),
-
   /// MarsGochara2Bindu
   marsGochara2Bindu('MarsGochara2Bindu'),
-
   /// MarsGochara1Bindu
   marsGochara1Bindu('MarsGochara1Bindu'),
-
   /// MarsGochara0Bindu
   marsGochara0Bindu('MarsGochara0Bindu'),
-
   /// MercuryGochara8Bindu
   mercuryGochara8Bindu('MercuryGochara8Bindu'),
-
   /// MercuryGochara7Bindu
   mercuryGochara7Bindu('MercuryGochara7Bindu'),
-
   /// MercuryGochara6Bindu
   mercuryGochara6Bindu('MercuryGochara6Bindu'),
-
   /// MercuryGochara5Bindu
   mercuryGochara5Bindu('MercuryGochara5Bindu'),
-
   /// MercuryGochara4Bindu
   mercuryGochara4Bindu('MercuryGochara4Bindu'),
-
   /// MercuryGochara3Bindu
   mercuryGochara3Bindu('MercuryGochara3Bindu'),
-
   /// MercuryGochara2Bindu
   mercuryGochara2Bindu('MercuryGochara2Bindu'),
-
   /// MercuryGochara1Bindu
   mercuryGochara1Bindu('MercuryGochara1Bindu'),
-
   /// MercuryGochara0Bindu
   mercuryGochara0Bindu('MercuryGochara0Bindu'),
-
   /// JupiterGochara8Bindu
   jupiterGochara8Bindu('JupiterGochara8Bindu'),
-
   /// JupiterGochara7Bindu
   jupiterGochara7Bindu('JupiterGochara7Bindu'),
-
   /// JupiterGochara6Bindu
   jupiterGochara6Bindu('JupiterGochara6Bindu'),
-
   /// JupiterGochara5Bindu
   jupiterGochara5Bindu('JupiterGochara5Bindu'),
-
   /// JupiterGochara4Bindu
   jupiterGochara4Bindu('JupiterGochara4Bindu'),
-
   /// JupiterGochara3Bindu
   jupiterGochara3Bindu('JupiterGochara3Bindu'),
-
   /// JupiterGochara2Bindu
   jupiterGochara2Bindu('JupiterGochara2Bindu'),
-
   /// JupiterGochara1Bindu
   jupiterGochara1Bindu('JupiterGochara1Bindu'),
-
   /// JupiterGochara0Bindu
   jupiterGochara0Bindu('JupiterGochara0Bindu'),
-
   /// VenusGochara8Bindu
   venusGochara8Bindu('VenusGochara8Bindu'),
-
   /// VenusGochara7Bindu
   venusGochara7Bindu('VenusGochara7Bindu'),
-
   /// VenusGochara6Bindu
   venusGochara6Bindu('VenusGochara6Bindu'),
-
   /// VenusGochara5Bindu
   venusGochara5Bindu('VenusGochara5Bindu'),
-
   /// VenusGochara4Bindu
   venusGochara4Bindu('VenusGochara4Bindu'),
-
   /// VenusGochara3Bindu
   venusGochara3Bindu('VenusGochara3Bindu'),
-
   /// VenusGochara2Bindu
   venusGochara2Bindu('VenusGochara2Bindu'),
-
   /// VenusGochara1Bindu
   venusGochara1Bindu('VenusGochara1Bindu'),
-
   /// VenusGochara0Bindu
   venusGochara0Bindu('VenusGochara0Bindu'),
-
   /// SaturnGochara8Bindu
   saturnGochara8Bindu('SaturnGochara8Bindu'),
-
   /// SaturnGochara7Bindu
   saturnGochara7Bindu('SaturnGochara7Bindu'),
-
   /// SaturnGochara6Bindu
   saturnGochara6Bindu('SaturnGochara6Bindu'),
-
   /// SaturnGochara5Bindu
   saturnGochara5Bindu('SaturnGochara5Bindu'),
-
   /// SaturnGochara4Bindu
   saturnGochara4Bindu('SaturnGochara4Bindu'),
-
   /// SaturnGochara3Bindu
   saturnGochara3Bindu('SaturnGochara3Bindu'),
-
   /// SaturnGochara2Bindu
   saturnGochara2Bindu('SaturnGochara2Bindu'),
-
   /// SaturnGochara1Bindu
   saturnGochara1Bindu('SaturnGochara1Bindu'),
-
   /// SaturnGochara0Bindu
   saturnGochara0Bindu('SaturnGochara0Bindu'),
-
   /// DasaLordAshtakavargaStrong
   dasaLordAshtakavargaStrong('DasaLordAshtakavargaStrong'),
-
   /// DasaLordAshtakavargaWeak
   dasaLordAshtakavargaWeak('DasaLordAshtakavargaWeak'),
-
   /// BhuktiLordAshtakavargaStrong
   bhuktiLordAshtakavargaStrong('BhuktiLordAshtakavargaStrong'),
-
   /// BhuktiLordAshtakavargaWeak
   bhuktiLordAshtakavargaWeak('BhuktiLordAshtakavargaWeak'),
-
   /// GocharaInStrongSarvashtakavargaSign
   gocharaInStrongSarvashtakavargaSign('GocharaInStrongSarvashtakavargaSign'),
-
   /// GocharaInWeakSarvashtakavargaSign
   gocharaInWeakSarvashtakavargaSign('GocharaInWeakSarvashtakavargaSign'),
-
   /// SaturnInNativeDeathNakshatra
   saturnInNativeDeathNakshatra('SaturnInNativeDeathNakshatra'),
-
   /// JupiterInMarriageNakshatra
   jupiterInMarriageNakshatra('JupiterInMarriageNakshatra'),
-
   /// JupiterInChildBirthNakshatra
   jupiterInChildBirthNakshatra('JupiterInChildBirthNakshatra'),
-
   /// SaturnInCareerLossNakshatra
   saturnInCareerLossNakshatra('SaturnInCareerLossNakshatra'),
-
   /// JupiterInFatherDeathNakshatra
   jupiterInFatherDeathNakshatra('JupiterInFatherDeathNakshatra'),
-
   /// SaturnInMotherDeathNakshatra
   saturnInMotherDeathNakshatra('SaturnInMotherDeathNakshatra'),
-
   /// SaturnInBrotherAfflictionNakshatra
   saturnInBrotherAfflictionNakshatra('SaturnInBrotherAfflictionNakshatra'),
-
   /// JupiterInBrotherProsperitySign
   jupiterInBrotherProsperitySign('JupiterInBrotherProsperitySign'),
-
   /// JupiterInMentalBalanceSign
   jupiterInMentalBalanceSign('JupiterInMentalBalanceSign'),
-
   /// SaturnInMentalAfflictionNakshatra
   saturnInMentalAfflictionNakshatra('SaturnInMentalAfflictionNakshatra'),
-
   /// JupiterInChildBirthSign
   jupiterInChildBirthSign('JupiterInChildBirthSign'),
-
   /// SunInChildBirthMonth
   sunInChildBirthMonth('SunInChildBirthMonth'),
-
   /// SunInMarriageMonth
   sunInMarriageMonth('SunInMarriageMonth'),
-
   /// JupiterInSpouseDeathNakshatra
   jupiterInSpouseDeathNakshatra('JupiterInSpouseDeathNakshatra'),
-
   /// JupiterInNativeDeathNakshatra
   jupiterInNativeDeathNakshatra('JupiterInNativeDeathNakshatra'),
-
   /// SunInNativeDeathMonth
   sunInNativeDeathMonth('SunInNativeDeathMonth'),
-
   /// MoonInHighBinduSign
   moonInHighBinduSign('MoonInHighBinduSign'),
-
   /// MoonInMediumBinduSign
   moonInMediumBinduSign('MoonInMediumBinduSign'),
-
   /// MoonInLowBinduSign
   moonInLowBinduSign('MoonInLowBinduSign'),
-
   /// SunInHighBinduSign
   sunInHighBinduSign('SunInHighBinduSign'),
-
   /// SunInMediumBinduSign
   sunInMediumBinduSign('SunInMediumBinduSign'),
-
   /// SunInLowBinduSign
   sunInLowBinduSign('SunInLowBinduSign'),
-
   /// JupiterExpansionYear
   jupiterExpansionYear('JupiterExpansionYear'),
-
   /// JupiterNeutralYear
   jupiterNeutralYear('JupiterNeutralYear'),
-
   /// JupiterContractionYear
   jupiterContractionYear('JupiterContractionYear'),
-
   /// SaturnSadeSatiMild
   saturnSadeSatiMild('SaturnSadeSatiMild'),
-
   /// SaturnSadeSatiModerate
   saturnSadeSatiModerate('SaturnSadeSatiModerate'),
-
   /// SaturnSadeSatiSevere
   saturnSadeSatiSevere('SaturnSadeSatiSevere'),
-
   /// SaturnInHighBinduSign
   saturnInHighBinduSign('SaturnInHighBinduSign'),
-
   /// SaturnInMediumBinduSign
   saturnInMediumBinduSign('SaturnInMediumBinduSign'),
-
   /// SaturnInLowBinduSign
   saturnInLowBinduSign('SaturnInLowBinduSign'),
-
   /// DasaLordInHighBinduHouse
   dasaLordInHighBinduHouse('DasaLordInHighBinduHouse'),
-
   /// DasaLordInLowBinduHouse
   dasaLordInLowBinduHouse('DasaLordInLowBinduHouse'),
-
   /// BhuktiKakshyaSaturn
   bhuktiKakshyaSaturn('BhuktiKakshyaSaturn'),
-
   /// BhuktiKakshyaJupiter
   bhuktiKakshyaJupiter('BhuktiKakshyaJupiter'),
-
   /// BhuktiKakshyaMars
   bhuktiKakshyaMars('BhuktiKakshyaMars'),
-
   /// BhuktiKakshyaSun
   bhuktiKakshyaSun('BhuktiKakshyaSun'),
-
   /// BhuktiKakshyaVenus
   bhuktiKakshyaVenus('BhuktiKakshyaVenus'),
-
   /// BhuktiKakshyaMercury
   bhuktiKakshyaMercury('BhuktiKakshyaMercury'),
-
   /// BhuktiKakshyaMoon
   bhuktiKakshyaMoon('BhuktiKakshyaMoon'),
-
   /// BhuktiKakshyaLagna
   bhuktiKakshyaLagna('BhuktiKakshyaLagna'),
-
   /// SunGocharaInHouse1
   sunGocharaInHouse1('SunGocharaInHouse1'),
-
   /// SunGocharaInHouse2
   sunGocharaInHouse2('SunGocharaInHouse2'),
-
   /// SunGocharaInHouse3
   sunGocharaInHouse3('SunGocharaInHouse3'),
-
   /// SunGocharaInHouse4
   sunGocharaInHouse4('SunGocharaInHouse4'),
-
   /// SunGocharaInHouse5
   sunGocharaInHouse5('SunGocharaInHouse5'),
-
   /// SunGocharaInHouse6
   sunGocharaInHouse6('SunGocharaInHouse6'),
-
   /// SunGocharaInHouse7
   sunGocharaInHouse7('SunGocharaInHouse7'),
-
   /// SunGocharaInHouse8
   sunGocharaInHouse8('SunGocharaInHouse8'),
-
   /// SunGocharaInHouse9
   sunGocharaInHouse9('SunGocharaInHouse9'),
-
   /// SunGocharaInHouse10
   sunGocharaInHouse10('SunGocharaInHouse10'),
-
   /// SunGocharaInHouse11
   sunGocharaInHouse11('SunGocharaInHouse11'),
-
   /// SunGocharaInHouse12
   sunGocharaInHouse12('SunGocharaInHouse12'),
-
   /// MoonGocharaInHouse1
   moonGocharaInHouse1('MoonGocharaInHouse1'),
-
   /// MoonGocharaInHouse2
   moonGocharaInHouse2('MoonGocharaInHouse2'),
-
   /// MoonGocharaInHouse3
   moonGocharaInHouse3('MoonGocharaInHouse3'),
-
   /// MoonGocharaInHouse4
   moonGocharaInHouse4('MoonGocharaInHouse4'),
-
   /// MoonGocharaInHouse5
   moonGocharaInHouse5('MoonGocharaInHouse5'),
-
   /// MoonGocharaInHouse6
   moonGocharaInHouse6('MoonGocharaInHouse6'),
-
   /// MoonGocharaInHouse7
   moonGocharaInHouse7('MoonGocharaInHouse7'),
-
   /// MoonGocharaInHouse8
   moonGocharaInHouse8('MoonGocharaInHouse8'),
-
   /// MoonGocharaInHouse9
   moonGocharaInHouse9('MoonGocharaInHouse9'),
-
   /// MoonGocharaInHouse10
   moonGocharaInHouse10('MoonGocharaInHouse10'),
-
   /// MoonGocharaInHouse11
   moonGocharaInHouse11('MoonGocharaInHouse11'),
-
   /// MoonGocharaInHouse12
   moonGocharaInHouse12('MoonGocharaInHouse12'),
-
   /// MarsGocharaInHouse1
   marsGocharaInHouse1('MarsGocharaInHouse1'),
-
   /// MarsGocharaInHouse2
   marsGocharaInHouse2('MarsGocharaInHouse2'),
-
   /// MarsGocharaInHouse3
   marsGocharaInHouse3('MarsGocharaInHouse3'),
-
   /// MarsGocharaInHouse4
   marsGocharaInHouse4('MarsGocharaInHouse4'),
-
   /// MarsGocharaInHouse5
   marsGocharaInHouse5('MarsGocharaInHouse5'),
-
   /// MarsGocharaInHouse6
   marsGocharaInHouse6('MarsGocharaInHouse6'),
-
   /// MarsGocharaInHouse7
   marsGocharaInHouse7('MarsGocharaInHouse7'),
-
   /// MarsGocharaInHouse8
   marsGocharaInHouse8('MarsGocharaInHouse8'),
-
   /// MarsGocharaInHouse9
   marsGocharaInHouse9('MarsGocharaInHouse9'),
-
   /// MarsGocharaInHouse10
   marsGocharaInHouse10('MarsGocharaInHouse10'),
-
   /// MarsGocharaInHouse11
   marsGocharaInHouse11('MarsGocharaInHouse11'),
-
   /// MarsGocharaInHouse12
   marsGocharaInHouse12('MarsGocharaInHouse12'),
-
   /// MercuryGocharaInHouse1
   mercuryGocharaInHouse1('MercuryGocharaInHouse1'),
-
   /// MercuryGocharaInHouse2
   mercuryGocharaInHouse2('MercuryGocharaInHouse2'),
-
   /// MercuryGocharaInHouse3
   mercuryGocharaInHouse3('MercuryGocharaInHouse3'),
-
   /// MercuryGocharaInHouse4
   mercuryGocharaInHouse4('MercuryGocharaInHouse4'),
-
   /// MercuryGocharaInHouse5
   mercuryGocharaInHouse5('MercuryGocharaInHouse5'),
-
   /// MercuryGocharaInHouse6
   mercuryGocharaInHouse6('MercuryGocharaInHouse6'),
-
   /// MercuryGocharaInHouse7
   mercuryGocharaInHouse7('MercuryGocharaInHouse7'),
-
   /// MercuryGocharaInHouse8
   mercuryGocharaInHouse8('MercuryGocharaInHouse8'),
-
   /// MercuryGocharaInHouse9
   mercuryGocharaInHouse9('MercuryGocharaInHouse9'),
-
   /// MercuryGocharaInHouse10
   mercuryGocharaInHouse10('MercuryGocharaInHouse10'),
-
   /// MercuryGocharaInHouse11
   mercuryGocharaInHouse11('MercuryGocharaInHouse11'),
-
   /// MercuryGocharaInHouse12
   mercuryGocharaInHouse12('MercuryGocharaInHouse12'),
-
   /// JupiterGocharaInHouse1
   jupiterGocharaInHouse1('JupiterGocharaInHouse1'),
-
   /// JupiterGocharaInHouse2
   jupiterGocharaInHouse2('JupiterGocharaInHouse2'),
-
   /// JupiterGocharaInHouse3
   jupiterGocharaInHouse3('JupiterGocharaInHouse3'),
-
   /// JupiterGocharaInHouse4
   jupiterGocharaInHouse4('JupiterGocharaInHouse4'),
-
   /// JupiterGocharaInHouse5
   jupiterGocharaInHouse5('JupiterGocharaInHouse5'),
-
   /// JupiterGocharaInHouse6
   jupiterGocharaInHouse6('JupiterGocharaInHouse6'),
-
   /// JupiterGocharaInHouse7
   jupiterGocharaInHouse7('JupiterGocharaInHouse7'),
-
   /// JupiterGocharaInHouse8
   jupiterGocharaInHouse8('JupiterGocharaInHouse8'),
-
   /// JupiterGocharaInHouse9
   jupiterGocharaInHouse9('JupiterGocharaInHouse9'),
-
   /// JupiterGocharaInHouse10
   jupiterGocharaInHouse10('JupiterGocharaInHouse10'),
-
   /// JupiterGocharaInHouse11
   jupiterGocharaInHouse11('JupiterGocharaInHouse11'),
-
   /// JupiterGocharaInHouse12
   jupiterGocharaInHouse12('JupiterGocharaInHouse12'),
-
   /// VenusGocharaInHouse1
   venusGocharaInHouse1('VenusGocharaInHouse1'),
-
   /// VenusGocharaInHouse2
   venusGocharaInHouse2('VenusGocharaInHouse2'),
-
   /// VenusGocharaInHouse3
   venusGocharaInHouse3('VenusGocharaInHouse3'),
-
   /// VenusGocharaInHouse4
   venusGocharaInHouse4('VenusGocharaInHouse4'),
-
   /// VenusGocharaInHouse5
   venusGocharaInHouse5('VenusGocharaInHouse5'),
-
   /// VenusGocharaInHouse6
   venusGocharaInHouse6('VenusGocharaInHouse6'),
-
   /// VenusGocharaInHouse7
   venusGocharaInHouse7('VenusGocharaInHouse7'),
-
   /// VenusGocharaInHouse8
   venusGocharaInHouse8('VenusGocharaInHouse8'),
-
   /// VenusGocharaInHouse9
   venusGocharaInHouse9('VenusGocharaInHouse9'),
-
   /// VenusGocharaInHouse10
   venusGocharaInHouse10('VenusGocharaInHouse10'),
-
   /// VenusGocharaInHouse11
   venusGocharaInHouse11('VenusGocharaInHouse11'),
-
   /// VenusGocharaInHouse12
   venusGocharaInHouse12('VenusGocharaInHouse12'),
-
   /// SaturnGocharaInHouse1
   saturnGocharaInHouse1('SaturnGocharaInHouse1'),
-
   /// SaturnGocharaInHouse2
   saturnGocharaInHouse2('SaturnGocharaInHouse2'),
-
   /// SaturnGocharaInHouse3
   saturnGocharaInHouse3('SaturnGocharaInHouse3'),
-
   /// SaturnGocharaInHouse4
   saturnGocharaInHouse4('SaturnGocharaInHouse4'),
-
   /// SaturnGocharaInHouse5
   saturnGocharaInHouse5('SaturnGocharaInHouse5'),
-
   /// SaturnGocharaInHouse6
   saturnGocharaInHouse6('SaturnGocharaInHouse6'),
-
   /// SaturnGocharaInHouse7
   saturnGocharaInHouse7('SaturnGocharaInHouse7'),
-
   /// SaturnGocharaInHouse8
   saturnGocharaInHouse8('SaturnGocharaInHouse8'),
-
   /// SaturnGocharaInHouse9
   saturnGocharaInHouse9('SaturnGocharaInHouse9'),
-
   /// SaturnGocharaInHouse10
   saturnGocharaInHouse10('SaturnGocharaInHouse10'),
-
   /// SaturnGocharaInHouse11
   saturnGocharaInHouse11('SaturnGocharaInHouse11'),
-
   /// SaturnGocharaInHouse12
   saturnGocharaInHouse12('SaturnGocharaInHouse12'),
-
   /// RahuGocharaInHouse1
   rahuGocharaInHouse1('RahuGocharaInHouse1'),
-
   /// RahuGocharaInHouse2
   rahuGocharaInHouse2('RahuGocharaInHouse2'),
-
   /// RahuGocharaInHouse3
   rahuGocharaInHouse3('RahuGocharaInHouse3'),
-
   /// RahuGocharaInHouse4
   rahuGocharaInHouse4('RahuGocharaInHouse4'),
-
   /// RahuGocharaInHouse5
   rahuGocharaInHouse5('RahuGocharaInHouse5'),
-
   /// RahuGocharaInHouse6
   rahuGocharaInHouse6('RahuGocharaInHouse6'),
-
   /// RahuGocharaInHouse7
   rahuGocharaInHouse7('RahuGocharaInHouse7'),
-
   /// RahuGocharaInHouse8
   rahuGocharaInHouse8('RahuGocharaInHouse8'),
-
   /// RahuGocharaInHouse9
   rahuGocharaInHouse9('RahuGocharaInHouse9'),
-
   /// RahuGocharaInHouse10
   rahuGocharaInHouse10('RahuGocharaInHouse10'),
-
   /// RahuGocharaInHouse11
   rahuGocharaInHouse11('RahuGocharaInHouse11'),
-
   /// RahuGocharaInHouse12
   rahuGocharaInHouse12('RahuGocharaInHouse12'),
-
   /// KetuGocharaInHouse1
   ketuGocharaInHouse1('KetuGocharaInHouse1'),
-
   /// KetuGocharaInHouse2
   ketuGocharaInHouse2('KetuGocharaInHouse2'),
-
   /// KetuGocharaInHouse3
   ketuGocharaInHouse3('KetuGocharaInHouse3'),
-
   /// KetuGocharaInHouse4
   ketuGocharaInHouse4('KetuGocharaInHouse4'),
-
   /// KetuGocharaInHouse5
   ketuGocharaInHouse5('KetuGocharaInHouse5'),
-
   /// KetuGocharaInHouse6
   ketuGocharaInHouse6('KetuGocharaInHouse6'),
-
   /// KetuGocharaInHouse7
   ketuGocharaInHouse7('KetuGocharaInHouse7'),
-
   /// KetuGocharaInHouse8
   ketuGocharaInHouse8('KetuGocharaInHouse8'),
-
   /// KetuGocharaInHouse9
   ketuGocharaInHouse9('KetuGocharaInHouse9'),
-
   /// KetuGocharaInHouse10
   ketuGocharaInHouse10('KetuGocharaInHouse10'),
-
   /// KetuGocharaInHouse11
   ketuGocharaInHouse11('KetuGocharaInHouse11'),
-
   /// KetuGocharaInHouse12
   ketuGocharaInHouse12('KetuGocharaInHouse12'),
-
   /// GocharaSummary
   gocharaSummary('GocharaSummary'),
-
   /// AriesSunPD1
   ariesSunPd1('AriesSunPD1'),
-
   /// TaurusSunPD1
   taurusSunPd1('TaurusSunPD1'),
-
   /// GeminiSunPD1
   geminiSunPd1('GeminiSunPD1'),
-
   /// CancerSunPD1
   cancerSunPd1('CancerSunPD1'),
-
   /// LeoSunPD1
   leoSunPd1('LeoSunPD1'),
-
   /// VirgoSunPD1
   virgoSunPd1('VirgoSunPD1'),
-
   /// LibraSunPD1
   libraSunPd1('LibraSunPD1'),
-
   /// ScorpioSunPD1
   scorpioSunPd1('ScorpioSunPD1'),
-
   /// SagittariusSunPD1
   sagittariusSunPd1('SagittariusSunPD1'),
-
   /// CapricornSunPD1
   capricornSunPd1('CapricornSunPD1'),
-
   /// AquariusSunPD1
   aquariusSunPd1('AquariusSunPD1'),
-
   /// PiscesSunPD1
   piscesSunPd1('PiscesSunPD1'),
-
   /// AriesMoonPD1
   ariesMoonPd1('AriesMoonPD1'),
-
   /// TaurusMoonPD1
   taurusMoonPd1('TaurusMoonPD1'),
-
   /// GeminiMoonPD1
   geminiMoonPd1('GeminiMoonPD1'),
-
   /// CancerMoonPD1
   cancerMoonPd1('CancerMoonPD1'),
-
   /// LeoMoonPD1
   leoMoonPd1('LeoMoonPD1'),
-
   /// VirgoMoonPD1
   virgoMoonPd1('VirgoMoonPD1'),
-
   /// LibraMoonPD1
   libraMoonPd1('LibraMoonPD1'),
-
   /// ScorpioMoonPD1
   scorpioMoonPd1('ScorpioMoonPD1'),
-
   /// SagittariusMoonPD1
   sagittariusMoonPd1('SagittariusMoonPD1'),
-
   /// CapricornMoonPD1
   capricornMoonPd1('CapricornMoonPD1'),
-
   /// AquariusMoonPD1
   aquariusMoonPd1('AquariusMoonPD1'),
-
   /// PiscesMoonPD1
   piscesMoonPd1('PiscesMoonPD1'),
-
   /// AriesMarsPD1
   ariesMarsPd1('AriesMarsPD1'),
-
   /// TaurusMarsPD1
   taurusMarsPd1('TaurusMarsPD1'),
-
   /// GeminiMarsPD1
   geminiMarsPd1('GeminiMarsPD1'),
-
   /// CancerMarsPD1
   cancerMarsPd1('CancerMarsPD1'),
-
   /// LeoMarsPD1
   leoMarsPd1('LeoMarsPD1'),
-
   /// VirgoMarsPD1
   virgoMarsPd1('VirgoMarsPD1'),
-
   /// LibraMarsPD1
   libraMarsPd1('LibraMarsPD1'),
-
   /// ScorpioMarsPD1
   scorpioMarsPd1('ScorpioMarsPD1'),
-
   /// SagittariusMarsPD1
   sagittariusMarsPd1('SagittariusMarsPD1'),
-
   /// CapricornMarsPD1
   capricornMarsPd1('CapricornMarsPD1'),
-
   /// AquariusMarsPD1
   aquariusMarsPd1('AquariusMarsPD1'),
-
   /// PiscesMarsPD1
   piscesMarsPd1('PiscesMarsPD1'),
-
   /// AriesRahuPD1
   ariesRahuPd1('AriesRahuPD1'),
-
   /// TaurusRahuPD1
   taurusRahuPd1('TaurusRahuPD1'),
-
   /// GeminiRahuPD1
   geminiRahuPd1('GeminiRahuPD1'),
-
   /// CancerRahuPD1
   cancerRahuPd1('CancerRahuPD1'),
-
   /// LeoRahuPD1
   leoRahuPd1('LeoRahuPD1'),
-
   /// VirgoRahuPD1
   virgoRahuPd1('VirgoRahuPD1'),
-
   /// LibraRahuPD1
   libraRahuPd1('LibraRahuPD1'),
-
   /// ScorpioRahuPD1
   scorpioRahuPd1('ScorpioRahuPD1'),
-
   /// SagittariusRahuPD1
   sagittariusRahuPd1('SagittariusRahuPD1'),
-
   /// CapricornRahuPD1
   capricornRahuPd1('CapricornRahuPD1'),
-
   /// AquariusRahuPD1
   aquariusRahuPd1('AquariusRahuPD1'),
-
   /// PiscesRahuPD1
   piscesRahuPd1('PiscesRahuPD1'),
-
   /// AriesJupiterPD1
   ariesJupiterPd1('AriesJupiterPD1'),
-
   /// TaurusJupiterPD1
   taurusJupiterPd1('TaurusJupiterPD1'),
-
   /// GeminiJupiterPD1
   geminiJupiterPd1('GeminiJupiterPD1'),
-
   /// CancerJupiterPD1
   cancerJupiterPd1('CancerJupiterPD1'),
-
   /// LeoJupiterPD1
   leoJupiterPd1('LeoJupiterPD1'),
-
   /// VirgoJupiterPD1
   virgoJupiterPd1('VirgoJupiterPD1'),
-
   /// LibraJupiterPD1
   libraJupiterPd1('LibraJupiterPD1'),
-
   /// ScorpioJupiterPD1
   scorpioJupiterPd1('ScorpioJupiterPD1'),
-
   /// SagittariusJupiterPD1
   sagittariusJupiterPd1('SagittariusJupiterPD1'),
-
   /// CapricornJupiterPD1
   capricornJupiterPd1('CapricornJupiterPD1'),
-
   /// AquariusJupiterPD1
   aquariusJupiterPd1('AquariusJupiterPD1'),
-
   /// PiscesJupiterPD1
   piscesJupiterPd1('PiscesJupiterPD1'),
-
   /// AriesSaturnPD1
   ariesSaturnPd1('AriesSaturnPD1'),
-
   /// TaurusSaturnPD1
   taurusSaturnPd1('TaurusSaturnPD1'),
-
   /// GeminiSaturnPD1
   geminiSaturnPd1('GeminiSaturnPD1'),
-
   /// CancerSaturnPD1
   cancerSaturnPd1('CancerSaturnPD1'),
-
   /// LeoSaturnPD1
   leoSaturnPd1('LeoSaturnPD1'),
-
   /// VirgoSaturnPD1
   virgoSaturnPd1('VirgoSaturnPD1'),
-
   /// LibraSaturnPD1
   libraSaturnPd1('LibraSaturnPD1'),
-
   /// ScorpioSaturnPD1
   scorpioSaturnPd1('ScorpioSaturnPD1'),
-
   /// SagittariusSaturnPD1
   sagittariusSaturnPd1('SagittariusSaturnPD1'),
-
   /// CapricornSaturnPD1
   capricornSaturnPd1('CapricornSaturnPD1'),
-
   /// AquariusSaturnPD1
   aquariusSaturnPd1('AquariusSaturnPD1'),
-
   /// PiscesSaturnPD1
   piscesSaturnPd1('PiscesSaturnPD1'),
-
   /// AriesMercuryPD1
   ariesMercuryPd1('AriesMercuryPD1'),
-
   /// TaurusMercuryPD1
   taurusMercuryPd1('TaurusMercuryPD1'),
-
   /// GeminiMercuryPD1
   geminiMercuryPd1('GeminiMercuryPD1'),
-
   /// CancerMercuryPD1
   cancerMercuryPd1('CancerMercuryPD1'),
-
   /// LeoMercuryPD1
   leoMercuryPd1('LeoMercuryPD1'),
-
   /// VirgoMercuryPD1
   virgoMercuryPd1('VirgoMercuryPD1'),
-
   /// LibraMercuryPD1
   libraMercuryPd1('LibraMercuryPD1'),
-
   /// ScorpioMercuryPD1
   scorpioMercuryPd1('ScorpioMercuryPD1'),
-
   /// SagittariusMercuryPD1
   sagittariusMercuryPd1('SagittariusMercuryPD1'),
-
   /// CapricornMercuryPD1
   capricornMercuryPd1('CapricornMercuryPD1'),
-
   /// AquariusMercuryPD1
   aquariusMercuryPd1('AquariusMercuryPD1'),
-
   /// PiscesMercuryPD1
   piscesMercuryPd1('PiscesMercuryPD1'),
-
   /// AriesKetuPD1
   ariesKetuPd1('AriesKetuPD1'),
-
   /// TaurusKetuPD1
   taurusKetuPd1('TaurusKetuPD1'),
-
   /// GeminiKetuPD1
   geminiKetuPd1('GeminiKetuPD1'),
-
   /// CancerKetuPD1
   cancerKetuPd1('CancerKetuPD1'),
-
   /// LeoKetuPD1
   leoKetuPd1('LeoKetuPD1'),
-
   /// VirgoKetuPD1
   virgoKetuPd1('VirgoKetuPD1'),
-
   /// LibraKetuPD1
   libraKetuPd1('LibraKetuPD1'),
-
   /// ScorpioKetuPD1
   scorpioKetuPd1('ScorpioKetuPD1'),
-
   /// SagittariusKetuPD1
   sagittariusKetuPd1('SagittariusKetuPD1'),
-
   /// CapricornKetuPD1
   capricornKetuPd1('CapricornKetuPD1'),
-
   /// AquariusKetuPD1
   aquariusKetuPd1('AquariusKetuPD1'),
-
   /// PiscesKetuPD1
   piscesKetuPd1('PiscesKetuPD1'),
-
   /// AriesVenusPD1
   ariesVenusPd1('AriesVenusPD1'),
-
   /// TaurusVenusPD1
   taurusVenusPd1('TaurusVenusPD1'),
-
   /// GeminiVenusPD1
   geminiVenusPd1('GeminiVenusPD1'),
-
   /// CancerVenusPD1
   cancerVenusPd1('CancerVenusPD1'),
-
   /// LeoVenusPD1
   leoVenusPd1('LeoVenusPD1'),
-
   /// VirgoVenusPD1
   virgoVenusPd1('VirgoVenusPD1'),
-
   /// LibraVenusPD1
   libraVenusPd1('LibraVenusPD1'),
-
   /// ScorpioVenusPD1
   scorpioVenusPd1('ScorpioVenusPD1'),
-
   /// SagittariusVenusPD1
   sagittariusVenusPd1('SagittariusVenusPD1'),
-
   /// CapricornVenusPD1
   capricornVenusPd1('CapricornVenusPD1'),
-
   /// AquariusVenusPD1
   aquariusVenusPd1('AquariusVenusPD1'),
-
   /// PiscesVenusPD1
   piscesVenusPd1('PiscesVenusPD1'),
-
   /// SunSunPD2
   sunSunPd2('SunSunPD2'),
-
   /// SunMoonPD2
   sunMoonPd2('SunMoonPD2'),
-
   /// SunMarsPD2
   sunMarsPd2('SunMarsPD2'),
-
   /// SunRahuPD2
   sunRahuPd2('SunRahuPD2'),
-
   /// SunJupiterPD2
   sunJupiterPd2('SunJupiterPD2'),
-
   /// SunSaturnPD2
   sunSaturnPd2('SunSaturnPD2'),
-
   /// SunMercuryPD2
   sunMercuryPd2('SunMercuryPD2'),
-
   /// SunKetuPD2
   sunKetuPd2('SunKetuPD2'),
-
   /// SunVenusPD2
   sunVenusPd2('SunVenusPD2'),
-
   /// MoonSunPD2
   moonSunPd2('MoonSunPD2'),
-
   /// MoonMoonPD2
   moonMoonPd2('MoonMoonPD2'),
-
   /// MoonMarsPD2
   moonMarsPd2('MoonMarsPD2'),
-
   /// MoonRahuPD2
   moonRahuPd2('MoonRahuPD2'),
-
   /// MoonJupiterPD2
   moonJupiterPd2('MoonJupiterPD2'),
-
   /// MoonSaturnPD2
   moonSaturnPd2('MoonSaturnPD2'),
-
   /// MoonMercuryPD2
   moonMercuryPd2('MoonMercuryPD2'),
-
   /// MoonKetuPD2
   moonKetuPd2('MoonKetuPD2'),
-
   /// MoonVenusPD2
   moonVenusPd2('MoonVenusPD2'),
-
   /// MarsSunPD2
   marsSunPd2('MarsSunPD2'),
-
   /// MarsMoonPD2
   marsMoonPd2('MarsMoonPD2'),
-
   /// MarsMarsPD2
   marsMarsPd2('MarsMarsPD2'),
-
   /// MarsRahuPD2
   marsRahuPd2('MarsRahuPD2'),
-
   /// MarsJupiterPD2
   marsJupiterPd2('MarsJupiterPD2'),
-
   /// MarsSaturnPD2
   marsSaturnPd2('MarsSaturnPD2'),
-
   /// MarsMercuryPD2
   marsMercuryPd2('MarsMercuryPD2'),
-
   /// MarsKetuPD2
   marsKetuPd2('MarsKetuPD2'),
-
   /// MarsVenusPD2
   marsVenusPd2('MarsVenusPD2'),
-
   /// RahuSunPD2
   rahuSunPd2('RahuSunPD2'),
-
   /// RahuMoonPD2
   rahuMoonPd2('RahuMoonPD2'),
-
   /// RahuMarsPD2
   rahuMarsPd2('RahuMarsPD2'),
-
   /// RahuRahuPD2
   rahuRahuPd2('RahuRahuPD2'),
-
   /// RahuJupiterPD2
   rahuJupiterPd2('RahuJupiterPD2'),
-
   /// RahuSaturnPD2
   rahuSaturnPd2('RahuSaturnPD2'),
-
   /// RahuMercuryPD2
   rahuMercuryPd2('RahuMercuryPD2'),
-
   /// RahuKetuPD2
   rahuKetuPd2('RahuKetuPD2'),
-
   /// RahuVenusPD2
   rahuVenusPd2('RahuVenusPD2'),
-
   /// JupiterSunPD2
   jupiterSunPd2('JupiterSunPD2'),
-
   /// JupiterMoonPD2
   jupiterMoonPd2('JupiterMoonPD2'),
-
   /// JupiterMarsPD2
   jupiterMarsPd2('JupiterMarsPD2'),
-
   /// JupiterRahuPD2
   jupiterRahuPd2('JupiterRahuPD2'),
-
   /// JupiterJupiterPD2
   jupiterJupiterPd2('JupiterJupiterPD2'),
-
   /// JupiterSaturnPD2
   jupiterSaturnPd2('JupiterSaturnPD2'),
-
   /// JupiterMercuryPD2
   jupiterMercuryPd2('JupiterMercuryPD2'),
-
   /// JupiterKetuPD2
   jupiterKetuPd2('JupiterKetuPD2'),
-
   /// JupiterVenusPD2
   jupiterVenusPd2('JupiterVenusPD2'),
-
   /// SaturnSunPD2
   saturnSunPd2('SaturnSunPD2'),
-
   /// SaturnMoonPD2
   saturnMoonPd2('SaturnMoonPD2'),
-
   /// SaturnMarsPD2
   saturnMarsPd2('SaturnMarsPD2'),
-
   /// SaturnRahuPD2
   saturnRahuPd2('SaturnRahuPD2'),
-
   /// SaturnJupiterPD2
   saturnJupiterPd2('SaturnJupiterPD2'),
-
   /// SaturnSaturnPD2
   saturnSaturnPd2('SaturnSaturnPD2'),
-
   /// SaturnMercuryPD2
   saturnMercuryPd2('SaturnMercuryPD2'),
-
   /// SaturnKetuPD2
   saturnKetuPd2('SaturnKetuPD2'),
-
   /// SaturnVenusPD2
   saturnVenusPd2('SaturnVenusPD2'),
-
   /// MercurySunPD2
   mercurySunPd2('MercurySunPD2'),
-
   /// MercuryMoonPD2
   mercuryMoonPd2('MercuryMoonPD2'),
-
   /// MercuryMarsPD2
   mercuryMarsPd2('MercuryMarsPD2'),
-
   /// MercuryRahuPD2
   mercuryRahuPd2('MercuryRahuPD2'),
-
   /// MercuryJupiterPD2
   mercuryJupiterPd2('MercuryJupiterPD2'),
-
   /// MercurySaturnPD2
   mercurySaturnPd2('MercurySaturnPD2'),
-
   /// MercuryMercuryPD2
   mercuryMercuryPd2('MercuryMercuryPD2'),
-
   /// MercuryKetuPD2
   mercuryKetuPd2('MercuryKetuPD2'),
-
   /// MercuryVenusPD2
   mercuryVenusPd2('MercuryVenusPD2'),
-
   /// KetuSunPD2
   ketuSunPd2('KetuSunPD2'),
-
   /// KetuMoonPD2
   ketuMoonPd2('KetuMoonPD2'),
-
   /// KetuMarsPD2
   ketuMarsPd2('KetuMarsPD2'),
-
   /// KetuRahuPD2
   ketuRahuPd2('KetuRahuPD2'),
-
   /// KetuJupiterPD2
   ketuJupiterPd2('KetuJupiterPD2'),
-
   /// KetuSaturnPD2
   ketuSaturnPd2('KetuSaturnPD2'),
-
   /// KetuMercuryPD2
   ketuMercuryPd2('KetuMercuryPD2'),
-
   /// KetuKetuPD2
   ketuKetuPd2('KetuKetuPD2'),
-
   /// KetuVenusPD2
   ketuVenusPd2('KetuVenusPD2'),
-
   /// VenusSunPD2
   venusSunPd2('VenusSunPD2'),
-
   /// VenusMoonPD2
   venusMoonPd2('VenusMoonPD2'),
-
   /// VenusMarsPD2
   venusMarsPd2('VenusMarsPD2'),
-
   /// VenusRahuPD2
   venusRahuPd2('VenusRahuPD2'),
-
   /// VenusJupiterPD2
   venusJupiterPd2('VenusJupiterPD2'),
-
   /// VenusSaturnPD2
   venusSaturnPd2('VenusSaturnPD2'),
-
   /// VenusMercuryPD2
   venusMercuryPd2('VenusMercuryPD2'),
-
   /// VenusKetuPD2
   venusKetuPd2('VenusKetuPD2'),
-
   /// VenusVenusPD2
   venusVenusPd2('VenusVenusPD2'),
-
   /// SunSunPD3
   sunSunPd3('SunSunPD3'),
-
   /// MoonSunPD3
   moonSunPd3('MoonSunPD3'),
-
   /// MarsSunPD3
   marsSunPd3('MarsSunPD3'),
-
   /// RahuSunPD3
   rahuSunPd3('RahuSunPD3'),
-
   /// JupiterSunPD3
   jupiterSunPd3('JupiterSunPD3'),
-
   /// SaturnSunPD3
   saturnSunPd3('SaturnSunPD3'),
-
   /// MercurySunPD3
   mercurySunPd3('MercurySunPD3'),
-
   /// KetuSunPD3
   ketuSunPd3('KetuSunPD3'),
-
   /// VenusSunPD3
   venusSunPd3('VenusSunPD3'),
-
   /// SunMoonPD3
   sunMoonPd3('SunMoonPD3'),
-
   /// MoonMoonPD3
   moonMoonPd3('MoonMoonPD3'),
-
   /// MarsMoonPD3
   marsMoonPd3('MarsMoonPD3'),
-
   /// RahuMoonPD3
   rahuMoonPd3('RahuMoonPD3'),
-
   /// JupiterMoonPD3
   jupiterMoonPd3('JupiterMoonPD3'),
-
   /// SaturnMoonPD3
   saturnMoonPd3('SaturnMoonPD3'),
-
   /// MercuryMoonPD3
   mercuryMoonPd3('MercuryMoonPD3'),
-
   /// KetuMoonPD3
   ketuMoonPd3('KetuMoonPD3'),
-
   /// VenusMoonPD3
   venusMoonPd3('VenusMoonPD3'),
-
   /// SunMarsPD3
   sunMarsPd3('SunMarsPD3'),
-
   /// MoonMarsPD3
   moonMarsPd3('MoonMarsPD3'),
-
   /// MarsMarsPD3
   marsMarsPd3('MarsMarsPD3'),
-
   /// RahuMarsPD3
   rahuMarsPd3('RahuMarsPD3'),
-
   /// JupiterMarsPD3
   jupiterMarsPd3('JupiterMarsPD3'),
-
   /// SaturnMarsPD3
   saturnMarsPd3('SaturnMarsPD3'),
-
   /// MercuryMarsPD3
   mercuryMarsPd3('MercuryMarsPD3'),
-
   /// KetuMarsPD3
   ketuMarsPd3('KetuMarsPD3'),
-
   /// VenusMarsPD3
   venusMarsPd3('VenusMarsPD3'),
-
   /// SunRahuPD3
   sunRahuPd3('SunRahuPD3'),
-
   /// MoonRahuPD3
   moonRahuPd3('MoonRahuPD3'),
-
   /// MarsRahuPD3
   marsRahuPd3('MarsRahuPD3'),
-
   /// RahuRahuPD3
   rahuRahuPd3('RahuRahuPD3'),
-
   /// JupiterRahuPD3
   jupiterRahuPd3('JupiterRahuPD3'),
-
   /// SaturnRahuPD3
   saturnRahuPd3('SaturnRahuPD3'),
-
   /// MercuryRahuPD3
   mercuryRahuPd3('MercuryRahuPD3'),
-
   /// KetuRahuPD3
   ketuRahuPd3('KetuRahuPD3'),
-
   /// VenusRahuPD3
   venusRahuPd3('VenusRahuPD3'),
-
   /// SunJupiterPD3
   sunJupiterPd3('SunJupiterPD3'),
-
   /// MoonJupiterPD3
   moonJupiterPd3('MoonJupiterPD3'),
-
   /// MarsJupiterPD3
   marsJupiterPd3('MarsJupiterPD3'),
-
   /// RahuJupiterPD3
   rahuJupiterPd3('RahuJupiterPD3'),
-
   /// JupiterJupiterPD3
   jupiterJupiterPd3('JupiterJupiterPD3'),
-
   /// SaturnJupiterPD3
   saturnJupiterPd3('SaturnJupiterPD3'),
-
   /// MercuryJupiterPD3
   mercuryJupiterPd3('MercuryJupiterPD3'),
-
   /// KetuJupiterPD3
   ketuJupiterPd3('KetuJupiterPD3'),
-
   /// VenusJupiterPD3
   venusJupiterPd3('VenusJupiterPD3'),
-
   /// SunSaturnPD3
   sunSaturnPd3('SunSaturnPD3'),
-
   /// MoonSaturnPD3
   moonSaturnPd3('MoonSaturnPD3'),
-
   /// MarsSaturnPD3
   marsSaturnPd3('MarsSaturnPD3'),
-
   /// RahuSaturnPD3
   rahuSaturnPd3('RahuSaturnPD3'),
-
   /// JupiterSaturnPD3
   jupiterSaturnPd3('JupiterSaturnPD3'),
-
   /// SaturnSaturnPD3
   saturnSaturnPd3('SaturnSaturnPD3'),
-
   /// MercurySaturnPD3
   mercurySaturnPd3('MercurySaturnPD3'),
-
   /// KetuSaturnPD3
   ketuSaturnPd3('KetuSaturnPD3'),
-
   /// VenusSaturnPD3
   venusSaturnPd3('VenusSaturnPD3'),
-
   /// SunMercuryPD3
   sunMercuryPd3('SunMercuryPD3'),
-
   /// MoonMercuryPD3
   moonMercuryPd3('MoonMercuryPD3'),
-
   /// MarsMercuryPD3
   marsMercuryPd3('MarsMercuryPD3'),
-
   /// RahuMercuryPD3
   rahuMercuryPd3('RahuMercuryPD3'),
-
   /// JupiterMercuryPD3
   jupiterMercuryPd3('JupiterMercuryPD3'),
-
   /// SaturnMercuryPD3
   saturnMercuryPd3('SaturnMercuryPD3'),
-
   /// MercuryMercuryPD3
   mercuryMercuryPd3('MercuryMercuryPD3'),
-
   /// KetuMercuryPD3
   ketuMercuryPd3('KetuMercuryPD3'),
-
   /// VenusMercuryPD3
   venusMercuryPd3('VenusMercuryPD3'),
-
   /// SunKetuPD3
   sunKetuPd3('SunKetuPD3'),
-
   /// MoonKetuPD3
   moonKetuPd3('MoonKetuPD3'),
-
   /// MarsKetuPD3
   marsKetuPd3('MarsKetuPD3'),
-
   /// RahuKetuPD3
   rahuKetuPd3('RahuKetuPD3'),
-
   /// JupiterKetuPD3
   jupiterKetuPd3('JupiterKetuPD3'),
-
   /// SaturnKetuPD3
   saturnKetuPd3('SaturnKetuPD3'),
-
   /// MercuryKetuPD3
   mercuryKetuPd3('MercuryKetuPD3'),
-
   /// KetuKetuPD3
   ketuKetuPd3('KetuKetuPD3'),
-
   /// VenusKetuPD3
   venusKetuPd3('VenusKetuPD3'),
-
   /// SunVenusPD3
   sunVenusPd3('SunVenusPD3'),
-
   /// MoonVenusPD3
   moonVenusPd3('MoonVenusPD3'),
-
   /// MarsVenusPD3
   marsVenusPd3('MarsVenusPD3'),
-
   /// RahuVenusPD3
   rahuVenusPd3('RahuVenusPD3'),
-
   /// JupiterVenusPD3
   jupiterVenusPd3('JupiterVenusPD3'),
-
   /// SaturnVenusPD3
   saturnVenusPd3('SaturnVenusPD3'),
-
   /// MercuryVenusPD3
   mercuryVenusPd3('MercuryVenusPD3'),
-
   /// KetuVenusPD3
   ketuVenusPd3('KetuVenusPD3'),
-
   /// VenusVenusPD3
   venusVenusPd3('VenusVenusPD3'),
-
   /// SunSunPD4
   sunSunPd4('SunSunPD4'),
-
   /// MoonSunPD4
   moonSunPd4('MoonSunPD4'),
-
   /// MarsSunPD4
   marsSunPd4('MarsSunPD4'),
-
   /// RahuSunPD4
   rahuSunPd4('RahuSunPD4'),
-
   /// JupiterSunPD4
   jupiterSunPd4('JupiterSunPD4'),
-
   /// SaturnSunPD4
   saturnSunPd4('SaturnSunPD4'),
-
   /// MercurySunPD4
   mercurySunPd4('MercurySunPD4'),
-
   /// KetuSunPD4
   ketuSunPd4('KetuSunPD4'),
-
   /// VenusSunPD4
   venusSunPd4('VenusSunPD4'),
-
   /// SunMoonPD4
   sunMoonPd4('SunMoonPD4'),
-
   /// MoonMoonPD4
   moonMoonPd4('MoonMoonPD4'),
-
   /// MarsMoonPD4
   marsMoonPd4('MarsMoonPD4'),
-
   /// RahuMoonPD4
   rahuMoonPd4('RahuMoonPD4'),
-
   /// JupiterMoonPD4
   jupiterMoonPd4('JupiterMoonPD4'),
-
   /// SaturnMoonPD4
   saturnMoonPd4('SaturnMoonPD4'),
-
   /// MercuryMoonPD4
   mercuryMoonPd4('MercuryMoonPD4'),
-
   /// KetuMoonPD4
   ketuMoonPd4('KetuMoonPD4'),
-
   /// VenusMoonPD4
   venusMoonPd4('VenusMoonPD4'),
-
   /// SunMarsPD4
   sunMarsPd4('SunMarsPD4'),
-
   /// MoonMarsPD4
   moonMarsPd4('MoonMarsPD4'),
-
   /// MarsMarsPD4
   marsMarsPd4('MarsMarsPD4'),
-
   /// RahuMarsPD4
   rahuMarsPd4('RahuMarsPD4'),
-
   /// JupiterMarsPD4
   jupiterMarsPd4('JupiterMarsPD4'),
-
   /// SaturnMarsPD4
   saturnMarsPd4('SaturnMarsPD4'),
-
   /// MercuryMarsPD4
   mercuryMarsPd4('MercuryMarsPD4'),
-
   /// KetuMarsPD4
   ketuMarsPd4('KetuMarsPD4'),
-
   /// VenusMarsPD4
   venusMarsPd4('VenusMarsPD4'),
-
   /// SunRahuPD4
   sunRahuPd4('SunRahuPD4'),
-
   /// MoonRahuPD4
   moonRahuPd4('MoonRahuPD4'),
-
   /// MarsRahuPD4
   marsRahuPd4('MarsRahuPD4'),
-
   /// RahuRahuPD4
   rahuRahuPd4('RahuRahuPD4'),
-
   /// JupiterRahuPD4
   jupiterRahuPd4('JupiterRahuPD4'),
-
   /// SaturnRahuPD4
   saturnRahuPd4('SaturnRahuPD4'),
-
   /// MercuryRahuPD4
   mercuryRahuPd4('MercuryRahuPD4'),
-
   /// KetuRahuPD4
   ketuRahuPd4('KetuRahuPD4'),
-
   /// VenusRahuPD4
   venusRahuPd4('VenusRahuPD4'),
-
   /// SunJupiterPD4
   sunJupiterPd4('SunJupiterPD4'),
-
   /// MoonJupiterPD4
   moonJupiterPd4('MoonJupiterPD4'),
-
   /// MarsJupiterPD4
   marsJupiterPd4('MarsJupiterPD4'),
-
   /// RahuJupiterPD4
   rahuJupiterPd4('RahuJupiterPD4'),
-
   /// JupiterJupiterPD4
   jupiterJupiterPd4('JupiterJupiterPD4'),
-
   /// SaturnJupiterPD4
   saturnJupiterPd4('SaturnJupiterPD4'),
-
   /// MercuryJupiterPD4
   mercuryJupiterPd4('MercuryJupiterPD4'),
-
   /// KetuJupiterPD4
   ketuJupiterPd4('KetuJupiterPD4'),
-
   /// VenusJupiterPD4
   venusJupiterPd4('VenusJupiterPD4'),
-
   /// SunSaturnPD4
   sunSaturnPd4('SunSaturnPD4'),
-
   /// MoonSaturnPD4
   moonSaturnPd4('MoonSaturnPD4'),
-
   /// MarsSaturnPD4
   marsSaturnPd4('MarsSaturnPD4'),
-
   /// RahuSaturnPD4
   rahuSaturnPd4('RahuSaturnPD4'),
-
   /// JupiterSaturnPD4
   jupiterSaturnPd4('JupiterSaturnPD4'),
-
   /// SaturnSaturnPD4
   saturnSaturnPd4('SaturnSaturnPD4'),
-
   /// MercurySaturnPD4
   mercurySaturnPd4('MercurySaturnPD4'),
-
   /// KetuSaturnPD4
   ketuSaturnPd4('KetuSaturnPD4'),
-
   /// VenusSaturnPD4
   venusSaturnPd4('VenusSaturnPD4'),
-
   /// SunMercuryPD4
   sunMercuryPd4('SunMercuryPD4'),
-
   /// MoonMercuryPD4
   moonMercuryPd4('MoonMercuryPD4'),
-
   /// MarsMercuryPD4
   marsMercuryPd4('MarsMercuryPD4'),
-
   /// RahuMercuryPD4
   rahuMercuryPd4('RahuMercuryPD4'),
-
   /// JupiterMercuryPD4
   jupiterMercuryPd4('JupiterMercuryPD4'),
-
   /// SaturnMercuryPD4
   saturnMercuryPd4('SaturnMercuryPD4'),
-
   /// MercuryMercuryPD4
   mercuryMercuryPd4('MercuryMercuryPD4'),
-
   /// KetuMercuryPD4
   ketuMercuryPd4('KetuMercuryPD4'),
-
   /// VenusMercuryPD4
   venusMercuryPd4('VenusMercuryPD4'),
-
   /// SunKetuPD4
   sunKetuPd4('SunKetuPD4'),
-
   /// MoonKetuPD4
   moonKetuPd4('MoonKetuPD4'),
-
   /// MarsKetuPD4
   marsKetuPd4('MarsKetuPD4'),
-
   /// RahuKetuPD4
   rahuKetuPd4('RahuKetuPD4'),
-
   /// JupiterKetuPD4
   jupiterKetuPd4('JupiterKetuPD4'),
-
   /// SaturnKetuPD4
   saturnKetuPd4('SaturnKetuPD4'),
-
   /// MercuryKetuPD4
   mercuryKetuPd4('MercuryKetuPD4'),
-
   /// KetuKetuPD4
   ketuKetuPd4('KetuKetuPD4'),
-
   /// VenusKetuPD4
   venusKetuPd4('VenusKetuPD4'),
-
   /// SunVenusPD4
   sunVenusPd4('SunVenusPD4'),
-
   /// MoonVenusPD4
   moonVenusPd4('MoonVenusPD4'),
-
   /// MarsVenusPD4
   marsVenusPd4('MarsVenusPD4'),
-
   /// RahuVenusPD4
   rahuVenusPd4('RahuVenusPD4'),
-
   /// JupiterVenusPD4
   jupiterVenusPd4('JupiterVenusPD4'),
-
   /// SaturnVenusPD4
   saturnVenusPd4('SaturnVenusPD4'),
-
   /// MercuryVenusPD4
   mercuryVenusPd4('MercuryVenusPD4'),
-
   /// KetuVenusPD4
   ketuVenusPd4('KetuVenusPD4'),
-
   /// VenusVenusPD4
   venusVenusPd4('VenusVenusPD4'),
-
   /// SunSunPD5
   sunSunPd5('SunSunPD5'),
-
   /// MoonSunPD5
   moonSunPd5('MoonSunPD5'),
-
   /// MarsSunPD5
   marsSunPd5('MarsSunPD5'),
-
   /// RahuSunPD5
   rahuSunPd5('RahuSunPD5'),
-
   /// JupiterSunPD5
   jupiterSunPd5('JupiterSunPD5'),
-
   /// SaturnSunPD5
   saturnSunPd5('SaturnSunPD5'),
-
   /// MercurySunPD5
   mercurySunPd5('MercurySunPD5'),
-
   /// KetuSunPD5
   ketuSunPd5('KetuSunPD5'),
-
   /// VenusSunPD5
   venusSunPd5('VenusSunPD5'),
-
   /// SunMoonPD5
   sunMoonPd5('SunMoonPD5'),
-
   /// MoonMoonPD5
   moonMoonPd5('MoonMoonPD5'),
-
   /// MarsMoonPD5
   marsMoonPd5('MarsMoonPD5'),
-
   /// RahuMoonPD5
   rahuMoonPd5('RahuMoonPD5'),
-
   /// JupiterMoonPD5
   jupiterMoonPd5('JupiterMoonPD5'),
-
   /// SaturnMoonPD5
   saturnMoonPd5('SaturnMoonPD5'),
-
   /// MercuryMoonPD5
   mercuryMoonPd5('MercuryMoonPD5'),
-
   /// KetuMoonPD5
   ketuMoonPd5('KetuMoonPD5'),
-
   /// VenusMoonPD5
   venusMoonPd5('VenusMoonPD5'),
-
   /// SunMarsPD5
   sunMarsPd5('SunMarsPD5'),
-
   /// MoonMarsPD5
   moonMarsPd5('MoonMarsPD5'),
-
   /// MarsMarsPD5
   marsMarsPd5('MarsMarsPD5'),
-
   /// RahuMarsPD5
   rahuMarsPd5('RahuMarsPD5'),
-
   /// JupiterMarsPD5
   jupiterMarsPd5('JupiterMarsPD5'),
-
   /// SaturnMarsPD5
   saturnMarsPd5('SaturnMarsPD5'),
-
   /// MercuryMarsPD5
   mercuryMarsPd5('MercuryMarsPD5'),
-
   /// KetuMarsPD5
   ketuMarsPd5('KetuMarsPD5'),
-
   /// VenusMarsPD5
   venusMarsPd5('VenusMarsPD5'),
-
   /// SunRahuPD5
   sunRahuPd5('SunRahuPD5'),
-
   /// MoonRahuPD5
   moonRahuPd5('MoonRahuPD5'),
-
   /// MarsRahuPD5
   marsRahuPd5('MarsRahuPD5'),
-
   /// RahuRahuPD5
   rahuRahuPd5('RahuRahuPD5'),
-
   /// JupiterRahuPD5
   jupiterRahuPd5('JupiterRahuPD5'),
-
   /// SaturnRahuPD5
   saturnRahuPd5('SaturnRahuPD5'),
-
   /// MercuryRahuPD5
   mercuryRahuPd5('MercuryRahuPD5'),
-
   /// KetuRahuPD5
   ketuRahuPd5('KetuRahuPD5'),
-
   /// VenusRahuPD5
   venusRahuPd5('VenusRahuPD5'),
-
   /// SunJupiterPD5
   sunJupiterPd5('SunJupiterPD5'),
-
   /// MoonJupiterPD5
   moonJupiterPd5('MoonJupiterPD5'),
-
   /// MarsJupiterPD5
   marsJupiterPd5('MarsJupiterPD5'),
-
   /// RahuJupiterPD5
   rahuJupiterPd5('RahuJupiterPD5'),
-
   /// JupiterJupiterPD5
   jupiterJupiterPd5('JupiterJupiterPD5'),
-
   /// SaturnJupiterPD5
   saturnJupiterPd5('SaturnJupiterPD5'),
-
   /// MercuryJupiterPD5
   mercuryJupiterPd5('MercuryJupiterPD5'),
-
   /// KetuJupiterPD5
   ketuJupiterPd5('KetuJupiterPD5'),
-
   /// VenusJupiterPD5
   venusJupiterPd5('VenusJupiterPD5'),
-
   /// SunSaturnPD5
   sunSaturnPd5('SunSaturnPD5'),
-
   /// MoonSaturnPD5
   moonSaturnPd5('MoonSaturnPD5'),
-
   /// MarsSaturnPD5
   marsSaturnPd5('MarsSaturnPD5'),
-
   /// RahuSaturnPD5
   rahuSaturnPd5('RahuSaturnPD5'),
-
   /// JupiterSaturnPD5
   jupiterSaturnPd5('JupiterSaturnPD5'),
-
   /// SaturnSaturnPD5
   saturnSaturnPd5('SaturnSaturnPD5'),
-
   /// MercurySaturnPD5
   mercurySaturnPd5('MercurySaturnPD5'),
-
   /// KetuSaturnPD5
   ketuSaturnPd5('KetuSaturnPD5'),
-
   /// VenusSaturnPD5
   venusSaturnPd5('VenusSaturnPD5'),
-
   /// SunMercuryPD5
   sunMercuryPd5('SunMercuryPD5'),
-
   /// MoonMercuryPD5
   moonMercuryPd5('MoonMercuryPD5'),
-
   /// MarsMercuryPD5
   marsMercuryPd5('MarsMercuryPD5'),
-
   /// RahuMercuryPD5
   rahuMercuryPd5('RahuMercuryPD5'),
-
   /// JupiterMercuryPD5
   jupiterMercuryPd5('JupiterMercuryPD5'),
-
   /// SaturnMercuryPD5
   saturnMercuryPd5('SaturnMercuryPD5'),
-
   /// MercuryMercuryPD5
   mercuryMercuryPd5('MercuryMercuryPD5'),
-
   /// KetuMercuryPD5
   ketuMercuryPd5('KetuMercuryPD5'),
-
   /// VenusMercuryPD5
   venusMercuryPd5('VenusMercuryPD5'),
-
   /// SunKetuPD5
   sunKetuPd5('SunKetuPD5'),
-
   /// MoonKetuPD5
   moonKetuPd5('MoonKetuPD5'),
-
   /// MarsKetuPD5
   marsKetuPd5('MarsKetuPD5'),
-
   /// RahuKetuPD5
   rahuKetuPd5('RahuKetuPD5'),
-
   /// JupiterKetuPD5
   jupiterKetuPd5('JupiterKetuPD5'),
-
   /// SaturnKetuPD5
   saturnKetuPd5('SaturnKetuPD5'),
-
   /// MercuryKetuPD5
   mercuryKetuPd5('MercuryKetuPD5'),
-
   /// KetuKetuPD5
   ketuKetuPd5('KetuKetuPD5'),
-
   /// VenusKetuPD5
   venusKetuPd5('VenusKetuPD5'),
-
   /// SunVenusPD5
   sunVenusPd5('SunVenusPD5'),
-
   /// MoonVenusPD5
   moonVenusPd5('MoonVenusPD5'),
-
   /// MarsVenusPD5
   marsVenusPd5('MarsVenusPD5'),
-
   /// RahuVenusPD5
   rahuVenusPd5('RahuVenusPD5'),
-
   /// JupiterVenusPD5
   jupiterVenusPd5('JupiterVenusPD5'),
-
   /// SaturnVenusPD5
   saturnVenusPd5('SaturnVenusPD5'),
-
   /// MercuryVenusPD5
   mercuryVenusPd5('MercuryVenusPD5'),
-
   /// KetuVenusPD5
   ketuVenusPd5('KetuVenusPD5'),
-
   /// VenusVenusPD5
   venusVenusPd5('VenusVenusPD5'),
-
   /// SunSunPD6
   sunSunPd6('SunSunPD6'),
-
   /// MoonSunPD6
   moonSunPd6('MoonSunPD6'),
-
   /// MarsSunPD6
   marsSunPd6('MarsSunPD6'),
-
   /// RahuSunPD6
   rahuSunPd6('RahuSunPD6'),
-
   /// JupiterSunPD6
   jupiterSunPd6('JupiterSunPD6'),
-
   /// SaturnSunPD6
   saturnSunPd6('SaturnSunPD6'),
-
   /// MercurySunPD6
   mercurySunPd6('MercurySunPD6'),
-
   /// KetuSunPD6
   ketuSunPd6('KetuSunPD6'),
-
   /// VenusSunPD6
   venusSunPd6('VenusSunPD6'),
-
   /// SunMoonPD6
   sunMoonPd6('SunMoonPD6'),
-
   /// MoonMoonPD6
   moonMoonPd6('MoonMoonPD6'),
-
   /// MarsMoonPD6
   marsMoonPd6('MarsMoonPD6'),
-
   /// RahuMoonPD6
   rahuMoonPd6('RahuMoonPD6'),
-
   /// JupiterMoonPD6
   jupiterMoonPd6('JupiterMoonPD6'),
-
   /// SaturnMoonPD6
   saturnMoonPd6('SaturnMoonPD6'),
-
   /// MercuryMoonPD6
   mercuryMoonPd6('MercuryMoonPD6'),
-
   /// KetuMoonPD6
   ketuMoonPd6('KetuMoonPD6'),
-
   /// VenusMoonPD6
   venusMoonPd6('VenusMoonPD6'),
-
   /// SunMarsPD6
   sunMarsPd6('SunMarsPD6'),
-
   /// MoonMarsPD6
   moonMarsPd6('MoonMarsPD6'),
-
   /// MarsMarsPD6
   marsMarsPd6('MarsMarsPD6'),
-
   /// RahuMarsPD6
   rahuMarsPd6('RahuMarsPD6'),
-
   /// JupiterMarsPD6
   jupiterMarsPd6('JupiterMarsPD6'),
-
   /// SaturnMarsPD6
   saturnMarsPd6('SaturnMarsPD6'),
-
   /// MercuryMarsPD6
   mercuryMarsPd6('MercuryMarsPD6'),
-
   /// KetuMarsPD6
   ketuMarsPd6('KetuMarsPD6'),
-
   /// VenusMarsPD6
   venusMarsPd6('VenusMarsPD6'),
-
   /// SunRahuPD6
   sunRahuPd6('SunRahuPD6'),
-
   /// MoonRahuPD6
   moonRahuPd6('MoonRahuPD6'),
-
   /// MarsRahuPD6
   marsRahuPd6('MarsRahuPD6'),
-
   /// RahuRahuPD6
   rahuRahuPd6('RahuRahuPD6'),
-
   /// JupiterRahuPD6
   jupiterRahuPd6('JupiterRahuPD6'),
-
   /// SaturnRahuPD6
   saturnRahuPd6('SaturnRahuPD6'),
-
   /// MercuryRahuPD6
   mercuryRahuPd6('MercuryRahuPD6'),
-
   /// KetuRahuPD6
   ketuRahuPd6('KetuRahuPD6'),
-
   /// VenusRahuPD6
   venusRahuPd6('VenusRahuPD6'),
-
   /// SunJupiterPD6
   sunJupiterPd6('SunJupiterPD6'),
-
   /// MoonJupiterPD6
   moonJupiterPd6('MoonJupiterPD6'),
-
   /// MarsJupiterPD6
   marsJupiterPd6('MarsJupiterPD6'),
-
   /// RahuJupiterPD6
   rahuJupiterPd6('RahuJupiterPD6'),
-
   /// JupiterJupiterPD6
   jupiterJupiterPd6('JupiterJupiterPD6'),
-
   /// SaturnJupiterPD6
   saturnJupiterPd6('SaturnJupiterPD6'),
-
   /// MercuryJupiterPD6
   mercuryJupiterPd6('MercuryJupiterPD6'),
-
   /// KetuJupiterPD6
   ketuJupiterPd6('KetuJupiterPD6'),
-
   /// VenusJupiterPD6
   venusJupiterPd6('VenusJupiterPD6'),
-
   /// SunSaturnPD6
   sunSaturnPd6('SunSaturnPD6'),
-
   /// MoonSaturnPD6
   moonSaturnPd6('MoonSaturnPD6'),
-
   /// MarsSaturnPD6
   marsSaturnPd6('MarsSaturnPD6'),
-
   /// RahuSaturnPD6
   rahuSaturnPd6('RahuSaturnPD6'),
-
   /// JupiterSaturnPD6
   jupiterSaturnPd6('JupiterSaturnPD6'),
-
   /// SaturnSaturnPD6
   saturnSaturnPd6('SaturnSaturnPD6'),
-
   /// MercurySaturnPD6
   mercurySaturnPd6('MercurySaturnPD6'),
-
   /// KetuSaturnPD6
   ketuSaturnPd6('KetuSaturnPD6'),
-
   /// VenusSaturnPD6
   venusSaturnPd6('VenusSaturnPD6'),
-
   /// SunMercuryPD6
   sunMercuryPd6('SunMercuryPD6'),
-
   /// MoonMercuryPD6
   moonMercuryPd6('MoonMercuryPD6'),
-
   /// MarsMercuryPD6
   marsMercuryPd6('MarsMercuryPD6'),
-
   /// RahuMercuryPD6
   rahuMercuryPd6('RahuMercuryPD6'),
-
   /// JupiterMercuryPD6
   jupiterMercuryPd6('JupiterMercuryPD6'),
-
   /// SaturnMercuryPD6
   saturnMercuryPd6('SaturnMercuryPD6'),
-
   /// MercuryMercuryPD6
   mercuryMercuryPd6('MercuryMercuryPD6'),
-
   /// KetuMercuryPD6
   ketuMercuryPd6('KetuMercuryPD6'),
-
   /// VenusMercuryPD6
   venusMercuryPd6('VenusMercuryPD6'),
-
   /// SunKetuPD6
   sunKetuPd6('SunKetuPD6'),
-
   /// MoonKetuPD6
   moonKetuPd6('MoonKetuPD6'),
-
   /// MarsKetuPD6
   marsKetuPd6('MarsKetuPD6'),
-
   /// RahuKetuPD6
   rahuKetuPd6('RahuKetuPD6'),
-
   /// JupiterKetuPD6
   jupiterKetuPd6('JupiterKetuPD6'),
-
   /// SaturnKetuPD6
   saturnKetuPd6('SaturnKetuPD6'),
-
   /// MercuryKetuPD6
   mercuryKetuPd6('MercuryKetuPD6'),
-
   /// KetuKetuPD6
   ketuKetuPd6('KetuKetuPD6'),
-
   /// VenusKetuPD6
   venusKetuPd6('VenusKetuPD6'),
-
   /// SunVenusPD6
   sunVenusPd6('SunVenusPD6'),
-
   /// MoonVenusPD6
   moonVenusPd6('MoonVenusPD6'),
-
   /// MarsVenusPD6
   marsVenusPd6('MarsVenusPD6'),
-
   /// RahuVenusPD6
   rahuVenusPd6('RahuVenusPD6'),
-
   /// JupiterVenusPD6
   jupiterVenusPd6('JupiterVenusPD6'),
-
   /// SaturnVenusPD6
   saturnVenusPd6('SaturnVenusPD6'),
-
   /// MercuryVenusPD6
   mercuryVenusPd6('MercuryVenusPD6'),
-
   /// KetuVenusPD6
   ketuVenusPd6('KetuVenusPD6'),
-
   /// VenusVenusPD6
   venusVenusPd6('VenusVenusPD6'),
-
   /// SunSunPD7
   sunSunPd7('SunSunPD7'),
-
   /// MoonSunPD7
   moonSunPd7('MoonSunPD7'),
-
   /// MarsSunPD7
   marsSunPd7('MarsSunPD7'),
-
   /// RahuSunPD7
   rahuSunPd7('RahuSunPD7'),
-
   /// JupiterSunPD7
   jupiterSunPd7('JupiterSunPD7'),
-
   /// SaturnSunPD7
   saturnSunPd7('SaturnSunPD7'),
-
   /// MercurySunPD7
   mercurySunPd7('MercurySunPD7'),
-
   /// KetuSunPD7
   ketuSunPd7('KetuSunPD7'),
-
   /// VenusSunPD7
   venusSunPd7('VenusSunPD7'),
-
   /// SunMoonPD7
   sunMoonPd7('SunMoonPD7'),
-
   /// MoonMoonPD7
   moonMoonPd7('MoonMoonPD7'),
-
   /// MarsMoonPD7
   marsMoonPd7('MarsMoonPD7'),
-
   /// RahuMoonPD7
   rahuMoonPd7('RahuMoonPD7'),
-
   /// JupiterMoonPD7
   jupiterMoonPd7('JupiterMoonPD7'),
-
   /// SaturnMoonPD7
   saturnMoonPd7('SaturnMoonPD7'),
-
   /// MercuryMoonPD7
   mercuryMoonPd7('MercuryMoonPD7'),
-
   /// KetuMoonPD7
   ketuMoonPd7('KetuMoonPD7'),
-
   /// VenusMoonPD7
   venusMoonPd7('VenusMoonPD7'),
-
   /// SunMarsPD7
   sunMarsPd7('SunMarsPD7'),
-
   /// MoonMarsPD7
   moonMarsPd7('MoonMarsPD7'),
-
   /// MarsMarsPD7
   marsMarsPd7('MarsMarsPD7'),
-
   /// RahuMarsPD7
   rahuMarsPd7('RahuMarsPD7'),
-
   /// JupiterMarsPD7
   jupiterMarsPd7('JupiterMarsPD7'),
-
   /// SaturnMarsPD7
   saturnMarsPd7('SaturnMarsPD7'),
-
   /// MercuryMarsPD7
   mercuryMarsPd7('MercuryMarsPD7'),
-
   /// KetuMarsPD7
   ketuMarsPd7('KetuMarsPD7'),
-
   /// VenusMarsPD7
   venusMarsPd7('VenusMarsPD7'),
-
   /// SunRahuPD7
   sunRahuPd7('SunRahuPD7'),
-
   /// MoonRahuPD7
   moonRahuPd7('MoonRahuPD7'),
-
   /// MarsRahuPD7
   marsRahuPd7('MarsRahuPD7'),
-
   /// RahuRahuPD7
   rahuRahuPd7('RahuRahuPD7'),
-
   /// JupiterRahuPD7
   jupiterRahuPd7('JupiterRahuPD7'),
-
   /// SaturnRahuPD7
   saturnRahuPd7('SaturnRahuPD7'),
-
   /// MercuryRahuPD7
   mercuryRahuPd7('MercuryRahuPD7'),
-
   /// KetuRahuPD7
   ketuRahuPd7('KetuRahuPD7'),
-
   /// VenusRahuPD7
   venusRahuPd7('VenusRahuPD7'),
-
   /// SunJupiterPD7
   sunJupiterPd7('SunJupiterPD7'),
-
   /// MoonJupiterPD7
   moonJupiterPd7('MoonJupiterPD7'),
-
   /// MarsJupiterPD7
   marsJupiterPd7('MarsJupiterPD7'),
-
   /// RahuJupiterPD7
   rahuJupiterPd7('RahuJupiterPD7'),
-
   /// JupiterJupiterPD7
   jupiterJupiterPd7('JupiterJupiterPD7'),
-
   /// SaturnJupiterPD7
   saturnJupiterPd7('SaturnJupiterPD7'),
-
   /// MercuryJupiterPD7
   mercuryJupiterPd7('MercuryJupiterPD7'),
-
   /// KetuJupiterPD7
   ketuJupiterPd7('KetuJupiterPD7'),
-
   /// VenusJupiterPD7
   venusJupiterPd7('VenusJupiterPD7'),
-
   /// SunSaturnPD7
   sunSaturnPd7('SunSaturnPD7'),
-
   /// MoonSaturnPD7
   moonSaturnPd7('MoonSaturnPD7'),
-
   /// MarsSaturnPD7
   marsSaturnPd7('MarsSaturnPD7'),
-
   /// RahuSaturnPD7
   rahuSaturnPd7('RahuSaturnPD7'),
-
   /// JupiterSaturnPD7
   jupiterSaturnPd7('JupiterSaturnPD7'),
-
   /// SaturnSaturnPD7
   saturnSaturnPd7('SaturnSaturnPD7'),
-
   /// MercurySaturnPD7
   mercurySaturnPd7('MercurySaturnPD7'),
-
   /// KetuSaturnPD7
   ketuSaturnPd7('KetuSaturnPD7'),
-
   /// VenusSaturnPD7
   venusSaturnPd7('VenusSaturnPD7'),
-
   /// SunMercuryPD7
   sunMercuryPd7('SunMercuryPD7'),
-
   /// MoonMercuryPD7
   moonMercuryPd7('MoonMercuryPD7'),
-
   /// MarsMercuryPD7
   marsMercuryPd7('MarsMercuryPD7'),
-
   /// RahuMercuryPD7
   rahuMercuryPd7('RahuMercuryPD7'),
-
   /// JupiterMercuryPD7
   jupiterMercuryPd7('JupiterMercuryPD7'),
-
   /// SaturnMercuryPD7
   saturnMercuryPd7('SaturnMercuryPD7'),
-
   /// MercuryMercuryPD7
   mercuryMercuryPd7('MercuryMercuryPD7'),
-
   /// KetuMercuryPD7
   ketuMercuryPd7('KetuMercuryPD7'),
-
   /// VenusMercuryPD7
   venusMercuryPd7('VenusMercuryPD7'),
-
   /// SunKetuPD7
   sunKetuPd7('SunKetuPD7'),
-
   /// MoonKetuPD7
   moonKetuPd7('MoonKetuPD7'),
-
   /// MarsKetuPD7
   marsKetuPd7('MarsKetuPD7'),
-
   /// RahuKetuPD7
   rahuKetuPd7('RahuKetuPD7'),
-
   /// JupiterKetuPD7
   jupiterKetuPd7('JupiterKetuPD7'),
-
   /// SaturnKetuPD7
   saturnKetuPd7('SaturnKetuPD7'),
-
   /// MercuryKetuPD7
   mercuryKetuPd7('MercuryKetuPD7'),
-
   /// KetuKetuPD7
   ketuKetuPd7('KetuKetuPD7'),
-
   /// VenusKetuPD7
   venusKetuPd7('VenusKetuPD7'),
-
   /// SunVenusPD7
   sunVenusPd7('SunVenusPD7'),
-
   /// MoonVenusPD7
   moonVenusPd7('MoonVenusPD7'),
-
   /// MarsVenusPD7
   marsVenusPd7('MarsVenusPD7'),
-
   /// RahuVenusPD7
   rahuVenusPd7('RahuVenusPD7'),
-
   /// JupiterVenusPD7
   jupiterVenusPd7('JupiterVenusPD7'),
-
   /// SaturnVenusPD7
   saturnVenusPd7('SaturnVenusPD7'),
-
   /// MercuryVenusPD7
   mercuryVenusPd7('MercuryVenusPD7'),
-
   /// KetuVenusPD7
   ketuVenusPd7('KetuVenusPD7'),
-
   /// VenusVenusPD7
   venusVenusPd7('VenusVenusPD7'),
-
   /// SunSunPD8
   sunSunPd8('SunSunPD8'),
-
   /// MoonSunPD8
   moonSunPd8('MoonSunPD8'),
-
   /// MarsSunPD8
   marsSunPd8('MarsSunPD8'),
-
   /// RahuSunPD8
   rahuSunPd8('RahuSunPD8'),
-
   /// JupiterSunPD8
   jupiterSunPd8('JupiterSunPD8'),
-
   /// SaturnSunPD8
   saturnSunPd8('SaturnSunPD8'),
-
   /// MercurySunPD8
   mercurySunPd8('MercurySunPD8'),
-
   /// KetuSunPD8
   ketuSunPd8('KetuSunPD8'),
-
   /// VenusSunPD8
   venusSunPd8('VenusSunPD8'),
-
   /// SunMoonPD8
   sunMoonPd8('SunMoonPD8'),
-
   /// MoonMoonPD8
   moonMoonPd8('MoonMoonPD8'),
-
   /// MarsMoonPD8
   marsMoonPd8('MarsMoonPD8'),
-
   /// RahuMoonPD8
   rahuMoonPd8('RahuMoonPD8'),
-
   /// JupiterMoonPD8
   jupiterMoonPd8('JupiterMoonPD8'),
-
   /// SaturnMoonPD8
   saturnMoonPd8('SaturnMoonPD8'),
-
   /// MercuryMoonPD8
   mercuryMoonPd8('MercuryMoonPD8'),
-
   /// KetuMoonPD8
   ketuMoonPd8('KetuMoonPD8'),
-
   /// VenusMoonPD8
   venusMoonPd8('VenusMoonPD8'),
-
   /// SunMarsPD8
   sunMarsPd8('SunMarsPD8'),
-
   /// MoonMarsPD8
   moonMarsPd8('MoonMarsPD8'),
-
   /// MarsMarsPD8
   marsMarsPd8('MarsMarsPD8'),
-
   /// RahuMarsPD8
   rahuMarsPd8('RahuMarsPD8'),
-
   /// JupiterMarsPD8
   jupiterMarsPd8('JupiterMarsPD8'),
-
   /// SaturnMarsPD8
   saturnMarsPd8('SaturnMarsPD8'),
-
   /// MercuryMarsPD8
   mercuryMarsPd8('MercuryMarsPD8'),
-
   /// KetuMarsPD8
   ketuMarsPd8('KetuMarsPD8'),
-
   /// VenusMarsPD8
   venusMarsPd8('VenusMarsPD8'),
-
   /// SunRahuPD8
   sunRahuPd8('SunRahuPD8'),
-
   /// MoonRahuPD8
   moonRahuPd8('MoonRahuPD8'),
-
   /// MarsRahuPD8
   marsRahuPd8('MarsRahuPD8'),
-
   /// RahuRahuPD8
   rahuRahuPd8('RahuRahuPD8'),
-
   /// JupiterRahuPD8
   jupiterRahuPd8('JupiterRahuPD8'),
-
   /// SaturnRahuPD8
   saturnRahuPd8('SaturnRahuPD8'),
-
   /// MercuryRahuPD8
   mercuryRahuPd8('MercuryRahuPD8'),
-
   /// KetuRahuPD8
   ketuRahuPd8('KetuRahuPD8'),
-
   /// VenusRahuPD8
   venusRahuPd8('VenusRahuPD8'),
-
   /// SunJupiterPD8
   sunJupiterPd8('SunJupiterPD8'),
-
   /// MoonJupiterPD8
   moonJupiterPd8('MoonJupiterPD8'),
-
   /// MarsJupiterPD8
   marsJupiterPd8('MarsJupiterPD8'),
-
   /// RahuJupiterPD8
   rahuJupiterPd8('RahuJupiterPD8'),
-
   /// JupiterJupiterPD8
   jupiterJupiterPd8('JupiterJupiterPD8'),
-
   /// SaturnJupiterPD8
   saturnJupiterPd8('SaturnJupiterPD8'),
-
   /// MercuryJupiterPD8
   mercuryJupiterPd8('MercuryJupiterPD8'),
-
   /// KetuJupiterPD8
   ketuJupiterPd8('KetuJupiterPD8'),
-
   /// VenusJupiterPD8
   venusJupiterPd8('VenusJupiterPD8'),
-
   /// SunSaturnPD8
   sunSaturnPd8('SunSaturnPD8'),
-
   /// MoonSaturnPD8
   moonSaturnPd8('MoonSaturnPD8'),
-
   /// MarsSaturnPD8
   marsSaturnPd8('MarsSaturnPD8'),
-
   /// RahuSaturnPD8
   rahuSaturnPd8('RahuSaturnPD8'),
-
   /// JupiterSaturnPD8
   jupiterSaturnPd8('JupiterSaturnPD8'),
-
   /// SaturnSaturnPD8
   saturnSaturnPd8('SaturnSaturnPD8'),
-
   /// MercurySaturnPD8
   mercurySaturnPd8('MercurySaturnPD8'),
-
   /// KetuSaturnPD8
   ketuSaturnPd8('KetuSaturnPD8'),
-
   /// VenusSaturnPD8
   venusSaturnPd8('VenusSaturnPD8'),
-
   /// SunMercuryPD8
   sunMercuryPd8('SunMercuryPD8'),
-
   /// MoonMercuryPD8
   moonMercuryPd8('MoonMercuryPD8'),
-
   /// MarsMercuryPD8
   marsMercuryPd8('MarsMercuryPD8'),
-
   /// RahuMercuryPD8
   rahuMercuryPd8('RahuMercuryPD8'),
-
   /// JupiterMercuryPD8
   jupiterMercuryPd8('JupiterMercuryPD8'),
-
   /// SaturnMercuryPD8
   saturnMercuryPd8('SaturnMercuryPD8'),
-
   /// MercuryMercuryPD8
   mercuryMercuryPd8('MercuryMercuryPD8'),
-
   /// KetuMercuryPD8
   ketuMercuryPd8('KetuMercuryPD8'),
-
   /// VenusMercuryPD8
   venusMercuryPd8('VenusMercuryPD8'),
-
   /// SunKetuPD8
   sunKetuPd8('SunKetuPD8'),
-
   /// MoonKetuPD8
   moonKetuPd8('MoonKetuPD8'),
-
   /// MarsKetuPD8
   marsKetuPd8('MarsKetuPD8'),
-
   /// RahuKetuPD8
   rahuKetuPd8('RahuKetuPD8'),
-
   /// JupiterKetuPD8
   jupiterKetuPd8('JupiterKetuPD8'),
-
   /// SaturnKetuPD8
   saturnKetuPd8('SaturnKetuPD8'),
-
   /// MercuryKetuPD8
   mercuryKetuPd8('MercuryKetuPD8'),
-
   /// KetuKetuPD8
   ketuKetuPd8('KetuKetuPD8'),
-
   /// VenusKetuPD8
   venusKetuPd8('VenusKetuPD8'),
-
   /// SunVenusPD8
   sunVenusPd8('SunVenusPD8'),
-
   /// MoonVenusPD8
   moonVenusPd8('MoonVenusPD8'),
-
   /// MarsVenusPD8
   marsVenusPd8('MarsVenusPD8'),
-
   /// RahuVenusPD8
   rahuVenusPd8('RahuVenusPD8'),
-
   /// JupiterVenusPD8
   jupiterVenusPd8('JupiterVenusPD8'),
-
   /// SaturnVenusPD8
   saturnVenusPd8('SaturnVenusPD8'),
-
   /// MercuryVenusPD8
   mercuryVenusPd8('MercuryVenusPD8'),
-
   /// KetuVenusPD8
   ketuVenusPd8('KetuVenusPD8'),
-
   /// VenusVenusPD8
   venusVenusPd8('VenusVenusPD8'),
-
   /// GoodLunarDayForTravel
   goodLunarDayForTravel('GoodLunarDayForTravel'),
-
   /// BadLunarDayForTravel
   badLunarDayForTravel('BadLunarDayForTravel'),
-
   /// GoodConstellationForTravel
   goodConstellationForTravel('GoodConstellationForTravel'),
-
   /// BadConstellationForTravel
   badConstellationForTravel('BadConstellationForTravel'),
-
   /// BadWeekdayForTravelNorth
   badWeekdayForTravelNorth('BadWeekdayForTravelNorth'),
-
   /// BadWeekdayForTravelWest
   badWeekdayForTravelWest('BadWeekdayForTravelWest'),
-
   /// BadWeekdayForTravelSouth
   badWeekdayForTravelSouth('BadWeekdayForTravelSouth'),
-
   /// BadWeekdayForTravelEast
   badWeekdayForTravelEast('BadWeekdayForTravelEast'),
-
   /// GoodLagnaForTravel
   goodLagnaForTravel('GoodLagnaForTravel'),
-
   /// BestLagnaForTravel
   bestLagnaForTravel('BestLagnaForTravel'),
-
   /// WorstLagnaForTravel
   worstLagnaForTravel('WorstLagnaForTravel'),
-
   /// BadLagnaForTravel
   badLagnaForTravel('BadLagnaForTravel'),
-
   /// GoodPlanetsInLagnaForTravel
   goodPlanetsInLagnaForTravel('GoodPlanetsInLagnaForTravel'),
-
   /// GoodMoonJupiterTravelYoga
   goodMoonJupiterTravelYoga('GoodMoonJupiterTravelYoga'),
-
   /// FortifiedMoonTravelYoga
   fortifiedMoonTravelYoga('FortifiedMoonTravelYoga'),
-
   /// StrongJupiterTravelYoga
   strongJupiterTravelYoga('StrongJupiterTravelYoga'),
-
   /// EasyPeacefulTravelYoga
   easyPeacefulTravelYoga('EasyPeacefulTravelYoga'),
-
   /// NeutralizeBadTravelYoga
   neutralizeBadTravelYoga('NeutralizeBadTravelYoga'),
-
   /// StrongBeneficsTravelYoga
   strongBeneficsTravelYoga('StrongBeneficsTravelYoga'),
-
   /// IdealPlanetsTravelYoga
   idealPlanetsTravelYoga('IdealPlanetsTravelYoga'),
-
   /// BirdRuling
   birdRuling('BirdRuling'),
-
   /// BirdEating
   birdEating('BirdEating'),
-
   /// BirdWalking
   birdWalking('BirdWalking'),
-
   /// BirdSleeping
   birdSleeping('BirdSleeping'),
-
   /// BirdDying
   birdDying('BirdDying'),
-
   /// GhatakaMoonSign
   ghatakaMoonSign('GhatakaMoonSign'),
-
   /// GhatakaTithiGroup
   ghatakaTithiGroup('GhatakaTithiGroup'),
-
   /// GhatakaWeekDay
   ghatakaWeekDay('GhatakaWeekDay'),
-
   /// GhatakaMoonConstellation
   ghatakaMoonConstellation('GhatakaMoonConstellation'),
-
   /// GhatakaLagna
   ghatakaLagna('GhatakaLagna'),
-
   /// Sunrise
   sunrise('Sunrise'),
-
   /// Sunset
   sunset('Sunset'),
-
   /// Midday
   midday('Midday'),
-
   /// LagnaLordIsWeekdayLord
   lagnaLordIsWeekdayLord('LagnaLordIsWeekdayLord'),
-
   /// Yama1
   yama1('Yama1'),
-
   /// Yama2
   yama2('Yama2'),
-
   /// Yama3
   yama3('Yama3'),
-
   /// Yama4
   yama4('Yama4'),
-
   /// Yama5
   yama5('Yama5'),
-
   /// SunIsStrong
   sunIsStrong('SunIsStrong'),
-
   /// MoonIsStrong
   moonIsStrong('MoonIsStrong'),
-
   /// MarsIsStrong
   marsIsStrong('MarsIsStrong'),
-
   /// MercuryIsStrong
   mercuryIsStrong('MercuryIsStrong'),
-
   /// JupiterIsStrong
   jupiterIsStrong('JupiterIsStrong'),
-
   /// VenusIsStrong
   venusIsStrong('VenusIsStrong'),
-
   /// SaturnIsStrong
   saturnIsStrong('SaturnIsStrong'),
-
   /// House1IsStrong
   house1IsStrong('House1IsStrong'),
-
   /// House2IsStrong
   house2IsStrong('House2IsStrong'),
-
   /// House3IsStrong
   house3IsStrong('House3IsStrong'),
-
   /// House4IsStrong
   house4IsStrong('House4IsStrong'),
-
   /// House5IsStrong
   house5IsStrong('House5IsStrong'),
-
   /// House6IsStrong
   house6IsStrong('House6IsStrong'),
-
   /// House7IsStrong
   house7IsStrong('House7IsStrong'),
-
   /// House8IsStrong
   house8IsStrong('House8IsStrong'),
-
   /// House9IsStrong
   house9IsStrong('House9IsStrong'),
-
   /// House10IsStrong
   house10IsStrong('House10IsStrong'),
-
   /// House11IsStrong
   house11IsStrong('House11IsStrong'),
-
   /// House12IsStrong
   house12IsStrong('House12IsStrong'),
-
   /// SunAspectingOwnHouse
   sunAspectingOwnHouse('SunAspectingOwnHouse'),
-
   /// MoonAspectingOwnHouse
   moonAspectingOwnHouse('MoonAspectingOwnHouse'),
-
   /// MarsAspectingOwnHouse
   marsAspectingOwnHouse('MarsAspectingOwnHouse'),
-
   /// MercuryAspectingOwnHouse
   mercuryAspectingOwnHouse('MercuryAspectingOwnHouse'),
-
   /// JupiterAspectingOwnHouse
   jupiterAspectingOwnHouse('JupiterAspectingOwnHouse'),
-
   /// VenusAspectingOwnHouse
   venusAspectingOwnHouse('VenusAspectingOwnHouse'),
-
   /// SaturnAspectingOwnHouse
   saturnAspectingOwnHouse('SaturnAspectingOwnHouse'),
-
   /// SunEntersAries
   sunEntersAries('SunEntersAries'),
-
   /// SunEntersTaurus
   sunEntersTaurus('SunEntersTaurus'),
-
   /// SunEntersGemini
   sunEntersGemini('SunEntersGemini'),
-
   /// SunEntersCancer
   sunEntersCancer('SunEntersCancer'),
-
   /// SunEntersLeo
   sunEntersLeo('SunEntersLeo'),
-
   /// SunEntersVirgo
   sunEntersVirgo('SunEntersVirgo'),
-
   /// SunEntersLibra
   sunEntersLibra('SunEntersLibra'),
-
   /// SunEntersScorpio
   sunEntersScorpio('SunEntersScorpio'),
-
   /// SunEntersSagittarius
   sunEntersSagittarius('SunEntersSagittarius'),
-
   /// SunEntersCapricorn
   sunEntersCapricorn('SunEntersCapricorn'),
-
   /// SunEntersAquarius
   sunEntersAquarius('SunEntersAquarius'),
-
   /// SunEntersPisces
   sunEntersPisces('SunEntersPisces'),
-
   /// MoonEntersAries
   moonEntersAries('MoonEntersAries'),
-
   /// MoonEntersTaurus
   moonEntersTaurus('MoonEntersTaurus'),
-
   /// MoonEntersGemini
   moonEntersGemini('MoonEntersGemini'),
-
   /// MoonEntersCancer
   moonEntersCancer('MoonEntersCancer'),
-
   /// MoonEntersLeo
   moonEntersLeo('MoonEntersLeo'),
-
   /// MoonEntersVirgo
   moonEntersVirgo('MoonEntersVirgo'),
-
   /// MoonEntersLibra
   moonEntersLibra('MoonEntersLibra'),
-
   /// MoonEntersScorpio
   moonEntersScorpio('MoonEntersScorpio'),
-
   /// MoonEntersSagittarius
   moonEntersSagittarius('MoonEntersSagittarius'),
-
   /// MoonEntersCapricorn
   moonEntersCapricorn('MoonEntersCapricorn'),
-
   /// MoonEntersAquarius
   moonEntersAquarius('MoonEntersAquarius'),
-
   /// MoonEntersPisces
   moonEntersPisces('MoonEntersPisces'),
-
   /// MarsEntersAries
   marsEntersAries('MarsEntersAries'),
-
   /// MarsEntersTaurus
   marsEntersTaurus('MarsEntersTaurus'),
-
   /// MarsEntersGemini
   marsEntersGemini('MarsEntersGemini'),
-
   /// MarsEntersCancer
   marsEntersCancer('MarsEntersCancer'),
-
   /// MarsEntersLeo
   marsEntersLeo('MarsEntersLeo'),
-
   /// MarsEntersVirgo
   marsEntersVirgo('MarsEntersVirgo'),
-
   /// MarsEntersLibra
   marsEntersLibra('MarsEntersLibra'),
-
   /// MarsEntersScorpio
   marsEntersScorpio('MarsEntersScorpio'),
-
   /// MarsEntersSagittarius
   marsEntersSagittarius('MarsEntersSagittarius'),
-
   /// MarsEntersCapricorn
   marsEntersCapricorn('MarsEntersCapricorn'),
-
   /// MarsEntersAquarius
   marsEntersAquarius('MarsEntersAquarius'),
-
   /// MarsEntersPisces
   marsEntersPisces('MarsEntersPisces'),
-
   /// MercuryEntersAries
   mercuryEntersAries('MercuryEntersAries'),
-
   /// MercuryEntersTaurus
   mercuryEntersTaurus('MercuryEntersTaurus'),
-
   /// MercuryEntersGemini
   mercuryEntersGemini('MercuryEntersGemini'),
-
   /// MercuryEntersCancer
   mercuryEntersCancer('MercuryEntersCancer'),
-
   /// MercuryEntersLeo
   mercuryEntersLeo('MercuryEntersLeo'),
-
   /// MercuryEntersVirgo
   mercuryEntersVirgo('MercuryEntersVirgo'),
-
   /// MercuryEntersLibra
   mercuryEntersLibra('MercuryEntersLibra'),
-
   /// MercuryEntersScorpio
   mercuryEntersScorpio('MercuryEntersScorpio'),
-
   /// MercuryEntersSagittarius
   mercuryEntersSagittarius('MercuryEntersSagittarius'),
-
   /// MercuryEntersCapricorn
   mercuryEntersCapricorn('MercuryEntersCapricorn'),
-
   /// MercuryEntersAquarius
   mercuryEntersAquarius('MercuryEntersAquarius'),
-
   /// MercuryEntersPisces
   mercuryEntersPisces('MercuryEntersPisces'),
-
   /// JupiterEntersAries
   jupiterEntersAries('JupiterEntersAries'),
-
   /// JupiterEntersTaurus
   jupiterEntersTaurus('JupiterEntersTaurus'),
-
   /// JupiterEntersGemini
   jupiterEntersGemini('JupiterEntersGemini'),
-
   /// JupiterEntersCancer
   jupiterEntersCancer('JupiterEntersCancer'),
-
   /// JupiterEntersLeo
   jupiterEntersLeo('JupiterEntersLeo'),
-
   /// JupiterEntersVirgo
   jupiterEntersVirgo('JupiterEntersVirgo'),
-
   /// JupiterEntersLibra
   jupiterEntersLibra('JupiterEntersLibra'),
-
   /// JupiterEntersScorpio
   jupiterEntersScorpio('JupiterEntersScorpio'),
-
   /// JupiterEntersSagittarius
   jupiterEntersSagittarius('JupiterEntersSagittarius'),
-
   /// JupiterEntersCapricorn
   jupiterEntersCapricorn('JupiterEntersCapricorn'),
-
   /// JupiterEntersAquarius
   jupiterEntersAquarius('JupiterEntersAquarius'),
-
   /// JupiterEntersPisces
   jupiterEntersPisces('JupiterEntersPisces'),
-
   /// VenusEntersAries
   venusEntersAries('VenusEntersAries'),
-
   /// VenusEntersTaurus
   venusEntersTaurus('VenusEntersTaurus'),
-
   /// VenusEntersGemini
   venusEntersGemini('VenusEntersGemini'),
-
   /// VenusEntersCancer
   venusEntersCancer('VenusEntersCancer'),
-
   /// VenusEntersLeo
   venusEntersLeo('VenusEntersLeo'),
-
   /// VenusEntersVirgo
   venusEntersVirgo('VenusEntersVirgo'),
-
   /// VenusEntersLibra
   venusEntersLibra('VenusEntersLibra'),
-
   /// VenusEntersScorpio
   venusEntersScorpio('VenusEntersScorpio'),
-
   /// VenusEntersSagittarius
   venusEntersSagittarius('VenusEntersSagittarius'),
-
   /// VenusEntersCapricorn
   venusEntersCapricorn('VenusEntersCapricorn'),
-
   /// VenusEntersAquarius
   venusEntersAquarius('VenusEntersAquarius'),
-
   /// VenusEntersPisces
   venusEntersPisces('VenusEntersPisces'),
-
   /// SaturnEntersAries
   saturnEntersAries('SaturnEntersAries'),
-
   /// SaturnEntersTaurus
   saturnEntersTaurus('SaturnEntersTaurus'),
-
   /// SaturnEntersGemini
   saturnEntersGemini('SaturnEntersGemini'),
-
   /// SaturnEntersCancer
   saturnEntersCancer('SaturnEntersCancer'),
-
   /// SaturnEntersLeo
   saturnEntersLeo('SaturnEntersLeo'),
-
   /// SaturnEntersVirgo
   saturnEntersVirgo('SaturnEntersVirgo'),
-
   /// SaturnEntersLibra
   saturnEntersLibra('SaturnEntersLibra'),
-
   /// SaturnEntersScorpio
   saturnEntersScorpio('SaturnEntersScorpio'),
-
   /// SaturnEntersSagittarius
   saturnEntersSagittarius('SaturnEntersSagittarius'),
-
   /// SaturnEntersCapricorn
   saturnEntersCapricorn('SaturnEntersCapricorn'),
-
   /// SaturnEntersAquarius
   saturnEntersAquarius('SaturnEntersAquarius'),
-
   /// SaturnEntersPisces
   saturnEntersPisces('SaturnEntersPisces'),
-
   /// RahuEntersAries
   rahuEntersAries('RahuEntersAries'),
-
   /// RahuEntersTaurus
   rahuEntersTaurus('RahuEntersTaurus'),
-
   /// RahuEntersGemini
   rahuEntersGemini('RahuEntersGemini'),
-
   /// RahuEntersCancer
   rahuEntersCancer('RahuEntersCancer'),
-
   /// RahuEntersLeo
   rahuEntersLeo('RahuEntersLeo'),
-
   /// RahuEntersVirgo
   rahuEntersVirgo('RahuEntersVirgo'),
-
   /// RahuEntersLibra
   rahuEntersLibra('RahuEntersLibra'),
-
   /// RahuEntersScorpio
   rahuEntersScorpio('RahuEntersScorpio'),
-
   /// RahuEntersSagittarius
   rahuEntersSagittarius('RahuEntersSagittarius'),
-
   /// RahuEntersCapricorn
   rahuEntersCapricorn('RahuEntersCapricorn'),
-
   /// RahuEntersAquarius
   rahuEntersAquarius('RahuEntersAquarius'),
-
   /// RahuEntersPisces
   rahuEntersPisces('RahuEntersPisces'),
-
   /// KetuEntersAries
   ketuEntersAries('KetuEntersAries'),
-
   /// KetuEntersTaurus
   ketuEntersTaurus('KetuEntersTaurus'),
-
   /// KetuEntersGemini
   ketuEntersGemini('KetuEntersGemini'),
-
   /// KetuEntersCancer
   ketuEntersCancer('KetuEntersCancer'),
-
   /// KetuEntersLeo
   ketuEntersLeo('KetuEntersLeo'),
-
   /// KetuEntersVirgo
   ketuEntersVirgo('KetuEntersVirgo'),
-
   /// KetuEntersLibra
   ketuEntersLibra('KetuEntersLibra'),
-
   /// KetuEntersScorpio
   ketuEntersScorpio('KetuEntersScorpio'),
-
   /// KetuEntersSagittarius
   ketuEntersSagittarius('KetuEntersSagittarius'),
-
   /// KetuEntersCapricorn
   ketuEntersCapricorn('KetuEntersCapricorn'),
-
   /// KetuEntersAquarius
   ketuEntersAquarius('KetuEntersAquarius'),
-
   /// KetuEntersPisces
   ketuEntersPisces('KetuEntersPisces'),
-
   /// SunEntersAswini
   sunEntersAswini('SunEntersAswini'),
-
   /// SunEntersBharani
   sunEntersBharani('SunEntersBharani'),
-
   /// SunEntersKrithika
   sunEntersKrithika('SunEntersKrithika'),
-
   /// SunEntersRohini
   sunEntersRohini('SunEntersRohini'),
-
   /// SunEntersMrigasira
   sunEntersMrigasira('SunEntersMrigasira'),
-
   /// SunEntersAridra
   sunEntersAridra('SunEntersAridra'),
-
   /// SunEntersPunarvasu
   sunEntersPunarvasu('SunEntersPunarvasu'),
-
   /// SunEntersPushyami
   sunEntersPushyami('SunEntersPushyami'),
-
   /// SunEntersAslesha
   sunEntersAslesha('SunEntersAslesha'),
-
   /// SunEntersMakha
   sunEntersMakha('SunEntersMakha'),
-
   /// SunEntersPubba
   sunEntersPubba('SunEntersPubba'),
-
   /// SunEntersUttara
   sunEntersUttara('SunEntersUttara'),
-
   /// SunEntersHasta
   sunEntersHasta('SunEntersHasta'),
-
   /// SunEntersChitta
   sunEntersChitta('SunEntersChitta'),
-
   /// SunEntersSwathi
   sunEntersSwathi('SunEntersSwathi'),
-
   /// SunEntersVishhaka
   sunEntersVishhaka('SunEntersVishhaka'),
-
   /// SunEntersAnuradha
   sunEntersAnuradha('SunEntersAnuradha'),
-
   /// SunEntersJyesta
   sunEntersJyesta('SunEntersJyesta'),
-
   /// SunEntersMoola
   sunEntersMoola('SunEntersMoola'),
-
   /// SunEntersPoorvashada
   sunEntersPoorvashada('SunEntersPoorvashada'),
-
   /// SunEntersUttarashada
   sunEntersUttarashada('SunEntersUttarashada'),
-
   /// SunEntersSravana
   sunEntersSravana('SunEntersSravana'),
-
   /// SunEntersDhanishta
   sunEntersDhanishta('SunEntersDhanishta'),
-
   /// SunEntersSatabhisha
   sunEntersSatabhisha('SunEntersSatabhisha'),
-
   /// SunEntersPoorvabhadra
   sunEntersPoorvabhadra('SunEntersPoorvabhadra'),
-
   /// SunEntersUttarabhadra
   sunEntersUttarabhadra('SunEntersUttarabhadra'),
-
   /// SunEntersRevathi
   sunEntersRevathi('SunEntersRevathi'),
-
   /// MoonEntersAswini
   moonEntersAswini('MoonEntersAswini'),
-
   /// MoonEntersBharani
   moonEntersBharani('MoonEntersBharani'),
-
   /// MoonEntersKrithika
   moonEntersKrithika('MoonEntersKrithika'),
-
   /// MoonEntersRohini
   moonEntersRohini('MoonEntersRohini'),
-
   /// MoonEntersMrigasira
   moonEntersMrigasira('MoonEntersMrigasira'),
-
   /// MoonEntersAridra
   moonEntersAridra('MoonEntersAridra'),
-
   /// MoonEntersPunarvasu
   moonEntersPunarvasu('MoonEntersPunarvasu'),
-
   /// MoonEntersPushyami
   moonEntersPushyami('MoonEntersPushyami'),
-
   /// MoonEntersAslesha
   moonEntersAslesha('MoonEntersAslesha'),
-
   /// MoonEntersMakha
   moonEntersMakha('MoonEntersMakha'),
-
   /// MoonEntersPubba
   moonEntersPubba('MoonEntersPubba'),
-
   /// MoonEntersUttara
   moonEntersUttara('MoonEntersUttara'),
-
   /// MoonEntersHasta
   moonEntersHasta('MoonEntersHasta'),
-
   /// MoonEntersChitta
   moonEntersChitta('MoonEntersChitta'),
-
   /// MoonEntersSwathi
   moonEntersSwathi('MoonEntersSwathi'),
-
   /// MoonEntersVishhaka
   moonEntersVishhaka('MoonEntersVishhaka'),
-
   /// MoonEntersAnuradha
   moonEntersAnuradha('MoonEntersAnuradha'),
-
   /// MoonEntersJyesta
   moonEntersJyesta('MoonEntersJyesta'),
-
   /// MoonEntersMoola
   moonEntersMoola('MoonEntersMoola'),
-
   /// MoonEntersPoorvashada
   moonEntersPoorvashada('MoonEntersPoorvashada'),
-
   /// MoonEntersUttarashada
   moonEntersUttarashada('MoonEntersUttarashada'),
-
   /// MoonEntersSravana
   moonEntersSravana('MoonEntersSravana'),
-
   /// MoonEntersDhanishta
   moonEntersDhanishta('MoonEntersDhanishta'),
-
   /// MoonEntersSatabhisha
   moonEntersSatabhisha('MoonEntersSatabhisha'),
-
   /// MoonEntersPoorvabhadra
   moonEntersPoorvabhadra('MoonEntersPoorvabhadra'),
-
   /// MoonEntersUttarabhadra
   moonEntersUttarabhadra('MoonEntersUttarabhadra'),
-
   /// MoonEntersRevathi
   moonEntersRevathi('MoonEntersRevathi'),
-
   /// MarsEntersAswini
   marsEntersAswini('MarsEntersAswini'),
-
   /// MarsEntersBharani
   marsEntersBharani('MarsEntersBharani'),
-
   /// MarsEntersKrithika
   marsEntersKrithika('MarsEntersKrithika'),
-
   /// MarsEntersRohini
   marsEntersRohini('MarsEntersRohini'),
-
   /// MarsEntersMrigasira
   marsEntersMrigasira('MarsEntersMrigasira'),
-
   /// MarsEntersAridra
   marsEntersAridra('MarsEntersAridra'),
-
   /// MarsEntersPunarvasu
   marsEntersPunarvasu('MarsEntersPunarvasu'),
-
   /// MarsEntersPushyami
   marsEntersPushyami('MarsEntersPushyami'),
-
   /// MarsEntersAslesha
   marsEntersAslesha('MarsEntersAslesha'),
-
   /// MarsEntersMakha
   marsEntersMakha('MarsEntersMakha'),
-
   /// MarsEntersPubba
   marsEntersPubba('MarsEntersPubba'),
-
   /// MarsEntersUttara
   marsEntersUttara('MarsEntersUttara'),
-
   /// MarsEntersHasta
   marsEntersHasta('MarsEntersHasta'),
-
   /// MarsEntersChitta
   marsEntersChitta('MarsEntersChitta'),
-
   /// MarsEntersSwathi
   marsEntersSwathi('MarsEntersSwathi'),
-
   /// MarsEntersVishhaka
   marsEntersVishhaka('MarsEntersVishhaka'),
-
   /// MarsEntersAnuradha
   marsEntersAnuradha('MarsEntersAnuradha'),
-
   /// MarsEntersJyesta
   marsEntersJyesta('MarsEntersJyesta'),
-
   /// MarsEntersMoola
   marsEntersMoola('MarsEntersMoola'),
-
   /// MarsEntersPoorvashada
   marsEntersPoorvashada('MarsEntersPoorvashada'),
-
   /// MarsEntersUttarashada
   marsEntersUttarashada('MarsEntersUttarashada'),
-
   /// MarsEntersSravana
   marsEntersSravana('MarsEntersSravana'),
-
   /// MarsEntersDhanishta
   marsEntersDhanishta('MarsEntersDhanishta'),
-
   /// MarsEntersSatabhisha
   marsEntersSatabhisha('MarsEntersSatabhisha'),
-
   /// MarsEntersPoorvabhadra
   marsEntersPoorvabhadra('MarsEntersPoorvabhadra'),
-
   /// MarsEntersUttarabhadra
   marsEntersUttarabhadra('MarsEntersUttarabhadra'),
-
   /// MarsEntersRevathi
   marsEntersRevathi('MarsEntersRevathi'),
-
   /// MercuryEntersAswini
   mercuryEntersAswini('MercuryEntersAswini'),
-
   /// MercuryEntersBharani
   mercuryEntersBharani('MercuryEntersBharani'),
-
   /// MercuryEntersKrithika
   mercuryEntersKrithika('MercuryEntersKrithika'),
-
   /// MercuryEntersRohini
   mercuryEntersRohini('MercuryEntersRohini'),
-
   /// MercuryEntersMrigasira
   mercuryEntersMrigasira('MercuryEntersMrigasira'),
-
   /// MercuryEntersAridra
   mercuryEntersAridra('MercuryEntersAridra'),
-
   /// MercuryEntersPunarvasu
   mercuryEntersPunarvasu('MercuryEntersPunarvasu'),
-
   /// MercuryEntersPushyami
   mercuryEntersPushyami('MercuryEntersPushyami'),
-
   /// MercuryEntersAslesha
   mercuryEntersAslesha('MercuryEntersAslesha'),
-
   /// MercuryEntersMakha
   mercuryEntersMakha('MercuryEntersMakha'),
-
   /// MercuryEntersPubba
   mercuryEntersPubba('MercuryEntersPubba'),
-
   /// MercuryEntersUttara
   mercuryEntersUttara('MercuryEntersUttara'),
-
   /// MercuryEntersHasta
   mercuryEntersHasta('MercuryEntersHasta'),
-
   /// MercuryEntersChitta
   mercuryEntersChitta('MercuryEntersChitta'),
-
   /// MercuryEntersSwathi
   mercuryEntersSwathi('MercuryEntersSwathi'),
-
   /// MercuryEntersVishhaka
   mercuryEntersVishhaka('MercuryEntersVishhaka'),
-
   /// MercuryEntersAnuradha
   mercuryEntersAnuradha('MercuryEntersAnuradha'),
-
   /// MercuryEntersJyesta
   mercuryEntersJyesta('MercuryEntersJyesta'),
-
   /// MercuryEntersMoola
   mercuryEntersMoola('MercuryEntersMoola'),
-
   /// MercuryEntersPoorvashada
   mercuryEntersPoorvashada('MercuryEntersPoorvashada'),
-
   /// MercuryEntersUttarashada
   mercuryEntersUttarashada('MercuryEntersUttarashada'),
-
   /// MercuryEntersSravana
   mercuryEntersSravana('MercuryEntersSravana'),
-
   /// MercuryEntersDhanishta
   mercuryEntersDhanishta('MercuryEntersDhanishta'),
-
   /// MercuryEntersSatabhisha
   mercuryEntersSatabhisha('MercuryEntersSatabhisha'),
-
   /// MercuryEntersPoorvabhadra
   mercuryEntersPoorvabhadra('MercuryEntersPoorvabhadra'),
-
   /// MercuryEntersUttarabhadra
   mercuryEntersUttarabhadra('MercuryEntersUttarabhadra'),
-
   /// MercuryEntersRevathi
   mercuryEntersRevathi('MercuryEntersRevathi'),
-
   /// JupiterEntersAswini
   jupiterEntersAswini('JupiterEntersAswini'),
-
   /// JupiterEntersBharani
   jupiterEntersBharani('JupiterEntersBharani'),
-
   /// JupiterEntersKrithika
   jupiterEntersKrithika('JupiterEntersKrithika'),
-
   /// JupiterEntersRohini
   jupiterEntersRohini('JupiterEntersRohini'),
-
   /// JupiterEntersMrigasira
   jupiterEntersMrigasira('JupiterEntersMrigasira'),
-
   /// JupiterEntersAridra
   jupiterEntersAridra('JupiterEntersAridra'),
-
   /// JupiterEntersPunarvasu
   jupiterEntersPunarvasu('JupiterEntersPunarvasu'),
-
   /// JupiterEntersPushyami
   jupiterEntersPushyami('JupiterEntersPushyami'),
-
   /// JupiterEntersAslesha
   jupiterEntersAslesha('JupiterEntersAslesha'),
-
   /// JupiterEntersMakha
   jupiterEntersMakha('JupiterEntersMakha'),
-
   /// JupiterEntersPubba
   jupiterEntersPubba('JupiterEntersPubba'),
-
   /// JupiterEntersUttara
   jupiterEntersUttara('JupiterEntersUttara'),
-
   /// JupiterEntersHasta
   jupiterEntersHasta('JupiterEntersHasta'),
-
   /// JupiterEntersChitta
   jupiterEntersChitta('JupiterEntersChitta'),
-
   /// JupiterEntersSwathi
   jupiterEntersSwathi('JupiterEntersSwathi'),
-
   /// JupiterEntersVishhaka
   jupiterEntersVishhaka('JupiterEntersVishhaka'),
-
   /// JupiterEntersAnuradha
   jupiterEntersAnuradha('JupiterEntersAnuradha'),
-
   /// JupiterEntersJyesta
   jupiterEntersJyesta('JupiterEntersJyesta'),
-
   /// JupiterEntersMoola
   jupiterEntersMoola('JupiterEntersMoola'),
-
   /// JupiterEntersPoorvashada
   jupiterEntersPoorvashada('JupiterEntersPoorvashada'),
-
   /// JupiterEntersUttarashada
   jupiterEntersUttarashada('JupiterEntersUttarashada'),
-
   /// JupiterEntersSravana
   jupiterEntersSravana('JupiterEntersSravana'),
-
   /// JupiterEntersDhanishta
   jupiterEntersDhanishta('JupiterEntersDhanishta'),
-
   /// JupiterEntersSatabhisha
   jupiterEntersSatabhisha('JupiterEntersSatabhisha'),
-
   /// JupiterEntersPoorvabhadra
   jupiterEntersPoorvabhadra('JupiterEntersPoorvabhadra'),
-
   /// JupiterEntersUttarabhadra
   jupiterEntersUttarabhadra('JupiterEntersUttarabhadra'),
-
   /// JupiterEntersRevathi
   jupiterEntersRevathi('JupiterEntersRevathi'),
-
   /// VenusEntersAswini
   venusEntersAswini('VenusEntersAswini'),
-
   /// VenusEntersBharani
   venusEntersBharani('VenusEntersBharani'),
-
   /// VenusEntersKrithika
   venusEntersKrithika('VenusEntersKrithika'),
-
   /// VenusEntersRohini
   venusEntersRohini('VenusEntersRohini'),
-
   /// VenusEntersMrigasira
   venusEntersMrigasira('VenusEntersMrigasira'),
-
   /// VenusEntersAridra
   venusEntersAridra('VenusEntersAridra'),
-
   /// VenusEntersPunarvasu
   venusEntersPunarvasu('VenusEntersPunarvasu'),
-
   /// VenusEntersPushyami
   venusEntersPushyami('VenusEntersPushyami'),
-
   /// VenusEntersAslesha
   venusEntersAslesha('VenusEntersAslesha'),
-
   /// VenusEntersMakha
   venusEntersMakha('VenusEntersMakha'),
-
   /// VenusEntersPubba
   venusEntersPubba('VenusEntersPubba'),
-
   /// VenusEntersUttara
   venusEntersUttara('VenusEntersUttara'),
-
   /// VenusEntersHasta
   venusEntersHasta('VenusEntersHasta'),
-
   /// VenusEntersChitta
   venusEntersChitta('VenusEntersChitta'),
-
   /// VenusEntersSwathi
   venusEntersSwathi('VenusEntersSwathi'),
-
   /// VenusEntersVishhaka
   venusEntersVishhaka('VenusEntersVishhaka'),
-
   /// VenusEntersAnuradha
   venusEntersAnuradha('VenusEntersAnuradha'),
-
   /// VenusEntersJyesta
   venusEntersJyesta('VenusEntersJyesta'),
-
   /// VenusEntersMoola
   venusEntersMoola('VenusEntersMoola'),
-
   /// VenusEntersPoorvashada
   venusEntersPoorvashada('VenusEntersPoorvashada'),
-
   /// VenusEntersUttarashada
   venusEntersUttarashada('VenusEntersUttarashada'),
-
   /// VenusEntersSravana
   venusEntersSravana('VenusEntersSravana'),
-
   /// VenusEntersDhanishta
   venusEntersDhanishta('VenusEntersDhanishta'),
-
   /// VenusEntersSatabhisha
   venusEntersSatabhisha('VenusEntersSatabhisha'),
-
   /// VenusEntersPoorvabhadra
   venusEntersPoorvabhadra('VenusEntersPoorvabhadra'),
-
   /// VenusEntersUttarabhadra
   venusEntersUttarabhadra('VenusEntersUttarabhadra'),
-
   /// VenusEntersRevathi
   venusEntersRevathi('VenusEntersRevathi'),
-
   /// SaturnEntersAswini
   saturnEntersAswini('SaturnEntersAswini'),
-
   /// SaturnEntersBharani
   saturnEntersBharani('SaturnEntersBharani'),
-
   /// SaturnEntersKrithika
   saturnEntersKrithika('SaturnEntersKrithika'),
-
   /// SaturnEntersRohini
   saturnEntersRohini('SaturnEntersRohini'),
-
   /// SaturnEntersMrigasira
   saturnEntersMrigasira('SaturnEntersMrigasira'),
-
   /// SaturnEntersAridra
   saturnEntersAridra('SaturnEntersAridra'),
-
   /// SaturnEntersPunarvasu
   saturnEntersPunarvasu('SaturnEntersPunarvasu'),
-
   /// SaturnEntersPushyami
   saturnEntersPushyami('SaturnEntersPushyami'),
-
   /// SaturnEntersAslesha
   saturnEntersAslesha('SaturnEntersAslesha'),
-
   /// SaturnEntersMakha
   saturnEntersMakha('SaturnEntersMakha'),
-
   /// SaturnEntersPubba
   saturnEntersPubba('SaturnEntersPubba'),
-
   /// SaturnEntersUttara
   saturnEntersUttara('SaturnEntersUttara'),
-
   /// SaturnEntersHasta
   saturnEntersHasta('SaturnEntersHasta'),
-
   /// SaturnEntersChitta
   saturnEntersChitta('SaturnEntersChitta'),
-
   /// SaturnEntersSwathi
   saturnEntersSwathi('SaturnEntersSwathi'),
-
   /// SaturnEntersVishhaka
   saturnEntersVishhaka('SaturnEntersVishhaka'),
-
   /// SaturnEntersAnuradha
   saturnEntersAnuradha('SaturnEntersAnuradha'),
-
   /// SaturnEntersJyesta
   saturnEntersJyesta('SaturnEntersJyesta'),
-
   /// SaturnEntersMoola
   saturnEntersMoola('SaturnEntersMoola'),
-
   /// SaturnEntersPoorvashada
   saturnEntersPoorvashada('SaturnEntersPoorvashada'),
-
   /// SaturnEntersUttarashada
   saturnEntersUttarashada('SaturnEntersUttarashada'),
-
   /// SaturnEntersSravana
   saturnEntersSravana('SaturnEntersSravana'),
-
   /// SaturnEntersDhanishta
   saturnEntersDhanishta('SaturnEntersDhanishta'),
-
   /// SaturnEntersSatabhisha
   saturnEntersSatabhisha('SaturnEntersSatabhisha'),
-
   /// SaturnEntersPoorvabhadra
   saturnEntersPoorvabhadra('SaturnEntersPoorvabhadra'),
-
   /// SaturnEntersUttarabhadra
   saturnEntersUttarabhadra('SaturnEntersUttarabhadra'),
-
   /// SaturnEntersRevathi
   saturnEntersRevathi('SaturnEntersRevathi'),
-
   /// RahuEntersAswini
   rahuEntersAswini('RahuEntersAswini'),
-
   /// RahuEntersBharani
   rahuEntersBharani('RahuEntersBharani'),
-
   /// RahuEntersKrithika
   rahuEntersKrithika('RahuEntersKrithika'),
-
   /// RahuEntersRohini
   rahuEntersRohini('RahuEntersRohini'),
-
   /// RahuEntersMrigasira
   rahuEntersMrigasira('RahuEntersMrigasira'),
-
   /// RahuEntersAridra
   rahuEntersAridra('RahuEntersAridra'),
-
   /// RahuEntersPunarvasu
   rahuEntersPunarvasu('RahuEntersPunarvasu'),
-
   /// RahuEntersPushyami
   rahuEntersPushyami('RahuEntersPushyami'),
-
   /// RahuEntersAslesha
   rahuEntersAslesha('RahuEntersAslesha'),
-
   /// RahuEntersMakha
   rahuEntersMakha('RahuEntersMakha'),
-
   /// RahuEntersPubba
   rahuEntersPubba('RahuEntersPubba'),
-
   /// RahuEntersUttara
   rahuEntersUttara('RahuEntersUttara'),
-
   /// RahuEntersHasta
   rahuEntersHasta('RahuEntersHasta'),
-
   /// RahuEntersChitta
   rahuEntersChitta('RahuEntersChitta'),
-
   /// RahuEntersSwathi
   rahuEntersSwathi('RahuEntersSwathi'),
-
   /// RahuEntersVishhaka
   rahuEntersVishhaka('RahuEntersVishhaka'),
-
   /// RahuEntersAnuradha
   rahuEntersAnuradha('RahuEntersAnuradha'),
-
   /// RahuEntersJyesta
   rahuEntersJyesta('RahuEntersJyesta'),
-
   /// RahuEntersMoola
   rahuEntersMoola('RahuEntersMoola'),
-
   /// RahuEntersPoorvashada
   rahuEntersPoorvashada('RahuEntersPoorvashada'),
-
   /// RahuEntersUttarashada
   rahuEntersUttarashada('RahuEntersUttarashada'),
-
   /// RahuEntersSravana
   rahuEntersSravana('RahuEntersSravana'),
-
   /// RahuEntersDhanishta
   rahuEntersDhanishta('RahuEntersDhanishta'),
-
   /// RahuEntersSatabhisha
   rahuEntersSatabhisha('RahuEntersSatabhisha'),
-
   /// RahuEntersPoorvabhadra
   rahuEntersPoorvabhadra('RahuEntersPoorvabhadra'),
-
   /// RahuEntersUttarabhadra
   rahuEntersUttarabhadra('RahuEntersUttarabhadra'),
-
   /// RahuEntersRevathi
   rahuEntersRevathi('RahuEntersRevathi'),
-
   /// KetuEntersAswini
   ketuEntersAswini('KetuEntersAswini'),
-
   /// KetuEntersBharani
   ketuEntersBharani('KetuEntersBharani'),
-
   /// KetuEntersKrithika
   ketuEntersKrithika('KetuEntersKrithika'),
-
   /// KetuEntersRohini
   ketuEntersRohini('KetuEntersRohini'),
-
   /// KetuEntersMrigasira
   ketuEntersMrigasira('KetuEntersMrigasira'),
-
   /// KetuEntersAridra
   ketuEntersAridra('KetuEntersAridra'),
-
   /// KetuEntersPunarvasu
   ketuEntersPunarvasu('KetuEntersPunarvasu'),
-
   /// KetuEntersPushyami
   ketuEntersPushyami('KetuEntersPushyami'),
-
   /// KetuEntersAslesha
   ketuEntersAslesha('KetuEntersAslesha'),
-
   /// KetuEntersMakha
   ketuEntersMakha('KetuEntersMakha'),
-
   /// KetuEntersPubba
   ketuEntersPubba('KetuEntersPubba'),
-
   /// KetuEntersUttara
   ketuEntersUttara('KetuEntersUttara'),
-
   /// KetuEntersHasta
   ketuEntersHasta('KetuEntersHasta'),
-
   /// KetuEntersChitta
   ketuEntersChitta('KetuEntersChitta'),
-
   /// KetuEntersSwathi
   ketuEntersSwathi('KetuEntersSwathi'),
-
   /// KetuEntersVishhaka
   ketuEntersVishhaka('KetuEntersVishhaka'),
-
   /// KetuEntersAnuradha
   ketuEntersAnuradha('KetuEntersAnuradha'),
-
   /// KetuEntersJyesta
   ketuEntersJyesta('KetuEntersJyesta'),
-
   /// KetuEntersMoola
   ketuEntersMoola('KetuEntersMoola'),
-
   /// KetuEntersPoorvashada
   ketuEntersPoorvashada('KetuEntersPoorvashada'),
-
   /// KetuEntersUttarashada
   ketuEntersUttarashada('KetuEntersUttarashada'),
-
   /// KetuEntersSravana
   ketuEntersSravana('KetuEntersSravana'),
-
   /// KetuEntersDhanishta
   ketuEntersDhanishta('KetuEntersDhanishta'),
-
   /// KetuEntersSatabhisha
   ketuEntersSatabhisha('KetuEntersSatabhisha'),
-
   /// KetuEntersPoorvabhadra
   ketuEntersPoorvabhadra('KetuEntersPoorvabhadra'),
-
   /// KetuEntersUttarabhadra
   ketuEntersUttarabhadra('KetuEntersUttarabhadra'),
-
   /// KetuEntersRevathi
   ketuEntersRevathi('KetuEntersRevathi'),
-
   /// MercuryStationsRetrograde
   mercuryStationsRetrograde('MercuryStationsRetrograde'),
-
   /// MercuryStationsDirect
   mercuryStationsDirect('MercuryStationsDirect'),
-
   /// VenusStationsRetrograde
   venusStationsRetrograde('VenusStationsRetrograde'),
-
   /// VenusStationsDirect
   venusStationsDirect('VenusStationsDirect'),
-
   /// MarsStationsRetrograde
   marsStationsRetrograde('MarsStationsRetrograde'),
-
   /// MarsStationsDirect
   marsStationsDirect('MarsStationsDirect'),
-
   /// JupiterStationsRetrograde
   jupiterStationsRetrograde('JupiterStationsRetrograde'),
-
   /// JupiterStationsDirect
   jupiterStationsDirect('JupiterStationsDirect'),
-
   /// SaturnStationsRetrograde
   saturnStationsRetrograde('SaturnStationsRetrograde'),
-
   /// SaturnStationsDirect
   saturnStationsDirect('SaturnStationsDirect'),
-
   /// NewMoon
   newMoon('NewMoon'),
-
   /// FirstQuarterMoon
   firstQuarterMoon('FirstQuarterMoon'),
-
   /// FullMoon
   fullMoon('FullMoon'),
-
   /// LastQuarterMoon
   lastQuarterMoon('LastQuarterMoon'),
-
   /// Tithi1
   tithi1('Tithi1'),
-
   /// Tithi2
   tithi2('Tithi2'),
-
   /// Tithi3
   tithi3('Tithi3'),
-
   /// Tithi4
   tithi4('Tithi4'),
-
   /// Tithi5
   tithi5('Tithi5'),
-
   /// Tithi6
   tithi6('Tithi6'),
-
   /// Tithi7
   tithi7('Tithi7'),
-
   /// Tithi8
   tithi8('Tithi8'),
-
   /// Tithi9
   tithi9('Tithi9'),
-
   /// Tithi10
   tithi10('Tithi10'),
-
   /// Tithi11
   tithi11('Tithi11'),
-
   /// Tithi12
   tithi12('Tithi12'),
-
   /// Tithi13
   tithi13('Tithi13'),
-
   /// Tithi14
   tithi14('Tithi14'),
-
   /// Tithi15
   tithi15('Tithi15'),
-
   /// Tithi16
   tithi16('Tithi16'),
-
   /// Tithi17
   tithi17('Tithi17'),
-
   /// Tithi18
   tithi18('Tithi18'),
-
   /// Tithi19
   tithi19('Tithi19'),
-
   /// Tithi20
   tithi20('Tithi20'),
-
   /// Tithi21
   tithi21('Tithi21'),
-
   /// Tithi22
   tithi22('Tithi22'),
-
   /// Tithi23
   tithi23('Tithi23'),
-
   /// Tithi24
   tithi24('Tithi24'),
-
   /// Tithi25
   tithi25('Tithi25'),
-
   /// Tithi26
   tithi26('Tithi26'),
-
   /// Tithi27
   tithi27('Tithi27'),
-
   /// Tithi28
   tithi28('Tithi28'),
-
   /// Tithi29
   tithi29('Tithi29'),
-
   /// Tithi30
   tithi30('Tithi30'),
-
   /// KaranaBava
   karanaBava('KaranaBava'),
-
   /// KaranaBalava
   karanaBalava('KaranaBalava'),
-
   /// KaranaKaulava
   karanaKaulava('KaranaKaulava'),
-
   /// KaranaTaitula
   karanaTaitula('KaranaTaitula'),
-
   /// KaranaGarija
   karanaGarija('KaranaGarija'),
-
   /// KaranaVanija
   karanaVanija('KaranaVanija'),
-
   /// KaranaVisti
   karanaVisti('KaranaVisti'),
-
   /// KaranaSakuna
   karanaSakuna('KaranaSakuna'),
-
   /// KaranaChatushpada
   karanaChatushpada('KaranaChatushpada'),
-
   /// KaranaNaga
   karanaNaga('KaranaNaga'),
-
   /// KaranaKimstughna
   karanaKimstughna('KaranaKimstughna'),
-
   /// MarchEquinox
   marchEquinox('MarchEquinox'),
-
   /// JuneSolstice
   juneSolstice('JuneSolstice'),
-
   /// SeptemberEquinox
   septemberEquinox('SeptemberEquinox'),
-
   /// DecemberSolstice
   decemberSolstice('DecemberSolstice'),
-
   /// LagnaEntersAries
   lagnaEntersAries('LagnaEntersAries'),
-
   /// LagnaEntersTaurus
   lagnaEntersTaurus('LagnaEntersTaurus'),
-
   /// LagnaEntersGemini
   lagnaEntersGemini('LagnaEntersGemini'),
-
   /// LagnaEntersCancer
   lagnaEntersCancer('LagnaEntersCancer'),
-
   /// LagnaEntersLeo
   lagnaEntersLeo('LagnaEntersLeo'),
-
   /// LagnaEntersVirgo
   lagnaEntersVirgo('LagnaEntersVirgo'),
-
   /// LagnaEntersLibra
   lagnaEntersLibra('LagnaEntersLibra'),
-
   /// LagnaEntersScorpio
   lagnaEntersScorpio('LagnaEntersScorpio'),
-
   /// LagnaEntersSagittarius
   lagnaEntersSagittarius('LagnaEntersSagittarius'),
-
   /// LagnaEntersCapricorn
   lagnaEntersCapricorn('LagnaEntersCapricorn'),
-
   /// LagnaEntersAquarius
   lagnaEntersAquarius('LagnaEntersAquarius'),
-
   /// LagnaEntersPisces
   lagnaEntersPisces('LagnaEntersPisces'),
-
   /// SunNavamsaEntersAries
   sunNavamsaEntersAries('SunNavamsaEntersAries'),
-
   /// SunNavamsaEntersTaurus
   sunNavamsaEntersTaurus('SunNavamsaEntersTaurus'),
-
   /// SunNavamsaEntersGemini
   sunNavamsaEntersGemini('SunNavamsaEntersGemini'),
-
   /// SunNavamsaEntersCancer
   sunNavamsaEntersCancer('SunNavamsaEntersCancer'),
-
   /// SunNavamsaEntersLeo
   sunNavamsaEntersLeo('SunNavamsaEntersLeo'),
-
   /// SunNavamsaEntersVirgo
   sunNavamsaEntersVirgo('SunNavamsaEntersVirgo'),
-
   /// SunNavamsaEntersLibra
   sunNavamsaEntersLibra('SunNavamsaEntersLibra'),
-
   /// SunNavamsaEntersScorpio
   sunNavamsaEntersScorpio('SunNavamsaEntersScorpio'),
-
   /// SunNavamsaEntersSagittarius
   sunNavamsaEntersSagittarius('SunNavamsaEntersSagittarius'),
-
   /// SunNavamsaEntersCapricorn
   sunNavamsaEntersCapricorn('SunNavamsaEntersCapricorn'),
-
   /// SunNavamsaEntersAquarius
   sunNavamsaEntersAquarius('SunNavamsaEntersAquarius'),
-
   /// SunNavamsaEntersPisces
   sunNavamsaEntersPisces('SunNavamsaEntersPisces'),
-
   /// MoonNavamsaEntersAries
   moonNavamsaEntersAries('MoonNavamsaEntersAries'),
-
   /// MoonNavamsaEntersTaurus
   moonNavamsaEntersTaurus('MoonNavamsaEntersTaurus'),
-
   /// MoonNavamsaEntersGemini
   moonNavamsaEntersGemini('MoonNavamsaEntersGemini'),
-
   /// MoonNavamsaEntersCancer
   moonNavamsaEntersCancer('MoonNavamsaEntersCancer'),
-
   /// MoonNavamsaEntersLeo
   moonNavamsaEntersLeo('MoonNavamsaEntersLeo'),
-
   /// MoonNavamsaEntersVirgo
   moonNavamsaEntersVirgo('MoonNavamsaEntersVirgo'),
-
   /// MoonNavamsaEntersLibra
   moonNavamsaEntersLibra('MoonNavamsaEntersLibra'),
-
   /// MoonNavamsaEntersScorpio
   moonNavamsaEntersScorpio('MoonNavamsaEntersScorpio'),
-
   /// MoonNavamsaEntersSagittarius
   moonNavamsaEntersSagittarius('MoonNavamsaEntersSagittarius'),
-
   /// MoonNavamsaEntersCapricorn
   moonNavamsaEntersCapricorn('MoonNavamsaEntersCapricorn'),
-
   /// MoonNavamsaEntersAquarius
   moonNavamsaEntersAquarius('MoonNavamsaEntersAquarius'),
-
   /// MoonNavamsaEntersPisces
   moonNavamsaEntersPisces('MoonNavamsaEntersPisces'),
-
   /// MarsNavamsaEntersAries
   marsNavamsaEntersAries('MarsNavamsaEntersAries'),
-
   /// MarsNavamsaEntersTaurus
   marsNavamsaEntersTaurus('MarsNavamsaEntersTaurus'),
-
   /// MarsNavamsaEntersGemini
   marsNavamsaEntersGemini('MarsNavamsaEntersGemini'),
-
   /// MarsNavamsaEntersCancer
   marsNavamsaEntersCancer('MarsNavamsaEntersCancer'),
-
   /// MarsNavamsaEntersLeo
   marsNavamsaEntersLeo('MarsNavamsaEntersLeo'),
-
   /// MarsNavamsaEntersVirgo
   marsNavamsaEntersVirgo('MarsNavamsaEntersVirgo'),
-
   /// MarsNavamsaEntersLibra
   marsNavamsaEntersLibra('MarsNavamsaEntersLibra'),
-
   /// MarsNavamsaEntersScorpio
   marsNavamsaEntersScorpio('MarsNavamsaEntersScorpio'),
-
   /// MarsNavamsaEntersSagittarius
   marsNavamsaEntersSagittarius('MarsNavamsaEntersSagittarius'),
-
   /// MarsNavamsaEntersCapricorn
   marsNavamsaEntersCapricorn('MarsNavamsaEntersCapricorn'),
-
   /// MarsNavamsaEntersAquarius
   marsNavamsaEntersAquarius('MarsNavamsaEntersAquarius'),
-
   /// MarsNavamsaEntersPisces
   marsNavamsaEntersPisces('MarsNavamsaEntersPisces'),
-
   /// MercuryNavamsaEntersAries
   mercuryNavamsaEntersAries('MercuryNavamsaEntersAries'),
-
   /// MercuryNavamsaEntersTaurus
   mercuryNavamsaEntersTaurus('MercuryNavamsaEntersTaurus'),
-
   /// MercuryNavamsaEntersGemini
   mercuryNavamsaEntersGemini('MercuryNavamsaEntersGemini'),
-
   /// MercuryNavamsaEntersCancer
   mercuryNavamsaEntersCancer('MercuryNavamsaEntersCancer'),
-
   /// MercuryNavamsaEntersLeo
   mercuryNavamsaEntersLeo('MercuryNavamsaEntersLeo'),
-
   /// MercuryNavamsaEntersVirgo
   mercuryNavamsaEntersVirgo('MercuryNavamsaEntersVirgo'),
-
   /// MercuryNavamsaEntersLibra
   mercuryNavamsaEntersLibra('MercuryNavamsaEntersLibra'),
-
   /// MercuryNavamsaEntersScorpio
   mercuryNavamsaEntersScorpio('MercuryNavamsaEntersScorpio'),
-
   /// MercuryNavamsaEntersSagittarius
   mercuryNavamsaEntersSagittarius('MercuryNavamsaEntersSagittarius'),
-
   /// MercuryNavamsaEntersCapricorn
   mercuryNavamsaEntersCapricorn('MercuryNavamsaEntersCapricorn'),
-
   /// MercuryNavamsaEntersAquarius
   mercuryNavamsaEntersAquarius('MercuryNavamsaEntersAquarius'),
-
   /// MercuryNavamsaEntersPisces
   mercuryNavamsaEntersPisces('MercuryNavamsaEntersPisces'),
-
   /// JupiterNavamsaEntersAries
   jupiterNavamsaEntersAries('JupiterNavamsaEntersAries'),
-
   /// JupiterNavamsaEntersTaurus
   jupiterNavamsaEntersTaurus('JupiterNavamsaEntersTaurus'),
-
   /// JupiterNavamsaEntersGemini
   jupiterNavamsaEntersGemini('JupiterNavamsaEntersGemini'),
-
   /// JupiterNavamsaEntersCancer
   jupiterNavamsaEntersCancer('JupiterNavamsaEntersCancer'),
-
   /// JupiterNavamsaEntersLeo
   jupiterNavamsaEntersLeo('JupiterNavamsaEntersLeo'),
-
   /// JupiterNavamsaEntersVirgo
   jupiterNavamsaEntersVirgo('JupiterNavamsaEntersVirgo'),
-
   /// JupiterNavamsaEntersLibra
   jupiterNavamsaEntersLibra('JupiterNavamsaEntersLibra'),
-
   /// JupiterNavamsaEntersScorpio
   jupiterNavamsaEntersScorpio('JupiterNavamsaEntersScorpio'),
-
   /// JupiterNavamsaEntersSagittarius
   jupiterNavamsaEntersSagittarius('JupiterNavamsaEntersSagittarius'),
-
   /// JupiterNavamsaEntersCapricorn
   jupiterNavamsaEntersCapricorn('JupiterNavamsaEntersCapricorn'),
-
   /// JupiterNavamsaEntersAquarius
   jupiterNavamsaEntersAquarius('JupiterNavamsaEntersAquarius'),
-
   /// JupiterNavamsaEntersPisces
   jupiterNavamsaEntersPisces('JupiterNavamsaEntersPisces'),
-
   /// VenusNavamsaEntersAries
   venusNavamsaEntersAries('VenusNavamsaEntersAries'),
-
   /// VenusNavamsaEntersTaurus
   venusNavamsaEntersTaurus('VenusNavamsaEntersTaurus'),
-
   /// VenusNavamsaEntersGemini
   venusNavamsaEntersGemini('VenusNavamsaEntersGemini'),
-
   /// VenusNavamsaEntersCancer
   venusNavamsaEntersCancer('VenusNavamsaEntersCancer'),
-
   /// VenusNavamsaEntersLeo
   venusNavamsaEntersLeo('VenusNavamsaEntersLeo'),
-
   /// VenusNavamsaEntersVirgo
   venusNavamsaEntersVirgo('VenusNavamsaEntersVirgo'),
-
   /// VenusNavamsaEntersLibra
   venusNavamsaEntersLibra('VenusNavamsaEntersLibra'),
-
   /// VenusNavamsaEntersScorpio
   venusNavamsaEntersScorpio('VenusNavamsaEntersScorpio'),
-
   /// VenusNavamsaEntersSagittarius
   venusNavamsaEntersSagittarius('VenusNavamsaEntersSagittarius'),
-
   /// VenusNavamsaEntersCapricorn
   venusNavamsaEntersCapricorn('VenusNavamsaEntersCapricorn'),
-
   /// VenusNavamsaEntersAquarius
   venusNavamsaEntersAquarius('VenusNavamsaEntersAquarius'),
-
   /// VenusNavamsaEntersPisces
   venusNavamsaEntersPisces('VenusNavamsaEntersPisces'),
-
   /// SaturnNavamsaEntersAries
   saturnNavamsaEntersAries('SaturnNavamsaEntersAries'),
-
   /// SaturnNavamsaEntersTaurus
   saturnNavamsaEntersTaurus('SaturnNavamsaEntersTaurus'),
-
   /// SaturnNavamsaEntersGemini
   saturnNavamsaEntersGemini('SaturnNavamsaEntersGemini'),
-
   /// SaturnNavamsaEntersCancer
   saturnNavamsaEntersCancer('SaturnNavamsaEntersCancer'),
-
   /// SaturnNavamsaEntersLeo
   saturnNavamsaEntersLeo('SaturnNavamsaEntersLeo'),
-
   /// SaturnNavamsaEntersVirgo
   saturnNavamsaEntersVirgo('SaturnNavamsaEntersVirgo'),
-
   /// SaturnNavamsaEntersLibra
   saturnNavamsaEntersLibra('SaturnNavamsaEntersLibra'),
-
   /// SaturnNavamsaEntersScorpio
   saturnNavamsaEntersScorpio('SaturnNavamsaEntersScorpio'),
-
   /// SaturnNavamsaEntersSagittarius
   saturnNavamsaEntersSagittarius('SaturnNavamsaEntersSagittarius'),
-
   /// SaturnNavamsaEntersCapricorn
   saturnNavamsaEntersCapricorn('SaturnNavamsaEntersCapricorn'),
-
   /// SaturnNavamsaEntersAquarius
   saturnNavamsaEntersAquarius('SaturnNavamsaEntersAquarius'),
-
   /// SaturnNavamsaEntersPisces
   saturnNavamsaEntersPisces('SaturnNavamsaEntersPisces'),
-
   /// RahuNavamsaEntersAries
   rahuNavamsaEntersAries('RahuNavamsaEntersAries'),
-
   /// RahuNavamsaEntersTaurus
   rahuNavamsaEntersTaurus('RahuNavamsaEntersTaurus'),
-
   /// RahuNavamsaEntersGemini
   rahuNavamsaEntersGemini('RahuNavamsaEntersGemini'),
-
   /// RahuNavamsaEntersCancer
   rahuNavamsaEntersCancer('RahuNavamsaEntersCancer'),
-
   /// RahuNavamsaEntersLeo
   rahuNavamsaEntersLeo('RahuNavamsaEntersLeo'),
-
   /// RahuNavamsaEntersVirgo
   rahuNavamsaEntersVirgo('RahuNavamsaEntersVirgo'),
-
   /// RahuNavamsaEntersLibra
   rahuNavamsaEntersLibra('RahuNavamsaEntersLibra'),
-
   /// RahuNavamsaEntersScorpio
   rahuNavamsaEntersScorpio('RahuNavamsaEntersScorpio'),
-
   /// RahuNavamsaEntersSagittarius
   rahuNavamsaEntersSagittarius('RahuNavamsaEntersSagittarius'),
-
   /// RahuNavamsaEntersCapricorn
   rahuNavamsaEntersCapricorn('RahuNavamsaEntersCapricorn'),
-
   /// RahuNavamsaEntersAquarius
   rahuNavamsaEntersAquarius('RahuNavamsaEntersAquarius'),
-
   /// RahuNavamsaEntersPisces
   rahuNavamsaEntersPisces('RahuNavamsaEntersPisces'),
-
   /// KetuNavamsaEntersAries
   ketuNavamsaEntersAries('KetuNavamsaEntersAries'),
-
   /// KetuNavamsaEntersTaurus
   ketuNavamsaEntersTaurus('KetuNavamsaEntersTaurus'),
-
   /// KetuNavamsaEntersGemini
   ketuNavamsaEntersGemini('KetuNavamsaEntersGemini'),
-
   /// KetuNavamsaEntersCancer
   ketuNavamsaEntersCancer('KetuNavamsaEntersCancer'),
-
   /// KetuNavamsaEntersLeo
   ketuNavamsaEntersLeo('KetuNavamsaEntersLeo'),
-
   /// KetuNavamsaEntersVirgo
   ketuNavamsaEntersVirgo('KetuNavamsaEntersVirgo'),
-
   /// KetuNavamsaEntersLibra
   ketuNavamsaEntersLibra('KetuNavamsaEntersLibra'),
-
   /// KetuNavamsaEntersScorpio
   ketuNavamsaEntersScorpio('KetuNavamsaEntersScorpio'),
-
   /// KetuNavamsaEntersSagittarius
   ketuNavamsaEntersSagittarius('KetuNavamsaEntersSagittarius'),
-
   /// KetuNavamsaEntersCapricorn
   ketuNavamsaEntersCapricorn('KetuNavamsaEntersCapricorn'),
-
   /// KetuNavamsaEntersAquarius
   ketuNavamsaEntersAquarius('KetuNavamsaEntersAquarius'),
-
   /// KetuNavamsaEntersPisces
   ketuNavamsaEntersPisces('KetuNavamsaEntersPisces'),
-
   /// SunVargottama
   sunVargottama('SunVargottama'),
-
   /// MoonVargottama
   moonVargottama('MoonVargottama'),
-
   /// MarsVargottama
   marsVargottama('MarsVargottama'),
-
   /// MercuryVargottama
   mercuryVargottama('MercuryVargottama'),
-
   /// JupiterVargottama
   jupiterVargottama('JupiterVargottama'),
-
   /// VenusVargottama
   venusVargottama('VenusVargottama'),
-
   /// SaturnVargottama
   saturnVargottama('SaturnVargottama'),
-
   /// RahuVargottama
   rahuVargottama('RahuVargottama'),
-
   /// KetuVargottama
   ketuVargottama('KetuVargottama'),
-
   /// MarsMercuryWar
   marsMercuryWar('MarsMercuryWar'),
-
   /// MarsJupiterWar
   marsJupiterWar('MarsJupiterWar'),
-
   /// MarsVenusWar
   marsVenusWar('MarsVenusWar'),
-
   /// MarsSaturnWar
   marsSaturnWar('MarsSaturnWar'),
-
   /// MercuryJupiterWar
   mercuryJupiterWar('MercuryJupiterWar'),
-
   /// MercuryVenusWar
   mercuryVenusWar('MercuryVenusWar'),
-
   /// MercurySaturnWar
   mercurySaturnWar('MercurySaturnWar'),
-
   /// JupiterVenusWar
   jupiterVenusWar('JupiterVenusWar'),
-
   /// JupiterSaturnWar
   jupiterSaturnWar('JupiterSaturnWar'),
-
   /// VenusSaturnWar
   venusSaturnWar('VenusSaturnWar'),
-
   /// SunInGandanta
   sunInGandanta('SunInGandanta'),
-
   /// MoonInGandanta
   moonInGandanta('MoonInGandanta'),
-
   /// MarsInGandanta
   marsInGandanta('MarsInGandanta'),
-
   /// MercuryInGandanta
   mercuryInGandanta('MercuryInGandanta'),
-
   /// JupiterInGandanta
   jupiterInGandanta('JupiterInGandanta'),
-
   /// VenusInGandanta
   venusInGandanta('VenusInGandanta'),
-
   /// SaturnInGandanta
   saturnInGandanta('SaturnInGandanta'),
-
   /// RahuInGandanta
   rahuInGandanta('RahuInGandanta'),
-
   /// KetuInGandanta
   ketuInGandanta('KetuInGandanta'),
-
   /// SunInSandhi
   sunInSandhi('SunInSandhi'),
-
   /// MoonInSandhi
   moonInSandhi('MoonInSandhi'),
-
   /// MarsInSandhi
   marsInSandhi('MarsInSandhi'),
-
   /// MercuryInSandhi
   mercuryInSandhi('MercuryInSandhi'),
-
   /// JupiterInSandhi
   jupiterInSandhi('JupiterInSandhi'),
-
   /// VenusInSandhi
   venusInSandhi('VenusInSandhi'),
-
   /// SaturnInSandhi
   saturnInSandhi('SaturnInSandhi'),
-
   /// RahuInSandhi
   rahuInSandhi('RahuInSandhi'),
-
   /// KetuInSandhi
   ketuInSandhi('KetuInSandhi'),
-
   /// SpecialDasaSunPD1
   specialDasaSunPd1('SpecialDasaSunPD1'),
-
   /// SpecialDasaMoonPD1
   specialDasaMoonPd1('SpecialDasaMoonPD1'),
-
   /// SpecialDasaMarsPD1
   specialDasaMarsPd1('SpecialDasaMarsPD1'),
-
   /// SpecialDasaMercuryPD1
   specialDasaMercuryPd1('SpecialDasaMercuryPD1'),
-
   /// SpecialDasaJupiterPD1
   specialDasaJupiterPd1('SpecialDasaJupiterPD1'),
-
   /// SpecialDasaVenusPD1
   specialDasaVenusPd1('SpecialDasaVenusPD1'),
-
   /// SpecialDasaSaturnPD1
   specialDasaSaturnPd1('SpecialDasaSaturnPD1'),
-
   /// SpecialDasaRahuPD1
   specialDasaRahuPd1('SpecialDasaRahuPD1'),
-
   /// SpecialDasaKetuPD1
   specialDasaKetuPd1('SpecialDasaKetuPD1'),
-
   /// SpecialDasaSunSunPD2
   specialDasaSunSunPd2('SpecialDasaSunSunPD2'),
-
   /// SpecialDasaSunMoonPD2
   specialDasaSunMoonPd2('SpecialDasaSunMoonPD2'),
-
   /// SpecialDasaSunMarsPD2
   specialDasaSunMarsPd2('SpecialDasaSunMarsPD2'),
-
   /// SpecialDasaSunMercuryPD2
   specialDasaSunMercuryPd2('SpecialDasaSunMercuryPD2'),
-
   /// SpecialDasaSunJupiterPD2
   specialDasaSunJupiterPd2('SpecialDasaSunJupiterPD2'),
-
   /// SpecialDasaSunVenusPD2
   specialDasaSunVenusPd2('SpecialDasaSunVenusPD2'),
-
   /// SpecialDasaSunSaturnPD2
   specialDasaSunSaturnPd2('SpecialDasaSunSaturnPD2'),
-
   /// SpecialDasaSunRahuPD2
   specialDasaSunRahuPd2('SpecialDasaSunRahuPD2'),
-
   /// SpecialDasaSunKetuPD2
   specialDasaSunKetuPd2('SpecialDasaSunKetuPD2'),
-
   /// SpecialDasaMoonSunPD2
   specialDasaMoonSunPd2('SpecialDasaMoonSunPD2'),
-
   /// SpecialDasaMoonMoonPD2
   specialDasaMoonMoonPd2('SpecialDasaMoonMoonPD2'),
-
   /// SpecialDasaMoonMarsPD2
   specialDasaMoonMarsPd2('SpecialDasaMoonMarsPD2'),
-
   /// SpecialDasaMoonMercuryPD2
   specialDasaMoonMercuryPd2('SpecialDasaMoonMercuryPD2'),
-
   /// SpecialDasaMoonJupiterPD2
   specialDasaMoonJupiterPd2('SpecialDasaMoonJupiterPD2'),
-
   /// SpecialDasaMoonVenusPD2
   specialDasaMoonVenusPd2('SpecialDasaMoonVenusPD2'),
-
   /// SpecialDasaMoonSaturnPD2
   specialDasaMoonSaturnPd2('SpecialDasaMoonSaturnPD2'),
-
   /// SpecialDasaMoonRahuPD2
   specialDasaMoonRahuPd2('SpecialDasaMoonRahuPD2'),
-
   /// SpecialDasaMoonKetuPD2
   specialDasaMoonKetuPd2('SpecialDasaMoonKetuPD2'),
-
   /// SpecialDasaMarsSunPD2
   specialDasaMarsSunPd2('SpecialDasaMarsSunPD2'),
-
   /// SpecialDasaMarsMoonPD2
   specialDasaMarsMoonPd2('SpecialDasaMarsMoonPD2'),
-
   /// SpecialDasaMarsMarsPD2
   specialDasaMarsMarsPd2('SpecialDasaMarsMarsPD2'),
-
   /// SpecialDasaMarsMercuryPD2
   specialDasaMarsMercuryPd2('SpecialDasaMarsMercuryPD2'),
-
   /// SpecialDasaMarsJupiterPD2
   specialDasaMarsJupiterPd2('SpecialDasaMarsJupiterPD2'),
-
   /// SpecialDasaMarsVenusPD2
   specialDasaMarsVenusPd2('SpecialDasaMarsVenusPD2'),
-
   /// SpecialDasaMarsSaturnPD2
   specialDasaMarsSaturnPd2('SpecialDasaMarsSaturnPD2'),
-
   /// SpecialDasaMarsRahuPD2
   specialDasaMarsRahuPd2('SpecialDasaMarsRahuPD2'),
-
   /// SpecialDasaMarsKetuPD2
   specialDasaMarsKetuPd2('SpecialDasaMarsKetuPD2'),
-
   /// SpecialDasaMercurySunPD2
   specialDasaMercurySunPd2('SpecialDasaMercurySunPD2'),
-
   /// SpecialDasaMercuryMoonPD2
   specialDasaMercuryMoonPd2('SpecialDasaMercuryMoonPD2'),
-
   /// SpecialDasaMercuryMarsPD2
   specialDasaMercuryMarsPd2('SpecialDasaMercuryMarsPD2'),
-
   /// SpecialDasaMercuryMercuryPD2
   specialDasaMercuryMercuryPd2('SpecialDasaMercuryMercuryPD2'),
-
   /// SpecialDasaMercuryJupiterPD2
   specialDasaMercuryJupiterPd2('SpecialDasaMercuryJupiterPD2'),
-
   /// SpecialDasaMercuryVenusPD2
   specialDasaMercuryVenusPd2('SpecialDasaMercuryVenusPD2'),
-
   /// SpecialDasaMercurySaturnPD2
   specialDasaMercurySaturnPd2('SpecialDasaMercurySaturnPD2'),
-
   /// SpecialDasaMercuryRahuPD2
   specialDasaMercuryRahuPd2('SpecialDasaMercuryRahuPD2'),
-
   /// SpecialDasaMercuryKetuPD2
   specialDasaMercuryKetuPd2('SpecialDasaMercuryKetuPD2'),
-
   /// SpecialDasaJupiterSunPD2
   specialDasaJupiterSunPd2('SpecialDasaJupiterSunPD2'),
-
   /// SpecialDasaJupiterMoonPD2
   specialDasaJupiterMoonPd2('SpecialDasaJupiterMoonPD2'),
-
   /// SpecialDasaJupiterMarsPD2
   specialDasaJupiterMarsPd2('SpecialDasaJupiterMarsPD2'),
-
   /// SpecialDasaJupiterMercuryPD2
   specialDasaJupiterMercuryPd2('SpecialDasaJupiterMercuryPD2'),
-
   /// SpecialDasaJupiterJupiterPD2
   specialDasaJupiterJupiterPd2('SpecialDasaJupiterJupiterPD2'),
-
   /// SpecialDasaJupiterVenusPD2
   specialDasaJupiterVenusPd2('SpecialDasaJupiterVenusPD2'),
-
   /// SpecialDasaJupiterSaturnPD2
   specialDasaJupiterSaturnPd2('SpecialDasaJupiterSaturnPD2'),
-
   /// SpecialDasaJupiterRahuPD2
   specialDasaJupiterRahuPd2('SpecialDasaJupiterRahuPD2'),
-
   /// SpecialDasaJupiterKetuPD2
   specialDasaJupiterKetuPd2('SpecialDasaJupiterKetuPD2'),
-
   /// SpecialDasaVenusSunPD2
   specialDasaVenusSunPd2('SpecialDasaVenusSunPD2'),
-
   /// SpecialDasaVenusMoonPD2
   specialDasaVenusMoonPd2('SpecialDasaVenusMoonPD2'),
-
   /// SpecialDasaVenusMarsPD2
   specialDasaVenusMarsPd2('SpecialDasaVenusMarsPD2'),
-
   /// SpecialDasaVenusMercuryPD2
   specialDasaVenusMercuryPd2('SpecialDasaVenusMercuryPD2'),
-
   /// SpecialDasaVenusJupiterPD2
   specialDasaVenusJupiterPd2('SpecialDasaVenusJupiterPD2'),
-
   /// SpecialDasaVenusVenusPD2
   specialDasaVenusVenusPd2('SpecialDasaVenusVenusPD2'),
-
   /// SpecialDasaVenusSaturnPD2
   specialDasaVenusSaturnPd2('SpecialDasaVenusSaturnPD2'),
-
   /// SpecialDasaVenusRahuPD2
   specialDasaVenusRahuPd2('SpecialDasaVenusRahuPD2'),
-
   /// SpecialDasaVenusKetuPD2
   specialDasaVenusKetuPd2('SpecialDasaVenusKetuPD2'),
-
   /// SpecialDasaSaturnSunPD2
   specialDasaSaturnSunPd2('SpecialDasaSaturnSunPD2'),
-
   /// SpecialDasaSaturnMoonPD2
   specialDasaSaturnMoonPd2('SpecialDasaSaturnMoonPD2'),
-
   /// SpecialDasaSaturnMarsPD2
   specialDasaSaturnMarsPd2('SpecialDasaSaturnMarsPD2'),
-
   /// SpecialDasaSaturnMercuryPD2
   specialDasaSaturnMercuryPd2('SpecialDasaSaturnMercuryPD2'),
-
   /// SpecialDasaSaturnJupiterPD2
   specialDasaSaturnJupiterPd2('SpecialDasaSaturnJupiterPD2'),
-
   /// SpecialDasaSaturnVenusPD2
   specialDasaSaturnVenusPd2('SpecialDasaSaturnVenusPD2'),
-
   /// SpecialDasaSaturnSaturnPD2
   specialDasaSaturnSaturnPd2('SpecialDasaSaturnSaturnPD2'),
-
   /// SpecialDasaSaturnRahuPD2
   specialDasaSaturnRahuPd2('SpecialDasaSaturnRahuPD2'),
-
   /// SpecialDasaSaturnKetuPD2
   specialDasaSaturnKetuPd2('SpecialDasaSaturnKetuPD2'),
-
   /// SpecialDasaRahuSunPD2
   specialDasaRahuSunPd2('SpecialDasaRahuSunPD2'),
-
   /// SpecialDasaRahuMoonPD2
   specialDasaRahuMoonPd2('SpecialDasaRahuMoonPD2'),
-
   /// SpecialDasaRahuMarsPD2
   specialDasaRahuMarsPd2('SpecialDasaRahuMarsPD2'),
-
   /// SpecialDasaRahuMercuryPD2
   specialDasaRahuMercuryPd2('SpecialDasaRahuMercuryPD2'),
-
   /// SpecialDasaRahuJupiterPD2
   specialDasaRahuJupiterPd2('SpecialDasaRahuJupiterPD2'),
-
   /// SpecialDasaRahuVenusPD2
   specialDasaRahuVenusPd2('SpecialDasaRahuVenusPD2'),
-
   /// SpecialDasaRahuSaturnPD2
   specialDasaRahuSaturnPd2('SpecialDasaRahuSaturnPD2'),
-
   /// SpecialDasaRahuRahuPD2
   specialDasaRahuRahuPd2('SpecialDasaRahuRahuPD2'),
-
   /// SpecialDasaRahuKetuPD2
   specialDasaRahuKetuPd2('SpecialDasaRahuKetuPD2'),
-
   /// SpecialDasaKetuSunPD2
   specialDasaKetuSunPd2('SpecialDasaKetuSunPD2'),
-
   /// SpecialDasaKetuMoonPD2
   specialDasaKetuMoonPd2('SpecialDasaKetuMoonPD2'),
-
   /// SpecialDasaKetuMarsPD2
   specialDasaKetuMarsPd2('SpecialDasaKetuMarsPD2'),
-
   /// SpecialDasaKetuMercuryPD2
   specialDasaKetuMercuryPd2('SpecialDasaKetuMercuryPD2'),
-
   /// SpecialDasaKetuJupiterPD2
   specialDasaKetuJupiterPd2('SpecialDasaKetuJupiterPD2'),
-
   /// SpecialDasaKetuVenusPD2
   specialDasaKetuVenusPd2('SpecialDasaKetuVenusPD2'),
-
   /// SpecialDasaKetuSaturnPD2
   specialDasaKetuSaturnPd2('SpecialDasaKetuSaturnPD2'),
-
   /// SpecialDasaKetuRahuPD2
   specialDasaKetuRahuPd2('SpecialDasaKetuRahuPD2'),
-
   /// SpecialDasaKetuKetuPD2
   specialDasaKetuKetuPd2('SpecialDasaKetuKetuPD2'),
-
   /// SpecialDasaSunSunPD3
   specialDasaSunSunPd3('SpecialDasaSunSunPD3'),
-
   /// SpecialDasaSunMoonPD3
   specialDasaSunMoonPd3('SpecialDasaSunMoonPD3'),
-
   /// SpecialDasaSunMarsPD3
   specialDasaSunMarsPd3('SpecialDasaSunMarsPD3'),
-
   /// SpecialDasaSunMercuryPD3
   specialDasaSunMercuryPd3('SpecialDasaSunMercuryPD3'),
-
   /// SpecialDasaSunJupiterPD3
   specialDasaSunJupiterPd3('SpecialDasaSunJupiterPD3'),
-
   /// SpecialDasaSunVenusPD3
   specialDasaSunVenusPd3('SpecialDasaSunVenusPD3'),
-
   /// SpecialDasaSunSaturnPD3
   specialDasaSunSaturnPd3('SpecialDasaSunSaturnPD3'),
-
   /// SpecialDasaSunRahuPD3
   specialDasaSunRahuPd3('SpecialDasaSunRahuPD3'),
-
   /// SpecialDasaSunKetuPD3
   specialDasaSunKetuPd3('SpecialDasaSunKetuPD3'),
-
   /// SpecialDasaMoonSunPD3
   specialDasaMoonSunPd3('SpecialDasaMoonSunPD3'),
-
   /// SpecialDasaMoonMoonPD3
   specialDasaMoonMoonPd3('SpecialDasaMoonMoonPD3'),
-
   /// SpecialDasaMoonMarsPD3
   specialDasaMoonMarsPd3('SpecialDasaMoonMarsPD3'),
-
   /// SpecialDasaMoonMercuryPD3
   specialDasaMoonMercuryPd3('SpecialDasaMoonMercuryPD3'),
-
   /// SpecialDasaMoonJupiterPD3
   specialDasaMoonJupiterPd3('SpecialDasaMoonJupiterPD3'),
-
   /// SpecialDasaMoonVenusPD3
   specialDasaMoonVenusPd3('SpecialDasaMoonVenusPD3'),
-
   /// SpecialDasaMoonSaturnPD3
   specialDasaMoonSaturnPd3('SpecialDasaMoonSaturnPD3'),
-
   /// SpecialDasaMoonRahuPD3
   specialDasaMoonRahuPd3('SpecialDasaMoonRahuPD3'),
-
   /// SpecialDasaMoonKetuPD3
   specialDasaMoonKetuPd3('SpecialDasaMoonKetuPD3'),
-
   /// SpecialDasaMarsSunPD3
   specialDasaMarsSunPd3('SpecialDasaMarsSunPD3'),
-
   /// SpecialDasaMarsMoonPD3
   specialDasaMarsMoonPd3('SpecialDasaMarsMoonPD3'),
-
   /// SpecialDasaMarsMarsPD3
   specialDasaMarsMarsPd3('SpecialDasaMarsMarsPD3'),
-
   /// SpecialDasaMarsMercuryPD3
   specialDasaMarsMercuryPd3('SpecialDasaMarsMercuryPD3'),
-
   /// SpecialDasaMarsJupiterPD3
   specialDasaMarsJupiterPd3('SpecialDasaMarsJupiterPD3'),
-
   /// SpecialDasaMarsVenusPD3
   specialDasaMarsVenusPd3('SpecialDasaMarsVenusPD3'),
-
   /// SpecialDasaMarsSaturnPD3
   specialDasaMarsSaturnPd3('SpecialDasaMarsSaturnPD3'),
-
   /// SpecialDasaMarsRahuPD3
   specialDasaMarsRahuPd3('SpecialDasaMarsRahuPD3'),
-
   /// SpecialDasaMarsKetuPD3
   specialDasaMarsKetuPd3('SpecialDasaMarsKetuPD3'),
-
   /// SpecialDasaMercurySunPD3
   specialDasaMercurySunPd3('SpecialDasaMercurySunPD3'),
-
   /// SpecialDasaMercuryMoonPD3
   specialDasaMercuryMoonPd3('SpecialDasaMercuryMoonPD3'),
-
   /// SpecialDasaMercuryMarsPD3
   specialDasaMercuryMarsPd3('SpecialDasaMercuryMarsPD3'),
-
   /// SpecialDasaMercuryMercuryPD3
   specialDasaMercuryMercuryPd3('SpecialDasaMercuryMercuryPD3'),
-
   /// SpecialDasaMercuryJupiterPD3
   specialDasaMercuryJupiterPd3('SpecialDasaMercuryJupiterPD3'),
-
   /// SpecialDasaMercuryVenusPD3
   specialDasaMercuryVenusPd3('SpecialDasaMercuryVenusPD3'),
-
   /// SpecialDasaMercurySaturnPD3
   specialDasaMercurySaturnPd3('SpecialDasaMercurySaturnPD3'),
-
   /// SpecialDasaMercuryRahuPD3
   specialDasaMercuryRahuPd3('SpecialDasaMercuryRahuPD3'),
-
   /// SpecialDasaMercuryKetuPD3
   specialDasaMercuryKetuPd3('SpecialDasaMercuryKetuPD3'),
-
   /// SpecialDasaJupiterSunPD3
   specialDasaJupiterSunPd3('SpecialDasaJupiterSunPD3'),
-
   /// SpecialDasaJupiterMoonPD3
   specialDasaJupiterMoonPd3('SpecialDasaJupiterMoonPD3'),
-
   /// SpecialDasaJupiterMarsPD3
   specialDasaJupiterMarsPd3('SpecialDasaJupiterMarsPD3'),
-
   /// SpecialDasaJupiterMercuryPD3
   specialDasaJupiterMercuryPd3('SpecialDasaJupiterMercuryPD3'),
-
   /// SpecialDasaJupiterJupiterPD3
   specialDasaJupiterJupiterPd3('SpecialDasaJupiterJupiterPD3'),
-
   /// SpecialDasaJupiterVenusPD3
   specialDasaJupiterVenusPd3('SpecialDasaJupiterVenusPD3'),
-
   /// SpecialDasaJupiterSaturnPD3
   specialDasaJupiterSaturnPd3('SpecialDasaJupiterSaturnPD3'),
-
   /// SpecialDasaJupiterRahuPD3
   specialDasaJupiterRahuPd3('SpecialDasaJupiterRahuPD3'),
-
   /// SpecialDasaJupiterKetuPD3
   specialDasaJupiterKetuPd3('SpecialDasaJupiterKetuPD3'),
-
   /// SpecialDasaVenusSunPD3
   specialDasaVenusSunPd3('SpecialDasaVenusSunPD3'),
-
   /// SpecialDasaVenusMoonPD3
   specialDasaVenusMoonPd3('SpecialDasaVenusMoonPD3'),
-
   /// SpecialDasaVenusMarsPD3
   specialDasaVenusMarsPd3('SpecialDasaVenusMarsPD3'),
-
   /// SpecialDasaVenusMercuryPD3
   specialDasaVenusMercuryPd3('SpecialDasaVenusMercuryPD3'),
-
   /// SpecialDasaVenusJupiterPD3
   specialDasaVenusJupiterPd3('SpecialDasaVenusJupiterPD3'),
-
   /// SpecialDasaVenusVenusPD3
   specialDasaVenusVenusPd3('SpecialDasaVenusVenusPD3'),
-
   /// SpecialDasaVenusSaturnPD3
   specialDasaVenusSaturnPd3('SpecialDasaVenusSaturnPD3'),
-
   /// SpecialDasaVenusRahuPD3
   specialDasaVenusRahuPd3('SpecialDasaVenusRahuPD3'),
-
   /// SpecialDasaVenusKetuPD3
   specialDasaVenusKetuPd3('SpecialDasaVenusKetuPD3'),
-
   /// SpecialDasaSaturnSunPD3
   specialDasaSaturnSunPd3('SpecialDasaSaturnSunPD3'),
-
   /// SpecialDasaSaturnMoonPD3
   specialDasaSaturnMoonPd3('SpecialDasaSaturnMoonPD3'),
-
   /// SpecialDasaSaturnMarsPD3
   specialDasaSaturnMarsPd3('SpecialDasaSaturnMarsPD3'),
-
   /// SpecialDasaSaturnMercuryPD3
   specialDasaSaturnMercuryPd3('SpecialDasaSaturnMercuryPD3'),
-
   /// SpecialDasaSaturnJupiterPD3
   specialDasaSaturnJupiterPd3('SpecialDasaSaturnJupiterPD3'),
-
   /// SpecialDasaSaturnVenusPD3
   specialDasaSaturnVenusPd3('SpecialDasaSaturnVenusPD3'),
-
   /// SpecialDasaSaturnSaturnPD3
   specialDasaSaturnSaturnPd3('SpecialDasaSaturnSaturnPD3'),
-
   /// SpecialDasaSaturnRahuPD3
   specialDasaSaturnRahuPd3('SpecialDasaSaturnRahuPD3'),
-
   /// SpecialDasaSaturnKetuPD3
   specialDasaSaturnKetuPd3('SpecialDasaSaturnKetuPD3'),
-
   /// SpecialDasaRahuSunPD3
   specialDasaRahuSunPd3('SpecialDasaRahuSunPD3'),
-
   /// SpecialDasaRahuMoonPD3
   specialDasaRahuMoonPd3('SpecialDasaRahuMoonPD3'),
-
   /// SpecialDasaRahuMarsPD3
   specialDasaRahuMarsPd3('SpecialDasaRahuMarsPD3'),
-
   /// SpecialDasaRahuMercuryPD3
   specialDasaRahuMercuryPd3('SpecialDasaRahuMercuryPD3'),
-
   /// SpecialDasaRahuJupiterPD3
   specialDasaRahuJupiterPd3('SpecialDasaRahuJupiterPD3'),
-
   /// SpecialDasaRahuVenusPD3
   specialDasaRahuVenusPd3('SpecialDasaRahuVenusPD3'),
-
   /// SpecialDasaRahuSaturnPD3
   specialDasaRahuSaturnPd3('SpecialDasaRahuSaturnPD3'),
-
   /// SpecialDasaRahuRahuPD3
   specialDasaRahuRahuPd3('SpecialDasaRahuRahuPD3'),
-
   /// SpecialDasaRahuKetuPD3
   specialDasaRahuKetuPd3('SpecialDasaRahuKetuPD3'),
-
   /// SpecialDasaKetuSunPD3
   specialDasaKetuSunPd3('SpecialDasaKetuSunPD3'),
-
   /// SpecialDasaKetuMoonPD3
   specialDasaKetuMoonPd3('SpecialDasaKetuMoonPD3'),
-
   /// SpecialDasaKetuMarsPD3
   specialDasaKetuMarsPd3('SpecialDasaKetuMarsPD3'),
-
   /// SpecialDasaKetuMercuryPD3
   specialDasaKetuMercuryPd3('SpecialDasaKetuMercuryPD3'),
-
   /// SpecialDasaKetuJupiterPD3
   specialDasaKetuJupiterPd3('SpecialDasaKetuJupiterPD3'),
-
   /// SpecialDasaKetuVenusPD3
   specialDasaKetuVenusPd3('SpecialDasaKetuVenusPD3'),
-
   /// SpecialDasaKetuSaturnPD3
   specialDasaKetuSaturnPd3('SpecialDasaKetuSaturnPD3'),
-
   /// SpecialDasaKetuRahuPD3
   specialDasaKetuRahuPd3('SpecialDasaKetuRahuPD3'),
-
   /// SpecialDasaKetuKetuPD3
   specialDasaKetuKetuPd3('SpecialDasaKetuKetuPD3'),
   ;
@@ -5997,148 +4115,100 @@ enum EventName {
 enum EventTag {
   /// Empty
   empty('Empty'),
-
   /// LendingMoney
   lendingMoney('LendingMoney'),
-
   /// BorrowingMoney
   borrowingMoney('BorrowingMoney'),
-
   /// Agriculture
   agriculture('Agriculture'),
-
   /// General
   general('General'),
-
   /// Personal
   personal('Personal'),
-
   /// RulingConstellation
   rulingConstellation('RulingConstellation'),
-
   /// HairNailCutting
   hairNailCutting('HairNailCutting'),
-
   /// Medical
   medical('Medical'),
-
   /// Astronomical
   astronomical('Astronomical'),
-
   /// SignIngress
   signIngress('SignIngress'),
-
   /// NakshatraTransit
   nakshatraTransit('NakshatraTransit'),
-
   /// Station
   station('Station'),
-
   /// LunarPhase
   lunarPhase('LunarPhase'),
-
   /// Tithi
   tithi('Tithi'),
-
   /// Karana
   karana('Karana'),
-
   /// SolsticeEquinox
   solsticeEquinox('SolsticeEquinox'),
-
   /// LagnaIngress
   lagnaIngress('LagnaIngress'),
-
   /// NavamsaIngress
   navamsaIngress('NavamsaIngress'),
-
   /// Vargottama
   vargottama('Vargottama'),
-
   /// GrahaYuddha
   grahaYuddha('GrahaYuddha'),
-
   /// Gandanta
   gandanta('Gandanta'),
-
   /// Sandhi
   sandhi('Sandhi'),
-
   /// BuyingSelling
   buyingSelling('BuyingSelling'),
-
   /// Building
   building('Building'),
-
   /// Tarabala
   tarabala('Tarabala'),
-
   /// Chandrabala
   chandrabala('Chandrabala'),
-
   /// GocharaSummary
   gocharaSummary('GocharaSummary'),
-
   /// AshtakvargaGochara
   ashtakvargaGochara('AshtakvargaGochara'),
-
   /// AshtakvargaDasa
   ashtakvargaDasa('AshtakvargaDasa'),
-
   /// AshtakvargaGocharaTrigger
   ashtakvargaGocharaTrigger('AshtakvargaGocharaTrigger'),
-
   /// DasaKakshya
   dasaKakshya('DasaKakshya'),
-
   /// Gochara
   gochara('Gochara'),
-
   /// PD1
   pd1('PD1'),
-
   /// PD2
   pd2('PD2'),
-
   /// PD3
   pd3('PD3'),
-
   /// PD4
   pd4('PD4'),
-
   /// PD5
   pd5('PD5'),
-
   /// PD6
   pd6('PD6'),
-
   /// PD7
   pd7('PD7'),
-
   /// PD8
   pd8('PD8'),
-
   /// DasaSpecialRules
   dasaSpecialRules('DasaSpecialRules'),
-
   /// SpecialDasaPD1
   specialDasaPd1('SpecialDasaPD1'),
-
   /// SpecialDasaPD2
   specialDasaPd2('SpecialDasaPD2'),
-
   /// SpecialDasaPD3
   specialDasaPd3('SpecialDasaPD3'),
-
   /// PanchaPakshi
   panchaPakshi('PanchaPakshi'),
-
   /// YamaNumber
   yamaNumber('YamaNumber'),
-
   /// Marriage
   marriage('Marriage'),
-
   /// Travel
   travel('Travel'),
   ;
@@ -6156,262 +4226,176 @@ enum EventTag {
 enum HoroscopeTag {
   /// Empty
   empty('Empty'),
-
   /// MedicalAstrology
   medicalAstrology('MedicalAstrology'),
-
   /// Personal
   personal('Personal'),
-
   /// Yoga
   yoga('Yoga'),
-
   /// Horoscope
   horoscope('Horoscope'),
-
   /// HouseYoga
   houseYoga('HouseYoga'),
-
   /// PlanetInSigns
   planetInSigns('PlanetInSigns'),
-
   /// RisingSign
   risingSign('RisingSign'),
-
   /// Ashtakavarga
   ashtakavarga('Ashtakavarga'),
-
   /// PlanetInHouse
   planetInHouse('PlanetInHouse'),
-
   /// LordInHouse
   lordInHouse('LordInHouse'),
-
   /// Health
   health('Health'),
-
   /// Death
   death('Death'),
-
   /// Lifespan
   lifespan('Lifespan'),
-
   /// Family
   family('Family'),
-
   /// Parents
   parents('Parents'),
-
   /// Siblings
   siblings('Siblings'),
-
   /// Children
   children('Children'),
-
   /// Marriage
   marriage('Marriage'),
-
   /// Romance
   romance('Romance'),
-
   /// Finance
   finance('Finance'),
-
   /// Wealth
   wealth('Wealth'),
-
   /// Career
   career('Career'),
-
   /// Work
   work('Work'),
-
   /// Education
   education('Education'),
-
   /// Learning
   learning('Learning'),
-
   /// Travel
   travel('Travel'),
-
   /// Migration
   migration('Migration'),
-
   /// Reputation
   reputation('Reputation'),
-
   /// Status
   status('Status'),
-
   /// Character
   character('Character'),
-
   /// Personality
   personality('Personality'),
-
   /// Spirituality
   spirituality('Spirituality'),
-
   /// Religion
   religion('Religion'),
-
   /// Legal
   legal('Legal'),
-
   /// Conflict
   conflict('Conflict'),
-
   /// Skills
   skills('Skills'),
-
   /// Talents
   talents('Talents'),
-
   /// Intelligence
   intelligence('Intelligence'),
-
   /// Home
   home('Home'),
-
   /// Property
   property('Property'),
-
   /// WellBeing
   wellBeing('WellBeing'),
-
   /// Appearance
   appearance('Appearance'),
-
   /// Style
   style('Style'),
-
   /// MentalHealth
   mentalHealth('MentalHealth'),
-
   /// Emotions
   emotions('Emotions'),
-
   /// Lifestyle
   lifestyle('Lifestyle'),
-
   /// Habits
   habits('Habits'),
-
   /// Social
   social('Social'),
-
   /// Community
   community('Community'),
-
   /// Legacy
   legacy('Legacy'),
-
   /// Inheritance
   inheritance('Inheritance'),
-
   /// Risk
   risk('Risk'),
-
   /// Danger
   danger('Danger'),
-
   /// Destiny
   destiny('Destiny'),
-
   /// Fate
   fate('Fate'),
-
   /// PublicService
   publicService('PublicService'),
-
   /// Politics
   politics('Politics'),
-
   /// Arts
   arts('Arts'),
-
   /// Creativity
   creativity('Creativity'),
-
   /// Philanthropy
   philanthropy('Philanthropy'),
-
   /// Charity
   charity('Charity'),
-
   /// Adversity
   adversity('Adversity'),
-
   /// Leadership
   leadership('Leadership'),
-
   /// Authority
   authority('Authority'),
-
   /// Entrepreneurship
   entrepreneurship('Entrepreneurship'),
-
   /// Business
   business('Business'),
-
   /// Adoption
   adoption('Adoption'),
-
   /// Imprisonment
   imprisonment('Imprisonment'),
-
   /// Accident
   accident('Accident'),
-
   /// Disease
   disease('Disease'),
-
   /// MedicalProcedure
   medicalProcedure('MedicalProcedure'),
-
   /// Surgery
   surgery('Surgery'),
-
   /// Suicide
   suicide('Suicide'),
-
   /// Crime
   crime('Crime'),
-
   /// Punishment
   punishment('Punishment'),
-
   /// Battle
   battle('Battle'),
-
   /// Famine
   famine('Famine'),
-
   /// Poisoning
   poisoning('Poisoning'),
-
   /// OrganHealth
   organHealth('OrganHealth'),
-
   /// Paralysis
   paralysis('Paralysis'),
-
   /// SexualHealth
   sexualHealth('SexualHealth'),
-
   /// ShortLifeSpan
   shortLifeSpan('ShortLifeSpan'),
-
   /// Afterlife
   afterlife('Afterlife'),
-
   /// Moksha
   moksha('Moksha'),
-
   /// Pilgrimage
   pilgrimage('Pilgrimage'),
-
   /// SpiritualTitle
   spiritualTitle('SpiritualTitle'),
   ;
@@ -6429,69 +4413,33 @@ enum HoroscopeTag {
 enum HouseName {
   /// Empty
   empty('Empty'),
-
   /// House1
   house1('House1'),
-
   /// House2
   house2('House2'),
-
   /// House3
   house3('House3'),
-
   /// House4
   house4('House4'),
-
   /// House5
   house5('House5'),
-
   /// House6
   house6('House6'),
-
   /// House7
   house7('House7'),
-
   /// House8
   house8('House8'),
-
   /// House9
   house9('House9'),
-
   /// House10
   house10('House10'),
-
   /// House11
   house11('House11'),
-
   /// House12
   house12('House12'),
   ;
 
   const HouseName(this.wireName);
-
-  /// The exact string the API expects.
-  final String wireName;
-}
-
-/// Values for the server's `JHoraDasaYearDefinition` type.
-///
-/// [wireName] is what travels to the API; the constant's own name is for your
-/// code. Send one straight to a calculator and it is converted for you.
-enum JHoraDasaYearDefinition {
-  /// MeanTropical
-  meanTropical('MeanTropical'),
-
-  /// Savana
-  savana('Savana'),
-
-  /// MeanSidereal
-  meanSidereal('MeanSidereal'),
-
-  /// Tithi
-  tithi('Tithi'),
-  ;
-
-  const JHoraDasaYearDefinition(this.wireName);
 
   /// The exact string the API expects.
   final String wireName;
@@ -6504,34 +4452,24 @@ enum JHoraDasaYearDefinition {
 enum Karana {
   /// Bava
   bava('Bava'),
-
   /// Balava
   balava('Balava'),
-
   /// Kaulava
   kaulava('Kaulava'),
-
   /// Taitula
   taitula('Taitula'),
-
   /// Garija
   garija('Garija'),
-
   /// Vanija
   vanija('Vanija'),
-
   /// Visti
   visti('Visti'),
-
   /// Sakuna
   sakuna('Sakuna'),
-
   /// Chatushpada
   chatushpada('Chatushpada'),
-
   /// Naga
   naga('Naga'),
-
   /// Kimstughna
   kimstughna('Kimstughna'),
   ;
@@ -6549,16 +4487,12 @@ enum Karana {
 enum LunarDayGroup {
   /// Nanda
   nanda('Nanda'),
-
   /// Bhadra
   bhadra('Bhadra'),
-
   /// Jaya
   jaya('Jaya'),
-
   /// Rikta
   rikta('Rikta'),
-
   /// Purna
   purna('Purna'),
   ;
@@ -6576,102 +4510,57 @@ enum LunarDayGroup {
 enum LunarMonth {
   /// Empty
   empty('Empty'),
-
   /// Chaitra
   chaitra('Chaitra'),
-
   /// Vaisaakha
   vaisaakha('Vaisaakha'),
-
   /// Jyeshtha
   jyeshtha('Jyeshtha'),
-
   /// Aashaadha
   aashaadha('Aashaadha'),
-
   /// Sraavana
   sraavana('Sraavana'),
-
   /// Bhaadrapada
   bhaadrapada('Bhaadrapada'),
-
   /// Aaswayuja
   aaswayuja('Aaswayuja'),
-
   /// Kaarteeka
   kaarteeka('Kaarteeka'),
-
   /// Maargasira
   maargasira('Maargasira'),
-
   /// Pushya
   pushya('Pushya'),
-
   /// Maagha
   maagha('Maagha'),
-
   /// Phaalguna
   phaalguna('Phaalguna'),
-
   /// ChaitraAdhika
   chaitraAdhika('ChaitraAdhika'),
-
   /// VaisaakhaAdhika
   vaisaakhaAdhika('VaisaakhaAdhika'),
-
   /// JyeshthaAdhika
   jyeshthaAdhika('JyeshthaAdhika'),
-
   /// AashaadhaAdhika
   aashaadhaAdhika('AashaadhaAdhika'),
-
   /// SraavanaAdhika
   sraavanaAdhika('SraavanaAdhika'),
-
   /// BhaadrapadaAdhika
   bhaadrapadaAdhika('BhaadrapadaAdhika'),
-
   /// AaswayujaAdhika
   aaswayujaAdhika('AaswayujaAdhika'),
-
   /// KaarteekaAdhika
   kaarteekaAdhika('KaarteekaAdhika'),
-
   /// MaargasiraAdhika
   maargasiraAdhika('MaargasiraAdhika'),
-
   /// PushyaAdhika
   pushyaAdhika('PushyaAdhika'),
-
   /// MaaghaAdhika
   maaghaAdhika('MaaghaAdhika'),
-
   /// PhaalgunaAdhika
   phaalgunaAdhika('PhaalgunaAdhika'),
   ;
 
   const LunarMonth(this.wireName);
-
-  /// The exact string the API expects.
-  final String wireName;
-}
-
-/// Values for the server's `ShoolaAntardasaMode` type.
-///
-/// [wireName] is what travels to the API; the constant's own name is for your
-/// code. Send one straight to a calculator and it is converted for you.
-enum ShoolaAntardasaMode {
-  /// DasaSign
-  dasaSign('DasaSign'),
-
-  /// StrongerOppositeSign
-  strongerOppositeSign('StrongerOppositeSign'),
-
-  /// StrongerSignsLordPlacement
-  strongerSignsLordPlacement('StrongerSignsLordPlacement'),
-  ;
-
-  const ShoolaAntardasaMode(this.wireName);
 
   /// The exact string the API expects.
   final String wireName;
@@ -6684,19 +4573,14 @@ enum ShoolaAntardasaMode {
 enum TripatakiObjectGroup {
   /// Planets
   planets('Planets'),
-
   /// VedAstroNinePlanets
   vedAstroNinePlanets('VedAstroNinePlanets'),
-
   /// Trisphuta
   trisphuta('Trisphuta'),
-
   /// Upagrahas
   upagrahas('Upagrahas'),
-
   /// SpecialLagnas
   specialLagnas('SpecialLagnas'),
-
   /// Sahamas
   sahamas('Sahamas'),
   ;
@@ -6714,40 +4598,28 @@ enum TripatakiObjectGroup {
 enum ZodiacName {
   /// Empty
   empty('Empty'),
-
   /// Aries
   aries('Aries'),
-
   /// Taurus
   taurus('Taurus'),
-
   /// Gemini
   gemini('Gemini'),
-
   /// Cancer
   cancer('Cancer'),
-
   /// Leo
   leo('Leo'),
-
   /// Virgo
   virgo('Virgo'),
-
   /// Libra
   libra('Libra'),
-
   /// Scorpio
   scorpio('Scorpio'),
-
   /// Sagittarius
   sagittarius('Sagittarius'),
-
   /// Capricorn
   capricorn('Capricorn'),
-
   /// Aquarius
   aquarius('Aquarius'),
-
   /// Pisces
   pisces('Pisces'),
   ;
@@ -6765,70 +4637,48 @@ enum ZodiacName {
 enum PlanetName {
   /// Sun
   sun('Sun'),
-
   /// Moon
   moon('Moon'),
-
   /// Mars
   mars('Mars'),
-
   /// Mercury
   mercury('Mercury'),
-
   /// Jupiter
   jupiter('Jupiter'),
-
   /// Venus
   venus('Venus'),
-
   /// Saturn
   saturn('Saturn'),
-
   /// Earth
   earth('Earth'),
-
   /// Dhuma
   dhuma('Dhuma'),
-
   /// Vyatipaata
   vyatipaata('Vyatipaata'),
-
   /// Parivesha
   parivesha('Parivesha'),
-
   /// Indrachaapa
   indrachaapa('Indrachaapa'),
-
   /// Upaketu
   upaketu('Upaketu'),
-
   /// Kaala
   kaala('Kaala'),
-
   /// Mrityu
   mrityu('Mrityu'),
-
   /// Arthaprahaara
   arthaprahaara('Arthaprahaara'),
-
   /// Yamaghantaka
   yamaghantaka('Yamaghantaka'),
-
   /// Gulika
   gulika('Gulika'),
-
   /// Maandi
   maandi('Maandi'),
-
   /// Rahu
   rahu('Rahu'),
-
   /// Ketu
   ketu('Ketu'),
-
   /// Empty
   empty('Empty'),
-
   /// All - ask a calculator to fan out over every planet.
   all('All'),
   ;

@@ -1,5 +1,5 @@
 {
-  "methodCount": 685,
+  "methodCount": 677,
   "methods": [
     {
       "name": "AkshavedamshaSignAtLongitude",
@@ -1699,57 +1699,6 @@
       ]
     },
     {
-      "name": "CalculateShoolaDasa",
-      "signature": "CalculateShoolaDasa(Timetime,intstartingHouse,ZodiacNameresolvedStartSign,ShoolaAntardasaModeantardasaMode)",
-      "returnType": "VedAstro.Library.Calculate\u002BShoolaChakraResult",
-      "dartMethod": "calculateShoolaDasa",
-      "parameters": [
-        {
-          "name": "time",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "startingHouse",
-          "type": "System.Int32",
-          "dartType": "int",
-          "optional": true,
-          "defaultValue": 1
-        },
-        {
-          "name": "resolvedStartSign",
-          "type": "System.Nullable\u00601[[VedAstro.Library.ZodiacName, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null]]",
-          "dartType": "ZodiacName",
-          "optional": true,
-          "defaultValue": null
-        },
-        {
-          "name": "antardasaMode",
-          "type": "VedAstro.Library.Calculate\u002BShoolaAntardasaMode",
-          "dartType": "ShoolaAntardasaMode",
-          "optional": true,
-          "defaultValue": "DasaSign"
-        }
-      ]
-    },
-    {
-      "name": "CalculateSudarsanaChakraDasa",
-      "signature": "CalculateSudarsanaChakraDasa(Timetime)",
-      "returnType": "VedAstro.Library.Calculate\u002BSudarsanaChakraResult",
-      "dartMethod": "calculateSudarsanaChakraDasa",
-      "parameters": [
-        {
-          "name": "time",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        }
-      ]
-    },
-    {
       "name": "CalculateTripatakiChakra",
       "signature": "CalculateTripatakiChakra(Timetime,TripatakiObjectGroupobjectGroup)",
       "returnType": "VedAstro.Library.Calculate\u002BTripatakiChakraResult",
@@ -2577,95 +2526,9 @@
       ]
     },
     {
-      "name": "DasaAtRange",
-      "signature": "DasaAtRange(TimebirthTime,TimestartTime,TimeendTime,intlevels,intprecisionHours)",
-      "returnType": "Newtonsoft.Json.Linq.JObject",
-      "dartMethod": "dasaAtRange",
-      "parameters": [
-        {
-          "name": "birthTime",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "startTime",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "endTime",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "levels",
-          "type": "System.Int32",
-          "dartType": "int",
-          "optional": true,
-          "defaultValue": 3
-        },
-        {
-          "name": "precisionHours",
-          "type": "System.Int32",
-          "dartType": "int",
-          "optional": true,
-          "defaultValue": 100
-        }
-      ]
-    },
-    {
-      "name": "DasaAtRangeString",
-      "signature": "DasaAtRangeString(TimebirthTime,TimestartTime,TimeendTime,intlevels,intprecisionHours)",
-      "returnType": "System.String",
-      "dartMethod": "dasaAtRangeString",
-      "parameters": [
-        {
-          "name": "birthTime",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "startTime",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "endTime",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "levels",
-          "type": "System.Int32",
-          "dartType": "int",
-          "optional": true,
-          "defaultValue": 3
-        },
-        {
-          "name": "precisionHours",
-          "type": "System.Int32",
-          "dartType": "int",
-          "optional": true,
-          "defaultValue": 100
-        }
-      ]
-    },
-    {
       "name": "DasaAtTime",
-      "signature": "DasaAtTime(TimebirthTime,TimecheckTime,intlevels)",
-      "returnType": "Newtonsoft.Json.Linq.JObject",
+      "signature": "DasaAtTime(TimebirthTime,Timeat,DasaSystemsystem,intdepth,DasaOptionsoptions)",
+      "returnType": "VedAstro.Library.DasaSnapshot",
       "dartMethod": "dasaAtTime",
       "parameters": [
         {
@@ -2676,25 +2539,61 @@
           "defaultValue": null
         },
         {
-          "name": "checkTime",
+          "name": "at",
           "type": "VedAstro.Library.Time",
           "dartType": "Time",
           "optional": false,
           "defaultValue": null
         },
         {
-          "name": "levels",
+          "name": "system",
+          "type": "VedAstro.Library.DasaSystem",
+          "dartType": "DasaSystem",
+          "optional": true,
+          "defaultValue": "Vimshottari"
+        },
+        {
+          "name": "depth",
           "type": "System.Int32",
           "dartType": "int",
           "optional": true,
           "defaultValue": 3
+        },
+        {
+          "name": "options",
+          "type": "VedAstro.Library.DasaOptions",
+          "dartType": "Object?",
+          "optional": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "DasaChartReading",
+      "signature": "DasaChartReading(TimebirthTime,TimeatDate)",
+      "returnType": "System.Double",
+      "dartMethod": "dasaChartReading",
+      "parameters": [
+        {
+          "name": "birthTime",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "atDate",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
         }
       ]
     },
     {
       "name": "DasaForLife",
-      "signature": "DasaForLife(TimebirthTime,intlevels,intprecisionHours,intscanYears)",
-      "returnType": "Newtonsoft.Json.Linq.JObject",
+      "signature": "DasaForLife(TimebirthTime,DasaSystemsystem,intdepth,DasaOptionsoptions)",
+      "returnType": "VedAstro.Library.DasaSchedule",
       "dartMethod": "dasaForLife",
       "parameters": [
         {
@@ -2705,118 +2604,38 @@
           "defaultValue": null
         },
         {
-          "name": "levels",
+          "name": "system",
+          "type": "VedAstro.Library.DasaSystem",
+          "dartType": "DasaSystem",
+          "optional": true,
+          "defaultValue": "Vimshottari"
+        },
+        {
+          "name": "depth",
           "type": "System.Int32",
           "dartType": "int",
           "optional": true,
           "defaultValue": 3
         },
         {
-          "name": "precisionHours",
-          "type": "System.Int32",
-          "dartType": "int",
+          "name": "options",
+          "type": "VedAstro.Library.DasaOptions",
+          "dartType": "Object?",
           "optional": true,
-          "defaultValue": 24
-        },
-        {
-          "name": "scanYears",
-          "type": "System.Int32",
-          "dartType": "int",
-          "optional": true,
-          "defaultValue": 100
+          "defaultValue": null
         }
       ]
     },
     {
-      "name": "DasaForLifeString",
-      "signature": "DasaForLifeString(TimebirthTime,intlevels,intprecisionHours,intscanYears)",
-      "returnType": "System.String",
-      "dartMethod": "dasaForLifeString",
+      "name": "DasaSystems",
+      "signature": "DasaSystems(TimebirthTime)",
+      "returnType": "VedAstro.Library.DasaSystemCatalog",
+      "dartMethod": "dasaSystems",
       "parameters": [
         {
           "name": "birthTime",
           "type": "VedAstro.Library.Time",
           "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "levels",
-          "type": "System.Int32",
-          "dartType": "int",
-          "optional": true,
-          "defaultValue": 3
-        },
-        {
-          "name": "precisionHours",
-          "type": "System.Int32",
-          "dartType": "int",
-          "optional": true,
-          "defaultValue": 24
-        },
-        {
-          "name": "scanYears",
-          "type": "System.Int32",
-          "dartType": "int",
-          "optional": true,
-          "defaultValue": 100
-        }
-      ]
-    },
-    {
-      "name": "DasaForNow",
-      "signature": "DasaForNow(TimebirthTime,intlevels)",
-      "returnType": "Newtonsoft.Json.Linq.JObject",
-      "dartMethod": "dasaForNow",
-      "parameters": [
-        {
-          "name": "birthTime",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "levels",
-          "type": "System.Int32",
-          "dartType": "int",
-          "optional": true,
-          "defaultValue": 3
-        }
-      ]
-    },
-    {
-      "name": "DasaPeriodAshtakavargaStrength",
-      "signature": "DasaPeriodAshtakavargaStrength(PlanetNamedasaPlanet,TimebirthTime)",
-      "returnType": "System.Double",
-      "dartMethod": "dasaPeriodAshtakavargaStrength",
-      "parameters": [
-        {
-          "name": "dasaPlanet",
-          "type": "VedAstro.Library.PlanetName",
-          "dartType": "PlanetName",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "birthTime",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        }
-      ]
-    },
-    {
-      "name": "DasaYearLengthInDays",
-      "signature": "DasaYearLengthInDays(JHoraDasaYearDefinitionyearDefinition)",
-      "returnType": "System.Double",
-      "dartMethod": "dasaYearLengthInDays",
-      "parameters": [
-        {
-          "name": "yearDefinition",
-          "type": "VedAstro.Library.Calculate\u002BJHoraDasaYearDefinition",
-          "dartType": "JHoraDasaYearDefinition",
           "optional": false,
           "defaultValue": null
         }
@@ -3509,6 +3328,42 @@
       ]
     },
     {
+      "name": "FindBirthTimeByLifeEvents",
+      "signature": "FindBirthTimeByLifeEvents(TimebirthDateReference,List\u003CLifeEventInput\u003ElifeEvents,BirthDatePrecisionprecision,BirthTimeSearchOptionsoptions)",
+      "returnType": "VedAstro.Library.BirthTimePredictionResult",
+      "dartMethod": "findBirthTimeByLifeEvents",
+      "parameters": [
+        {
+          "name": "birthDateReference",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "lifeEvents",
+          "type": "System.Collections.Generic.List\u00601[[VedAstro.Library.LifeEventInput, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null]]",
+          "dartType": "List\u003CObject?\u003E",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "precision",
+          "type": "VedAstro.Library.BirthDatePrecision",
+          "dartType": "BirthDatePrecision",
+          "optional": true,
+          "defaultValue": "Day"
+        },
+        {
+          "name": "options",
+          "type": "VedAstro.Library.BirthTimeSearchOptions",
+          "dartType": "Object?",
+          "optional": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
       "name": "FindBirthTimeByMachineLearning",
       "signature": "FindBirthTimeByMachineLearning(TimepossibleBirthTime,stringbodyHeight,stringbodyShape,stringhair,stringlips,stringnose,stringcomplexion,stringfaceShape,stringconstitution,stringpersonality,doubleprecisionHours,BirthTimeModelTypemodelType)",
       "returnType": "VedAstro.Library.TimeRange",
@@ -3926,28 +3781,6 @@
       "parameters": []
     },
     {
-      "name": "GetCharaDasaAtTime",
-      "signature": "GetCharaDasaAtTime(TimebirthTime,TimecheckTime)",
-      "returnType": "VedAstro.Library.Calculate\u002BDashaPeriod",
-      "dartMethod": "getCharaDasaAtTime",
-      "parameters": [
-        {
-          "name": "birthTime",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "checkTime",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        }
-      ]
-    },
-    {
       "name": "GetConstellationTransitStartTime",
       "signature": "GetConstellationTransitStartTime(TimestartTime,TimeendTime,PlanetNameplanetName)",
       "returnType": "System.Collections.Generic.List\u00601[[System.Tuple\u00603[[VedAstro.Library.Time, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null],[VedAstro.Library.ConstellationName, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null],[VedAstro.Library.ZodiacSign, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
@@ -3971,21 +3804,6 @@
           "name": "planetName",
           "type": "VedAstro.Library.PlanetName",
           "dartType": "PlanetName",
-          "optional": false,
-          "defaultValue": null
-        }
-      ]
-    },
-    {
-      "name": "GetDasaInfoForAscendant",
-      "signature": "GetDasaInfoForAscendant(ZodiacNameascendantName)",
-      "returnType": "VedAstro.Library.AscendantDasaInfo",
-      "dartMethod": "getDasaInfoForAscendant",
-      "parameters": [
-        {
-          "name": "ascendantName",
-          "type": "VedAstro.Library.ZodiacName",
-          "dartType": "ZodiacName",
           "optional": false,
           "defaultValue": null
         }
@@ -4170,21 +3988,6 @@
           "name": "divisionalChart",
           "type": "System.String",
           "dartType": "String",
-          "optional": false,
-          "defaultValue": null
-        }
-      ]
-    },
-    {
-      "name": "GetSignLord",
-      "signature": "GetSignLord(ZodiacNamesign)",
-      "returnType": "VedAstro.Library.PlanetName",
-      "dartMethod": "getSignLord",
-      "parameters": [
-        {
-          "name": "sign",
-          "type": "VedAstro.Library.ZodiacName",
-          "dartType": "ZodiacName",
           "optional": false,
           "defaultValue": null
         }
@@ -5900,6 +5703,28 @@
           "name": "time",
           "type": "VedAstro.Library.Time",
           "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "IsGocharaFavourable",
+      "signature": "IsGocharaFavourable(PlanetNameplanet,inthouseFromMoon)",
+      "returnType": "System.Boolean",
+      "dartMethod": "isGocharaFavourable",
+      "parameters": [
+        {
+          "name": "planet",
+          "type": "VedAstro.Library.PlanetName",
+          "dartType": "PlanetName",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "houseFromMoon",
+          "type": "System.Int32",
+          "dartType": "int",
           "optional": false,
           "defaultValue": null
         }
@@ -8354,36 +8179,6 @@
       ]
     },
     {
-      "name": "KalachakraChart",
-      "signature": "KalachakraChart(Timetime)",
-      "returnType": "System.Object",
-      "dartMethod": "kalachakraChart",
-      "parameters": [
-        {
-          "name": "time",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        }
-      ]
-    },
-    {
-      "name": "KalachakraDasa",
-      "signature": "KalachakraDasa(Timetime)",
-      "returnType": "System.Collections.Generic.List\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-      "dartMethod": "kalachakraDasa",
-      "parameters": [
-        {
-          "name": "time",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        }
-      ]
-    },
-    {
       "name": "Karana",
       "signature": "Karana(Timetime)",
       "returnType": "VedAstro.Library.Karana",
@@ -9083,49 +8878,6 @@
       ]
     },
     {
-      "name": "MoolaDasa",
-      "signature": "MoolaDasa(Timetime,booluseLagna,booluseMoon,booluseSun,boolnoCorrectionInMoolatrikona)",
-      "returnType": "VedAstro.Library.Calculate\u002BMoolaDasaResult",
-      "dartMethod": "moolaDasa",
-      "parameters": [
-        {
-          "name": "time",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "useLagna",
-          "type": "System.Boolean",
-          "dartType": "bool",
-          "optional": true,
-          "defaultValue": true
-        },
-        {
-          "name": "useMoon",
-          "type": "System.Boolean",
-          "dartType": "bool",
-          "optional": true,
-          "defaultValue": true
-        },
-        {
-          "name": "useSun",
-          "type": "System.Boolean",
-          "dartType": "bool",
-          "optional": true,
-          "defaultValue": true
-        },
-        {
-          "name": "noCorrectionInMoolatrikona",
-          "type": "System.Boolean",
-          "dartType": "bool",
-          "optional": true,
-          "defaultValue": false
-        }
-      ]
-    },
-    {
       "name": "MoonConstellation",
       "signature": "MoonConstellation(Timetime)",
       "returnType": "VedAstro.Library.Constellation",
@@ -9359,21 +9111,6 @@
           "name": "fullName",
           "type": "System.String",
           "dartType": "String",
-          "optional": false,
-          "defaultValue": null
-        }
-      ]
-    },
-    {
-      "name": "NarayanaDasa",
-      "signature": "NarayanaDasa(Timetime)",
-      "returnType": "VedAstro.Library.Calculate\u002BNarayanaDasaResult",
-      "dartMethod": "narayanaDasa",
-      "parameters": [
-        {
-          "name": "time",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
           "optional": false,
           "defaultValue": null
         }
@@ -9686,6 +9423,36 @@
       ]
     },
     {
+      "name": "PanchaPakshiActivityFactor",
+      "signature": "PanchaPakshiActivityFactor(BirdActivityactivity)",
+      "returnType": "System.Double",
+      "dartMethod": "panchaPakshiActivityFactor",
+      "parameters": [
+        {
+          "name": "activity",
+          "type": "VedAstro.Library.BirdActivity",
+          "dartType": "BirdActivity",
+          "optional": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "PanchaPakshiBirdStrength",
+      "signature": "PanchaPakshiBirdStrength(BirdNamebird)",
+      "returnType": "System.Double",
+      "dartMethod": "panchaPakshiBirdStrength",
+      "parameters": [
+        {
+          "name": "bird",
+          "type": "VedAstro.Library.BirdName",
+          "dartType": "BirdName",
+          "optional": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
       "name": "PanchaPakshiBirthBird",
       "signature": "PanchaPakshiBirthBird(TimebirthTime)",
       "returnType": "VedAstro.Library.BirdName",
@@ -9697,6 +9464,121 @@
           "dartType": "Time",
           "optional": false,
           "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "PanchaPakshiCompare",
+      "signature": "PanchaPakshiCompare(TimepersonA,TimepersonB,TimecheckTime)",
+      "returnType": "VedAstro.Library.PanchaPakshiCompareResult",
+      "dartMethod": "panchaPakshiCompare",
+      "parameters": [
+        {
+          "name": "personA",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "personB",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "checkTime",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "PanchaPakshiTimeline",
+      "signature": "PanchaPakshiTimeline(TimepersonA,TimepersonB,TimestartTime,TimeendTime,doubleprecisionHours)",
+      "returnType": "System.Collections.Generic.List\u00601[[VedAstro.Library.PanchaPakshiCompareResult, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "dartMethod": "panchaPakshiTimeline",
+      "parameters": [
+        {
+          "name": "personA",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "personB",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "startTime",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "endTime",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "precisionHours",
+          "type": "System.Double",
+          "dartType": "double",
+          "optional": true,
+          "defaultValue": 1
+        }
+      ]
+    },
+    {
+      "name": "PanchaPakshiTimelineByDuration",
+      "signature": "PanchaPakshiTimelineByDuration(TimepersonA,TimepersonB,TimestartTime,doubledurationHours,doubleprecisionHours)",
+      "returnType": "System.Collections.Generic.List\u00601[[VedAstro.Library.PanchaPakshiCompareResult, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "dartMethod": "panchaPakshiTimelineByDuration",
+      "parameters": [
+        {
+          "name": "personA",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "personB",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "startTime",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "durationHours",
+          "type": "System.Double",
+          "dartType": "double",
+          "optional": true,
+          "defaultValue": 24
+        },
+        {
+          "name": "precisionHours",
+          "type": "System.Double",
+          "dartType": "double",
+          "optional": true,
+          "defaultValue": 1
         }
       ]
     },
@@ -10199,28 +10081,6 @@
         },
         {
           "name": "time",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        }
-      ]
-    },
-    {
-      "name": "PlanetDasaEffectsBasedOnIshtaKashta",
-      "signature": "PlanetDasaEffectsBasedOnIshtaKashta(PlanetNameplanetName,TimebirthTime)",
-      "returnType": "System.String",
-      "dartMethod": "planetDasaEffectsBasedOnIshtaKashta",
-      "parameters": [
-        {
-          "name": "planetName",
-          "type": "VedAstro.Library.PlanetName",
-          "dartType": "PlanetName",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "birthTime",
           "type": "VedAstro.Library.Time",
           "dartType": "Time",
           "optional": false,
@@ -11381,6 +11241,42 @@
       ]
     },
     {
+      "name": "PlanetSignBoundaries",
+      "signature": "PlanetSignBoundaries(TimestartTime,TimeendTime,List\u003CPlanetName\u003Eplanets,doubleprecisionHours)",
+      "returnType": "Newtonsoft.Json.Linq.JObject",
+      "dartMethod": "planetSignBoundaries",
+      "parameters": [
+        {
+          "name": "startTime",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "endTime",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "planets",
+          "type": "System.Collections.Generic.List\u00601[[VedAstro.Library.PlanetName, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null]]",
+          "dartType": "List\u003CObject?\u003E",
+          "optional": true,
+          "defaultValue": null
+        },
+        {
+          "name": "precisionHours",
+          "type": "System.Double",
+          "dartType": "double",
+          "optional": true,
+          "defaultValue": 24
+        }
+      ]
+    },
+    {
       "name": "PlanetSignTransit",
       "signature": "PlanetSignTransit(TimestartTime,TimeendTime,PlanetNameplanetName)",
       "returnType": "System.Collections.Generic.List\u00601[[System.Tuple\u00604[[VedAstro.Library.Time, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null],[VedAstro.Library.Time, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null],[VedAstro.Library.ZodiacName, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null],[VedAstro.Library.PlanetName, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
@@ -11405,6 +11301,28 @@
           "type": "VedAstro.Library.PlanetName",
           "dartType": "PlanetName",
           "optional": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "PlanetSignsAtTimes",
+      "signature": "PlanetSignsAtTimes(List\u003CTime\u003EcheckTimes,List\u003CPlanetName\u003Eplanets)",
+      "returnType": "Newtonsoft.Json.Linq.JObject",
+      "dartMethod": "planetSignsAtTimes",
+      "parameters": [
+        {
+          "name": "checkTimes",
+          "type": "System.Collections.Generic.List\u00601[[VedAstro.Library.Time, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null]]",
+          "dartType": "List\u003CObject?\u003E",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "planets",
+          "type": "System.Collections.Generic.List\u00601[[VedAstro.Library.PlanetName, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null]]",
+          "dartType": "List\u003CObject?\u003E",
+          "optional": true,
           "defaultValue": null
         }
       ]
@@ -12055,6 +11973,28 @@
       ]
     },
     {
+      "name": "RamanGochara",
+      "signature": "RamanGochara(TimebirthTime,TimetransitTime)",
+      "returnType": "System.Collections.Generic.Dictionary\u00602[[VedAstro.Library.PlanetName, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null],[VedAstro.Library.GocharaTransit, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "dartMethod": "ramanGochara",
+      "parameters": [
+        {
+          "name": "birthTime",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "transitTime",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
       "name": "RekhaSarvashtakavargaReductions",
       "signature": "RekhaSarvashtakavargaReductions(TimebirthTime)",
       "returnType": "VedAstro.Library.SarvashtakavargaReductionResult",
@@ -12264,6 +12204,28 @@
       ]
     },
     {
+      "name": "ScoreBirthTimeByLifeEvents",
+      "signature": "ScoreBirthTimeByLifeEvents(TimecandidateBirthTime,List\u003CLifeEventInput\u003ElifeEvents)",
+      "returnType": "System.Double",
+      "dartMethod": "scoreBirthTimeByLifeEvents",
+      "parameters": [
+        {
+          "name": "candidateBirthTime",
+          "type": "VedAstro.Library.Time",
+          "dartType": "Time",
+          "optional": false,
+          "defaultValue": null
+        },
+        {
+          "name": "lifeEvents",
+          "type": "System.Collections.Generic.List\u00601[[VedAstro.Library.LifeEventInput, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null]]",
+          "dartType": "List\u003CObject?\u003E",
+          "optional": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
       "name": "SearchEvents",
       "signature": "SearchEvents(TimebirthTime,TimeatTime,List\u003CEventTag\u003EeventTagList)",
       "returnType": "System.Collections.Generic.List\u00601[[VedAstro.Library.Event, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null]]",
@@ -12383,21 +12345,6 @@
           "name": "zodiacSign",
           "type": "VedAstro.Library.ZodiacSign",
           "dartType": "Object?",
-          "optional": false,
-          "defaultValue": null
-        }
-      ]
-    },
-    {
-      "name": "ShoolaChakra",
-      "signature": "ShoolaChakra(Timetime)",
-      "returnType": "System.Object",
-      "dartMethod": "shoolaChakra",
-      "parameters": [
-        {
-          "name": "time",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
           "optional": false,
           "defaultValue": null
         }
@@ -12640,57 +12587,6 @@
       ]
     },
     {
-      "name": "SpecialDasaApplicability",
-      "signature": "SpecialDasaApplicability(TimebirthTime)",
-      "returnType": "Newtonsoft.Json.Linq.JObject",
-      "dartMethod": "specialDasaApplicability",
-      "parameters": [
-        {
-          "name": "birthTime",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        }
-      ]
-    },
-    {
-      "name": "SpecialDasaAtTime",
-      "signature": "SpecialDasaAtTime(TimebirthTime,TimecheckTime,DasaTypedasaSystem,intlevels)",
-      "returnType": "Newtonsoft.Json.Linq.JObject",
-      "dartMethod": "specialDasaAtTime",
-      "parameters": [
-        {
-          "name": "birthTime",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "checkTime",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "dasaSystem",
-          "type": "VedAstro.Library.DasaType",
-          "dartType": "DasaType",
-          "optional": false,
-          "defaultValue": null
-        },
-        {
-          "name": "levels",
-          "type": "System.Int32",
-          "dartType": "int",
-          "optional": true,
-          "defaultValue": 3
-        }
-      ]
-    },
-    {
       "name": "SpouseDeathByJupiter",
       "signature": "SpouseDeathByJupiter(Timet)",
       "returnType": "VedAstro.Library.TransitPredictionResult",
@@ -12710,21 +12606,6 @@
       "signature": "SubhaGrahasList(Timetime)",
       "returnType": "System.Collections.Generic.List\u00601[[VedAstro.Library.PlanetName, VedAstro.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null]]",
       "dartMethod": "subhaGrahasList",
-      "parameters": [
-        {
-          "name": "time",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        }
-      ]
-    },
-    {
-      "name": "SudarsanaChakra",
-      "signature": "SudarsanaChakra(Timetime)",
-      "returnType": "System.Object",
-      "dartMethod": "sudarsanaChakra",
       "parameters": [
         {
           "name": "time",
@@ -13083,21 +12964,6 @@
       "signature": "TimeToJulianUniversalTime(Timetime)",
       "returnType": "System.Double",
       "dartMethod": "timeToJulianUniversalTime",
-      "parameters": [
-        {
-          "name": "time",
-          "type": "VedAstro.Library.Time",
-          "dartType": "Time",
-          "optional": false,
-          "defaultValue": null
-        }
-      ]
-    },
-    {
-      "name": "TithiAshtottariDasa",
-      "signature": "TithiAshtottariDasa(Timetime)",
-      "returnType": "System.Collections.Generic.List\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-      "dartMethod": "tithiAshtottariDasa",
       "parameters": [
         {
           "name": "time",

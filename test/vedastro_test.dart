@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:typed_data';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 import 'package:test/test.dart';
@@ -7,6 +8,14 @@ import 'package:vedastro/vedastro.dart';
 import 'fake_transport.dart';
 
 void main() {
+  test('transport preserves Unicode JSON and astronomical symbols', () {
+    final response = TransportResponse(
+        200,
+        Uint8List.fromList(
+            utf8.encode('{"reason":"chapters 7–15; 311°; दशा"}')),
+        'application/json');
+    expect(jsonDecode(response.text), {'reason': 'chapters 7–15; 311°; दशा'});
+  });
   group('Time', () {
     test('accepts the API format and remembers it verbatim', () {
       final moment = sampleBirth();
@@ -512,7 +521,7 @@ void main() {
 
   group('Generated surface', () {
     test('exposes every calculator with a unique name', () {
-      const expected = 685;
+      const expected = 677;
       final names = Calculators.methodNames;
       expect(names, hasLength(expected));
       expect(names.toSet(), hasLength(expected),
@@ -528,6 +537,9 @@ void main() {
         'southIndianChart',
         'searchSourceText',
         'astrocartography',
+        'dasaSystems',
+        'dasaAtTime',
+        'dasaForLife',
       ]) {
         expect(names, contains(name));
       }
@@ -540,6 +552,8 @@ void main() {
       expect(Ayanamsa.lahiri.wireName, 'LAHIRI');
       expect(Ayanamsa.faganBradley.wireName, 'FAGAN_BRADLEY');
       expect(Ayanamsa.values, hasLength(47));
+      expect(DasaSystem.vimshottariJanma.wireName, 'VimshottariJanma');
+      expect(Calculators.methodNames, isNot(contains('dasaForNow')));
     });
   });
 }

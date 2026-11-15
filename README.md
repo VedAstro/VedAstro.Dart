@@ -101,7 +101,7 @@ uses the service's free tier.
 | 📊 **Charts, aspects & events** | 55 | `southIndianChart` (SVG), `northIndianChart`, `kalaSarpaYoga` |
 | ❓ **Prashna (horary)** | 28 | `chapter10PrashnaMargaPredictions`, `chapter15PrashnaMargaPredictions` |
 | 🎯 **Ashtakavarga** | 20 | `bhinnashtakavargaChart`, `ashtakavargaTransitPrediction` |
-| ⏳ **Dasa systems** | 20 | `dasaForLife`, `dasaAtTime`, `calculateShoolaDasa` |
+| ⏳ **Dasa systems** | 19 | `dasaForLife`, `dasaAtTime`, `shoolaDasa` |
 | 🌍 **Earthquake** | 20 | `calculateEarthquakeRiskScore`, `isEarthquakeJupiterSaturnConjunction` |
 | 🧬 **Longevity** | 18 | `ashtakavargaLongevity`, `detailedAshtakavargaLongevity` |
 | 🌑 **Upagraha** | 15 | `gulikaLongitude`, `dhumaLongitude`, `upagrahaLongitude` |

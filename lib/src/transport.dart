@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:typed_data';
 
 /// What a [Transport] returns: the raw bytes, the status and the content type.
@@ -23,7 +24,7 @@ class TransportResponse {
   bool get isSuccess => statusCode >= 200 && statusCode < 300;
 
   /// The body decoded as UTF-8 text.
-  String get text => String.fromCharCodes(body);
+  String get text => utf8.decode(body);
 }
 
 /// Where the client sends its requests.
