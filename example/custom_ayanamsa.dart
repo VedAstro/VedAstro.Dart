@@ -17,12 +17,11 @@ Future<void> main() async {
     Ayanamsa.krishnamurti, // KP
     Ayanamsa.faganBradley, // Western sidereal
   ]) {
-    // Drawn from the same environment, so the key and base URL are identical; only
+    // Reuse the same API key; only
     // the ayanamsa differs. The ayanamsa travels with each request, so it is safe to
     // keep several clients side by side.
     final scoped = VedAstroClient(
       apiKey: base.apiKey,
-      baseUrl: base.baseUrl,
       silent: true,
       defaultAyanamsa: ayanamsa,
     );

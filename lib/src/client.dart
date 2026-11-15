@@ -35,20 +35,15 @@ export 'vedastro_exception.dart';
 class VedAstroClient {
   /// Creates a client.
   ///
-  /// [apiKey] may be empty, which uses the service's free tier. [baseUrl] can point
-  /// at a different Calculate service or a test server. [timeout] is optional.
+  /// [apiKey] may be empty, which uses the service's free tier. [timeout] is optional.
   /// [buildTransport] supplies a custom transport, for a proxy or a test double.
   VedAstroClient({
     this.apiKey = '',
-    this.baseUrl = defaultBaseUrl,
     this.timeout,
     this.silent = false,
     this.defaultAyanamsa,
     Transport Function(Duration? timeout)? buildTransport,
   }) : _transport = (buildTransport ?? _defaultTransport)(timeout) {
-    if (baseUrl.trim().isEmpty) {
-      throw ArgumentError.value(baseUrl, 'baseUrl', 'must not be blank');
-    }
     if (timeout != null && timeout! <= Duration.zero) {
       throw ArgumentError.value(
         timeout,
@@ -60,7 +55,7 @@ class VedAstroClient {
     if (!silent) _printBannerOnce();
   }
 
-  /// Builds a client from `VEDASTRO_API_KEY` and `VEDASTRO_BASE_URL` when set.
+  /// Builds a client from `VEDASTRO_API_KEY` when set.
   ///
   /// The environment is passed in rather than read here, so this library does not
   /// force a `dart:io` import on you and stays usable in the browser:
@@ -71,22 +66,19 @@ class VedAstroClient {
   factory VedAstroClient.fromEnvironment(
     Map<String, String> environment, {
     String apiKeyVariable = 'VEDASTRO_API_KEY',
-    String baseUrlVariable = 'VEDASTRO_BASE_URL',
     Duration? timeout,
     bool silent = false,
   }) {
     final key = environment[apiKeyVariable];
-    final url = environment[baseUrlVariable];
     return VedAstroClient(
       apiKey: key ?? '',
-      baseUrl: (url == null || url.isEmpty) ? defaultBaseUrl : url,
       timeout: timeout,
       silent: silent,
     );
   }
 
   /// The public calculator service.
-  static const String defaultBaseUrl =
+  static const String _apiEndpoint =
       'https://vedastro.zaishi.net/api/Calculate';
 
   /// The release version.
@@ -94,9 +86,6 @@ class VedAstroClient {
 
   /// Your API key, or an empty string for the free tier.
   final String apiKey;
-
-  /// The Calculate service root, given without a trailing slash.
-  final String baseUrl;
 
   /// The per-call deadline, or `null` - the default - for none.
   final Duration? timeout;
@@ -185,7 +174,7 @@ class VedAstroClient {
     }
 
     final url = Uri.parse(
-      '${baseUrl.replaceAll(RegExp(r'/+$'), '')}/$endpoint',
+      '${_apiEndpoint}/$endpoint',
     );
 
     try {

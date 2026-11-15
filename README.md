@@ -82,7 +82,7 @@ final client = VedAstroClient(apiKey: 'FreeAPIUser');
 final client = VedAstroClient.fromEnvironment(Platform.environment);
 ```
 
-`VedAstroClient.fromEnvironment` reads `VEDASTRO_API_KEY` and `VEDASTRO_BASE_URL`. An **empty key**
+`VedAstroClient.fromEnvironment` reads `VEDASTRO_API_KEY`. An **empty key**
 uses the service's free tier.
 
 > **Never commit a paid key.** Read it from the environment or your platform's secret store. The SDK

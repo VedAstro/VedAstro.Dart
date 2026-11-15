@@ -21,7 +21,7 @@ Future<void> main() async {
       client.timeout == null ? 'stream (no deadline)' : 'with a deadline';
 
   // ignore: avoid_print
-  print('VedAstro Dart SDK — live check against ${client.baseUrl}');
+  print('VedAstro Dart SDK — live check');
   // ignore: avoid_print
   print('transport: $transport\n');
 

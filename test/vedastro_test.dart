@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'package:http/testing.dart';
 import 'package:test/test.dart';
 import 'package:vedastro/vedastro.dart';
 
@@ -199,7 +202,7 @@ void main() {
       await client.calculate().planetRasiD1Sign(PlanetName.sun, sampleBirth());
 
       expect(transport.lastUrl.toString(),
-          'https://example.test/api/Calculate/PlanetRasiD1Sign');
+          'https://vedastro.zaishi.net/api/Calculate/PlanetRasiD1Sign');
       expect(transport.lastBody['APIKey'], 'test-key');
       expect(transport.lastBody['planetName'], 'Sun');
       expect(
@@ -209,19 +212,18 @@ void main() {
       expect(transport.lastHeaders['Content-Type'], 'application/json');
     });
 
-    test('trims a trailing slash so URLs never double up', () async {
+    test('uses the SDK service address', () async {
       final transport = FakeTransport()
         ..respondWith('HouseSignName', 'Aquarius');
       final client = VedAstroClient(
         apiKey: 'k',
-        baseUrl: 'https://example.test/api/Calculate/',
         silent: true,
         buildTransport: (_) => transport,
       );
 
       await client.calculate().houseSignName(HouseName.house1, sampleBirth());
       expect(transport.lastUrl.toString(),
-          'https://example.test/api/Calculate/HouseSignName');
+          'https://vedastro.zaishi.net/api/Calculate/HouseSignName');
     });
 
     test(
@@ -437,32 +439,40 @@ void main() {
       );
     });
 
-    test('reads configuration from a supplied environment', () {
-      final client = VedAstroClient.fromEnvironment(
-        {
+    test('reads the API key and ignores obsolete endpoint environment settings',
+        () async {
+      await http.runWithClient(() async {
+        final client = VedAstroClient.fromEnvironment({
           'VEDASTRO_API_KEY': 'env-key',
-          'VEDASTRO_BASE_URL': 'https://alt.test/api'
-        },
-        silent: true,
-      );
-      expect(client.apiKey, 'env-key');
-      expect(client.baseUrl, 'https://alt.test/api');
+          'VEDASTRO_BASE_URL': 'https://alt.test/api',
+        }, silent: true);
+        try {
+          expect(client.apiKey, 'env-key');
+          await client
+              .calculate()
+              .houseSignName(HouseName.house1, sampleBirth());
+        } finally {
+          client.close();
+        }
+      },
+          () => MockClient((request) async {
+                expect(request.url.toString(),
+                    'https://vedastro.zaishi.net/api/Calculate/HouseSignName');
+                expect(
+                    (jsonDecode(request.body)
+                        as Map<String, dynamic>)['APIKey'],
+                    'env-key');
+                return http.Response(
+                    '{"Status":"Pass","Payload":{"HouseSignName":"Aquarius"}}',
+                    200,
+                    headers: {'content-type': 'application/json'});
+              }));
     });
 
     test('falls back to the public service when the environment is empty', () {
       final client = VedAstroClient.fromEnvironment({}, silent: true);
       expect(client.apiKey, '');
-      expect(client.baseUrl, VedAstroClient.defaultBaseUrl);
-    });
-
-    test('rejects a blank base URL', () {
-      expect(
-        () => VedAstroClient(
-            baseUrl: '  ',
-            silent: true,
-            buildTransport: (_) => FakeTransport()),
-        throwsArgumentError,
-      );
+      expect(client.hasApiKey, isFalse);
     });
 
     test('closes the transport', () {

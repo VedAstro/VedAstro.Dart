@@ -88,7 +88,6 @@ Time sampleBirth() => Time.of(
 VedAstroClient clientWith(FakeTransport transport, {Ayanamsa? ayanamsa}) =>
     VedAstroClient(
       apiKey: 'test-key',
-      baseUrl: 'https://example.test/api/Calculate',
       silent: true,
       defaultAyanamsa: ayanamsa,
       buildTransport: (_) => transport,

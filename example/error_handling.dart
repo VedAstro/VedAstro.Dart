@@ -47,7 +47,7 @@ Future<void> main() async {
   demoHeading('3. The request never completed');
   final unreachable = VedAstroClient(
     apiKey: client.apiKey,
-    baseUrl: 'https://not-a-real-vedastro-host.test/api/Calculate',
+    buildTransport: (_) => _UnavailableTransport(),
     silent: true,
     timeout: const Duration(seconds: 5),
   );
@@ -74,4 +74,16 @@ Future<void> main() async {
   }
 
   client.close();
+}
+
+// Demonstrate a connection failure without depending on a particular DNS service.
+class _UnavailableTransport implements Transport {
+  @override
+  Future<TransportResponse> post(
+      Uri url, String body, Map<String, String> headers) async {
+    throw VedAstroException('Simulated connection failure');
+  }
+
+  @override
+  void close() {}
 }

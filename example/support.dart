@@ -8,7 +8,6 @@ import 'package:vedastro/vedastro.dart';
 /// They default to the free tier, and honour two environment variables:
 ///
 /// - `VEDASTRO_API_KEY` — use your own key instead of the free tier.
-/// - `VEDASTRO_BASE_URL` — point at a different Calculate service.
 ///
 /// The free tier allows five calls per minute, so the examples that make several
 /// calls pace themselves with [demoPace].

@@ -177,8 +177,7 @@ exceed the limit together. A token bucket in Redis is the usual answer.
 final client = VedAstroClient.fromEnvironment(Platform.environment);
 ```
 
-**Can I point at a different server?** Yes, `baseUrl` (or `VEDASTRO_BASE_URL`). Useful for a proxy or
-a staging deployment.
+**Who manages the service address?** The SDK manages it internally; applications supply calculation inputs and an API key.
 
 ---
 
